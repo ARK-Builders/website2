@@ -1,2 +1,5 @@
-# website2
-Redesigned website, work in progress
+# Running the website locally
+```
+git submodule update --init --recursive --progress
+zola serve
+```
