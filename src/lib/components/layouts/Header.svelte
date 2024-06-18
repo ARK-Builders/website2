@@ -1,0 +1,41 @@
+<script lang="ts">
+	import { config, navLinks } from '$lib/components/config'
+	import Twitter from '$lib/icons/twitter.svelte'
+	import Github from '$lib/icons/github.svelte'
+</script>
+
+<header class="sticky top-0 bg-[#302C2C] bg-opacity-95 py-3 dark:bg-gray-900">
+	<div class="mx-auto flex items-center justify-between xl:max-w-7xl">
+		<div class="flex flex-row items-center">
+			<a href="/" aria-label={config.headerTitle}>
+				<div class="flex items-center justify-between">
+					<div class="mr-3">
+						<img src="/images/logo.png" alt="Logo" class="h-10 w-auto" />
+					</div>
+					<!-- <div class="hidden text-4xl font-semibold sm:block font-title">
+					{config.headerTitle}
+				</div> -->
+				</div>
+			</a>
+
+			<div class="ml-5 hidden sm:block">
+				{#each navLinks as link}
+					<a
+						href={link.href}
+						target={link.title == 'Research' ? '_blank' : ''}
+						class="p-1 font-medium text-white sm:p-2 dark:text-gray-100">{link.title}</a
+					>
+				{/each}
+			</div>
+		</div>
+		<div class="flex items-center gap-3 text-base leading-5">
+			<a class="text-white" href={config.twitter} target="_blank">
+				<Twitter />
+			</a>
+			<a class="text-white" href={config.github} target="_blank">
+				<Github />
+			</a>
+			<!-- <MobileMenu /> -->
+		</div>
+	</div>
+</header>
