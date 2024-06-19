@@ -7,13 +7,7 @@ import mdsvexConfig from './mdsvex.config.js'
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			entries: ['/', '/blog', '/apps']
-		},
-		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-		}
+		adapter: adapter()
 	},
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
