@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { config } from '$lib/components/config'
+	import { config } from '$lib/config'
 
 	export let title = ''
 	export let description = config.description

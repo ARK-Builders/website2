@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { config, navLinks } from '$lib/components/config'
+	import { config, navLinks } from '$lib/config'
 	import Twitter from '$lib/icons/twitter.svelte'
 	import Github from '$lib/icons/github.svelte'
 </script>
