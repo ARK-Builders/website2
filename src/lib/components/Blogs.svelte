@@ -5,6 +5,7 @@
 	import SearchBox from '$lib/components/SearchBox.svelte'
 	import { page } from '$app/stores'
 	import fuzzySearch from '$utils/search.js'
+	import { onMount } from 'svelte'
 
 	export let title = ''
 	export let subtitle = ''
@@ -15,11 +16,15 @@
 	export let h2 = false
 	export let count = 0
 
+	let filter: string | null = null
+
 	if (count) {
 		posts = posts.slice(0, count)
 	}
+	onMount(() => {
+		filter = $page.url.searchParams.get('query')
+	})
 
-	$: filter = $page.url.searchParams.get('query')
 	$: currentPosts = filter ? fuzzySearch(posts, filter) : posts
 </script>
 
@@ -40,12 +45,9 @@
 						{#each tags as tag}
 							<div class="mr-5">
 								<Tag text={tag.text} size="text-xs" />
-								<a
-									href={`/tags/${tag.slug}`}
-									class="-ml-2 text-xs font-semibold uppercase text-gray-600 dark:text-gray-300"
-								>
+								<p class="-ml-2 text-xs font-semibold uppercase text-gray-600 dark:text-gray-300">
 									{` (${tag.count})`}
-								</a>
+								</p>
 							</div>
 						{/each}
 					</div>

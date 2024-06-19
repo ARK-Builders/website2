@@ -1,7 +1,12 @@
-export const prerender = false
-
 import { error } from '@sveltejs/kit'
 import { getEntries } from '$utils/entries.js'
+
+/** @type {import('./$types').EntryGenerator} */
+export function entries() {
+	return [{ slug: 'about-ark' }]
+}
+
+export const prerender = true
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
