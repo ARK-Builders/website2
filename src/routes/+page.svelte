@@ -1,9 +1,7 @@
 <script lang="ts">
+	import Hero from '$lib/components/Hero.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
 </script>
 
-<svelte:head>
-	<title>ARK-Builders</title>
-</svelte:head>
-
 <Head />
+<Hero />

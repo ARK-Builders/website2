@@ -2,10 +2,11 @@
 	import { config, navLinks } from '$lib/config'
 	import Twitter from '$lib/icons/twitter.svelte'
 	import Github from '$lib/icons/github.svelte'
+	import GetStarted from '../GetStarted.svelte'
 </script>
 
-<header class="sticky top-0 bg-[#302C2C] bg-opacity-95 py-3 dark:bg-gray-900">
-	<div class="mx-auto flex items-center justify-between xl:max-w-7xl">
+<header class="sticky top-0 h-[72px] bg-[#302C2C] bg-opacity-95 dark:bg-gray-900">
+	<div class="mx-auto flex h-full items-center justify-between xl:max-w-7xl">
 		<div class="flex flex-row items-center">
 			<a href="/" aria-label={config.headerTitle}>
 				<div class="flex items-center justify-between">
@@ -35,6 +36,7 @@
 			<a class="text-white" href={config.github} target="_blank">
 				<Github />
 			</a>
+			<GetStarted bgOrange />
 			<!-- <MobileMenu /> -->
 		</div>
 	</div>

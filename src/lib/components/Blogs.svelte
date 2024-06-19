@@ -28,7 +28,7 @@
 	$: currentPosts = filter ? fuzzySearch(posts, filter) : posts
 </script>
 
-<div class="divide-y divide-gray-200 dark:divide-gray-700">
+<div class="mx-auto w-full max-w-7xl divide-y divide-gray-200 dark:divide-gray-700">
 	<div class="space-y-2 pb-8 pt-6 md:space-y-5">
 		<div class="grid gap-4 lg:grid-cols-2">
 			<div>

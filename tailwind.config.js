@@ -5,7 +5,12 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
-			fontFamily: ['Jost', ...defaultTheme.fontFamily.sans]
+			fontFamily: {
+				sans: ['Jost', ...defaultTheme.fontFamily.sans]
+			},
+			colors: {
+				arkOrange: '#DD7409'
+			}
 		}
 	},
 	plugins: []

@@ -28,7 +28,7 @@ export const user = {
 
 export const navLinks = [
 	{ href: '/', title: 'Home' },
-	{ href: '/apps', title: 'Apps' },
+	{ href: '#', title: 'Apps' },
 	// { href: 'https://ark-builders.notion.site/Research-0e9029fa5e704ddfa8b6786b794a2f17', title: 'Research' },
 	{ href: '/', title: 'Devs Dashboard' },
 	{ href: '/blog', title: 'Blog' }
