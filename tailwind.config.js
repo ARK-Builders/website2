@@ -9,7 +9,8 @@ export default {
 				sans: ['Jost', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
-				arkOrange: '#DD7409'
+				arkOrange: '#DD7409',
+				arkOrangeLight: '#FFF3E6'
 			}
 		}
 	},

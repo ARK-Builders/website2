@@ -3,6 +3,7 @@
 	import '@fontsource/jost'
 	import Header from '$lib/components/layouts/Header.svelte'
 	import Transition from '$lib/components/layouts/Transition.svelte'
+	import Footer from '$lib/components/layouts/Footer.svelte'
 
 	export let data
 </script>
@@ -15,6 +16,6 @@
 			<slot />
 			<!-- </Transition> -->
 		</main>
-		<!-- <Footer /> -->
+		<Footer />
 	</div>
 </div>
