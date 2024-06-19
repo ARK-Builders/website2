@@ -14,4 +14,4 @@ Kawsar Ahmed
 
 ### Memorable Quotes
 
-> "Every day feels like I've died and gone to Hell."
+> "Every day feels like I've died and gone to Paradise."
