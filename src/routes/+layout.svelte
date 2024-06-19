@@ -7,7 +7,7 @@
 </script>
 
 <div class="mx-auto px-4 sm:px-6 xl:px-0">
-	<div class="flex h-screen flex-col justify-between">
+	<div class=" h-screen flex flex-col justify-between">
 		<Header />
 		<main class="mx-auto mb-auto w-full xl:max-w-7xl">
 			<Transition pathname={data?.pathname}>
