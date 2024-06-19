@@ -3,6 +3,12 @@
 	import Twitter from '$lib/icons/twitter.svelte'
 	import Github from '$lib/icons/github.svelte'
 	import GetStarted from '../GetStarted.svelte'
+
+	let hoverApp = false
+
+	const handleHover = () => {
+		hoverApp = true
+	}
 </script>
 
 <header class="sticky top-0 h-[72px] bg-[#302C2C] bg-opacity-95 dark:bg-gray-900">
@@ -23,7 +29,8 @@
 				{#each navLinks as link}
 					<a
 						href={link.href}
-						target={link.title == 'Research' ? '_blank' : ''}
+						on:mouseenter={handleHover}
+						on:mouseleave={() => (hoverApp = false)}
 						class="p-1 font-medium text-white sm:p-2 dark:text-gray-100">{link.title}</a
 					>
 				{/each}
