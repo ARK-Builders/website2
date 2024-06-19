@@ -7,8 +7,8 @@
 	export let data
 </script>
 
-<div class="mx-auto px-4 md:px-0">
-	<div class=" flex h-screen flex-col justify-between">
+<div class="mx-auto md:px-0">
+	<div class="flex h-screen flex-col justify-between">
 		<Header />
 		<main class="mb-auto">
 			<!-- <Transition pathname={data?.pathname}> -->

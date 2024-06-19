@@ -29,7 +29,7 @@
 				{/each}
 			</div>
 		</div>
-		<div class="flex items-center gap-3 text-base leading-5">
+		<div class="hidden items-center gap-3 text-base leading-5 md:flex">
 			<a class="text-white" href={config.twitter} target="_blank">
 				<Twitter />
 			</a>
