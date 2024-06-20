@@ -4,7 +4,7 @@
 	import Twitter from '$lib/icons/twitter.svelte'
 </script>
 
-<footer class="bg-white pb-10 pt-40">
+<footer class="bg-white px-5 pb-10 pt-40 md:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-row">
 		<div class="flex flex-1 flex-col gap-5">
 			<div>
@@ -19,7 +19,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="grid w-full flex-1 auto-rows-auto grid-cols-3 gap-3">
+		<div class="flex w-full flex-1 auto-rows-auto grid-cols-3 flex-col gap-3 md:grid">
 			<div>
 				<p class="text-xl font-semibold">Apps</p>
 				<table class="text-xl text-gray-400">
