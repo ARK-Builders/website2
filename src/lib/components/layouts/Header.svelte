@@ -6,8 +6,10 @@
 
 	let hoverApp = false
 
-	const handleHover = () => {
-		hoverApp = true
+	const handleHover = (name: string) => {
+		if (name == 'Apps') {
+			hoverApp = true
+		}
 	}
 </script>
 
@@ -25,14 +27,41 @@
 				</div>
 			</a>
 
-			<div class="ml-5 hidden sm:block">
+			<div class="relative ml-5 hidden sm:block">
 				{#each navLinks as link}
 					<a
 						href={link.href}
-						on:mouseenter={handleHover}
+						on:mouseenter={() => handleHover(link.title)}
 						on:mouseleave={() => (hoverApp = false)}
 						class="p-1 font-medium text-white sm:p-2 dark:text-gray-100">{link.title}</a
 					>
+					{#if hoverApp}
+						<div class="absolute left-16 grid grid-cols-2 rounded-md bg-white">
+							<div class="flex flex-col">
+								<div class="flex flex-row gap-2 p-1">
+									<div class="flex w-28">
+										<img src="/images/app-logos/rate-logo.png" alt="logo" />
+									</div>
+									<div class="flex flex-col">
+										<p class="font-bold">Memo</p>
+										<p>Descritpion</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="flex flex-col">
+								<div class="flex flex-row gap-2 p-1">
+									<div class="flex">
+										<img class="w-14" src="/images/app-logos/rate-logo.png" alt="logo" />
+									</div>
+									<div class="flex flex-col">
+										<p class="font-bold">Memo</p>
+										<p>Descritpion</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					{/if}
 				{/each}
 			</div>
 		</div>
