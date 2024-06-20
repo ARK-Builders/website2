@@ -2,8 +2,8 @@
 	import { config, navLinks } from '$lib/config'
 	import Twitter from '$lib/icons/twitter.svelte'
 	import Github from '$lib/icons/github.svelte'
-	import GetStarted from '../GetStarted.svelte'
-	import AppMenus from '../AppMenus.svelte'
+	import GetStarted from '$lib/components/GetStarted.svelte'
+	import AppMenus from '$lib/components/AppMenus.svelte'
 </script>
 
 <header class="sticky top-0 z-10 bg-[#302C2C] bg-opacity-95 dark:bg-gray-900">
