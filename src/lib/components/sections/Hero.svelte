@@ -1,8 +1,8 @@
-<script>
-	import GetStarted from './GetStarted.svelte'
+<script lang="ts">
+	import GetStarted from '$lib/components/GetStarted.svelte'
 </script>
 
-<div class="w-ful relative flex flex-row items-center justify-between gap-1">
+<div class="relative flex w-full flex-row items-center justify-between gap-1">
 	<div>
 		<img class="hidden md:block" src="/images/left.png" alt="left" />
 		<img class="sm:hidden" src="/images/mob-left.png" alt="left" />
@@ -14,7 +14,7 @@
 				Neat, efficient and
 			</p>
 			<p
-				class="bg-arkOrange w-fit rounded-lg px-4 text-center text-2xl font-semibold text-white md:text-4xl md:leading-tight lg:text-[66px]"
+				class="w-fit rounded-lg bg-arkOrange px-4 text-center text-2xl font-semibold text-white md:text-4xl md:leading-tight lg:text-[66px]"
 			>
 				privacy-focused apps
 			</p>

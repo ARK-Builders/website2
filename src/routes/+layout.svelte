@@ -11,7 +11,7 @@
 <div class="mx-auto md:px-0">
 	<div class="flex h-screen flex-col justify-between">
 		<Header />
-		<main class="mb-auto">
+		<main class="mb-auto flex flex-col">
 			<!-- <Transition pathname={data?.pathname}> -->
 			<slot />
 			<!-- </Transition> -->

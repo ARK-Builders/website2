@@ -1,0 +1,16 @@
+<script lang="ts">
+	export let name,
+		description = '',
+		logo = '',
+		url = ''
+</script>
+
+<div class="flex flex-row gap-3 rounded-md p-1 hover:bg-gray-100">
+	<div class="flex">
+		<img src="/images/app-logos/{logo || 'placeholder'}.png" alt="logo" />
+	</div>
+	<div class="flex cursor-pointer flex-col">
+		<a href={url} class="font-bold">{name}</a>
+		<p>{description || 'Descritpion'}</p>
+	</div>
+</div>
