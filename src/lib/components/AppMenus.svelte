@@ -1,5 +1,5 @@
 <script lang="ts">
-	import MenuItem from '$lib/components/MenuItem.svelte'
+	import MenuItem from '$lib/components/elements/MenuItem.svelte'
 	export let link
 
 	const appList = [
