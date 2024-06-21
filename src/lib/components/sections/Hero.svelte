@@ -1,5 +1,5 @@
 <script lang="ts">
-	import GetStarted from '$lib/components/GetStarted.svelte'
+	import Cta from '$lib/components/elements/CTA.svelte'
 </script>
 
 <div class="relative flex w-full flex-row items-center justify-between gap-1">
@@ -27,7 +27,7 @@
 			user experiences through privacy enhancements and seamless cross-device synchronization.
 		</p>
 		<div class="flex justify-center">
-			<GetStarted />
+			<Cta text="Get Started" bgBlack />
 		</div>
 	</div>
 	<div>
