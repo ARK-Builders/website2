@@ -6,7 +6,7 @@
 	import AppMenus from '$lib/components/AppMenus.svelte'
 </script>
 
-<header class="sticky top-0 z-10 bg-[#302C2C] bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
+<header class="bg-arkGray sticky top-0 z-10 bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
 	<div class="mx-auto flex h-[72px] items-center justify-between xl:max-w-7xl">
 		<div class="flex flex-row items-center">
 			<a href="/" aria-label={config.headerTitle}>
