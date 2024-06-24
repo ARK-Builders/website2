@@ -11,6 +11,6 @@
 	</div>
 	<div class="flex cursor-pointer flex-col">
 		<a href={url} class="font-bold">{name}</a>
-		<p>{description || 'Descritpion'}</p>
+		<p class="max-w-24 truncate">{description || 'Descritpion'}</p>
 	</div>
 </div>

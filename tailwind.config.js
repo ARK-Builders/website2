@@ -11,12 +11,14 @@ export default {
 			colors: {
 				arkOrange: '#DD7409',
 				arkOrangeLight: '#FFF3E6',
+				arkOrangeLighter: '#FFF5DD',
 
 				arkGray: '#302C2C',
 				arkGray2: '#453F3F',
 				arkGray3: '#685F5F',
 				arkGray4: '#968D8D',
-				arkGray5: '#F5F4F2'
+				arkGray5: '#F5F4F2',
+				arkGray6: '#F9F9F9'
 			}
 		}
 	},

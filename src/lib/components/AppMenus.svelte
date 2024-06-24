@@ -1,45 +1,7 @@
 <script lang="ts">
 	import MenuItem from '$lib/components/elements/MenuItem.svelte'
+	import { appList } from '$utils/constants'
 	export let link
-
-	const appList = [
-		{
-			name: 'Memo',
-			description: '',
-			logo: 'memo',
-			url: ''
-		},
-		{
-			name: 'Navigator',
-			description: '',
-			logo: 'navigator',
-			url: ''
-		},
-		{
-			name: 'Shelf',
-			description: '',
-			logo: 'shelf',
-			url: ''
-		},
-		{
-			name: 'Rate',
-			description: '',
-			logo: 'rate',
-			url: ''
-		},
-		{
-			name: 'Retouch',
-			description: '',
-			logo: 'retouch',
-			url: ''
-		},
-		{
-			name: 'Gallery',
-			description: '',
-			logo: '',
-			url: ''
-		}
-	]
 </script>
 
 <div class="menus">
@@ -53,7 +15,7 @@
 	>
 		<div class="flex w-44 flex-col">
 			{#each appList.slice(0, 3) as menu}
-				<MenuItem name={menu.name} logo={menu.logo} />
+				<MenuItem description={menu.description} name={menu.name} logo={menu.logo} />
 			{/each}
 		</div>
 		<div class="flex w-40 flex-col">
