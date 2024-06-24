@@ -3,7 +3,7 @@
 </script>
 
 <div class="relative flex w-full flex-row items-center justify-between gap-1">
-	<div>
+	<div class="flex-1">
 		<img class="hidden md:block" src="/images/left.png" alt="left" />
 		<img class="sm:hidden" src="/images/mob-left.png" alt="left" />
 	</div>
@@ -30,7 +30,7 @@
 			<Cta text="Get Started" bgBlack />
 		</div>
 	</div>
-	<div>
+	<div class="flex flex-1 justify-end">
 		<img class="hidden md:block" src="/images/right.png" alt="right" />
 		<img class="sm:hidden" src="/images/mob-right.png" alt="right" />
 	</div>
