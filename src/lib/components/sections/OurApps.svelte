@@ -13,7 +13,7 @@
 
 		<div class="flex w-full flex-col gap-7 lg:flex-row">
 			<!-- Left side panel -->
-			<div class="flex w-1/5 flex-row overflow-hidden bg-arkGray6 lg:flex-col">
+			<div class="flex w-1/5 flex-row overflow-hidden rounded-lg bg-arkGray6 lg:flex-col">
 				{#each appList as app}
 					<button
 						style="background-color: {activeApp.name == app.name ? app.colors[1] : ''};"
