@@ -13,13 +13,15 @@
 
 		<div class="flex w-full flex-col gap-7 lg:flex-row">
 			<!-- Left side panel -->
-			<div class="flex w-1/5 flex-row overflow-hidden rounded-lg bg-arkGray6 lg:flex-col">
+			<div
+				class="grid w-full grid-cols-3 flex-row overflow-hidden rounded-lg bg-arkGray6 md:flex lg:w-1/5 lg:flex-col"
+			>
 				{#each appList as app}
 					<button
 						style="background-color: {activeApp.name == app.name ? app.colors[1] : ''};"
 						on:click={() => (activeApp = app)}
 						class="
-							flex w-full flex-row items-center gap-3 border-b bg-transparent px-5 py-3 font-semibold first:rounded-tl-lg first:rounded-tr-lg last:rounded-bl-lg last:rounded-br-lg lg:h-[88px]"
+							flex w-full flex-col items-center gap-3 border-b bg-transparent px-5 py-3 font-semibold first:rounded-tl-lg first:rounded-tr-lg last:rounded-bl-lg last:rounded-br-lg lg:h-[88px] lg:flex-row"
 					>
 						<img src="/images/app-logos/{app.logo || 'placeholder'}.png" alt="app logo" />
 						{app.name}
@@ -30,7 +32,7 @@
 			<!-- App details -->
 			<div
 				style="background-color: {activeApp.colors[0]};"
-				class="flex w-4/5 flex-col justify-between rounded-md p-5"
+				class="flex w-full flex-col justify-between rounded-md p-5 lg:w-4/5"
 			>
 				<div class="flex flex-col gap-3">
 					<p class="text-3xl font-bold">{activeApp.name}</p>
