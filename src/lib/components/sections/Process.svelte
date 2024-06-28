@@ -43,12 +43,9 @@
 						Resources Needed
 					</p>
 					<div class="flex flex-col gap-3">
-						<img
-							class:hidden={activeType == 'typical'}
-							class="h-fit"
-							src="/images/process/{activeType}-right.png"
-							alt="ARK process"
-						/>
+						{#if activeType == 'ark'}
+							<img class="h-fit" src="/images/process/{activeType}-right.png" alt="ARK process" />
+						{/if}
 					</div>
 
 					<!-- Typical App -->
