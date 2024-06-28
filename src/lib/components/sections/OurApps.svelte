@@ -14,7 +14,7 @@
 		<div class="flex w-full flex-col gap-7 lg:flex-row">
 			<!-- Left side panel -->
 			<div
-				class="grid w-full grid-cols-3 flex-row overflow-hidden rounded-lg bg-arkGray6 md:flex lg:w-1/5 lg:flex-col"
+				class="grid h-fit w-full grid-cols-3 flex-row overflow-hidden rounded-lg bg-arkGray6 md:flex lg:w-1/5 lg:flex-col"
 			>
 				{#each appList as app}
 					<button
