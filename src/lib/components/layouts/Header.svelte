@@ -29,7 +29,7 @@
 					{:else}
 						<div>
 							<a
-								href={link.href}
+								href={base + link.href}
 								class:underline={$page.url.pathname == link.href}
 								class:!text-arkOrange={$page.url.pathname == link.href}
 								class="p-1 font-medium text-white hover:text-arkOrange sm:p-2"

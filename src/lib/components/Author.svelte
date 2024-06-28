@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths'
 	import SocialIcon from '$lib/components/SocialIcon.svelte'
 	import formatDate from '$utils/formatDate'
 
@@ -9,7 +10,7 @@
 </script>
 
 {#if avatar}
-	<img src={avatar} width="38px" height="38px" alt="avatar" class="h-10 w-10 rounded-lg" />
+	<img src={base + avatar} width="38px" height="38px" alt="avatar" class="h-10 w-10 rounded-lg" />
 {/if}
 <dl class="whitespace-nowrap text-sm font-medium leading-5">
 	<dt class="sr-only">Author</dt>

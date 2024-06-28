@@ -12,10 +12,10 @@ const config = {
 		}),
 		paths: {
 			base: process.env.BASE_PATH || ''
-		},
-		prerender: {
-			handleHttpError: 'warn'
 		}
+		// prerender: {
+		// 	handleHttpError: 'warn'
+		// }
 	},
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors

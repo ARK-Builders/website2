@@ -1,17 +1,18 @@
 <script>
-	import IconMail from '$lib/icons/mail.svelte';
-	import IconGithub from '$lib/icons/github.svelte';
-	import IconFacebook from '$lib/icons/facebook.svelte';
-	import IconYoutube from '$lib/icons/youtube.svelte';
-	import IconLinkedin from '$lib/icons/linkedin.svelte';
-	import IconTwitter from '$lib/icons/twitter.svelte';
+	import IconMail from '$lib/icons/mail.svelte'
+	import IconGithub from '$lib/icons/github.svelte'
+	import IconFacebook from '$lib/icons/facebook.svelte'
+	import IconYoutube from '$lib/icons/youtube.svelte'
+	import IconLinkedin from '$lib/icons/linkedin.svelte'
+	import IconTwitter from '$lib/icons/twitter.svelte'
+	import { base } from '$app/paths'
 
-	export let url = '';
-	export let icon = '';
-	export let popup = false;
-	export let small = false;
+	export let url = ''
+	export let icon = ''
+	export let popup = false
+	export let small = false
 
-	let size = small ? 'w-5' : 'w-7';
+	let size = small ? 'w-5' : 'w-7'
 
 	const options = [
 		{ caption: 'mail', component: IconMail },
@@ -20,15 +21,15 @@
 		{ caption: 'youtube', component: IconYoutube },
 		{ caption: 'linkedin', component: IconLinkedin },
 		{ caption: 'twitter', component: IconTwitter }
-	];
+	]
 
-	let svg = options.find((option) => option.caption === icon)?.component;
+	let svg = options.find((option) => option.caption === icon)?.component
 </script>
 
 {#if url}
 	<a
-		class="flex gap-x-2 text-gray-500 transition hover:text-primary-600"
-		href={url || '#'}
+		class="hover:text-primary-600 flex gap-x-2 text-gray-500 transition"
+		href={base + url || '#'}
 		target={popup ? '_blank' : ''}
 		rel="noreferrer"
 	>
