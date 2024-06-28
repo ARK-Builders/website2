@@ -4,9 +4,10 @@
 	import Github from '$lib/icons/github.svelte'
 	import GetStarted from '$lib/components/GetStarted.svelte'
 	import AppMenus from '$lib/components/AppMenus.svelte'
+	import { page } from '$app/stores'
 </script>
 
-<header class="bg-arkGray sticky top-0 z-10 bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
+<header class="sticky top-0 z-10 bg-arkGray bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
 	<div class="mx-auto flex h-[72px] items-center justify-between xl:max-w-7xl">
 		<div class="flex flex-row items-center">
 			<a href="/" aria-label={config.headerTitle}>
@@ -28,7 +29,9 @@
 						<div>
 							<a
 								href={link.href}
-								class="p-1 font-medium text-white hover:text-arkOrange sm:p-2 dark:text-gray-100"
+								class:underline={$page.url.pathname == link.href}
+								class:!text-arkOrange={$page.url.pathname == link.href}
+								class="p-1 font-medium text-white hover:text-arkOrange sm:p-2"
 							>
 								{link.title}
 							</a>
