@@ -2,6 +2,7 @@
 	import { config } from '$lib/config'
 	import Tag from '$lib/components/Tag.svelte'
 	import Author from '$lib/components/Author.svelte'
+	import { base } from '$app/paths'
 
 	export let post
 	export let author
@@ -115,7 +116,7 @@
 					</div>
 					<div class="pt-4 xl:pt-8">
 						<a
-							href="/blog"
+							href="{base}/blog"
 							class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
 						>
 							&larr; Back to the blog

@@ -5,12 +5,13 @@
 	import GetStarted from '$lib/components/GetStarted.svelte'
 	import AppMenus from '$lib/components/AppMenus.svelte'
 	import { page } from '$app/stores'
+	import { base } from '$app/paths'
 </script>
 
 <header class="sticky top-0 z-10 bg-arkGray bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
 	<div class="mx-auto flex h-[72px] items-center justify-between xl:max-w-7xl">
 		<div class="flex flex-row items-center">
-			<a href="/" aria-label={config.headerTitle}>
+			<a href="{base}/" aria-label={config.headerTitle}>
 				<div class="flex items-center justify-between">
 					<div class="mr-3">
 						<img src="/images/logo.png" alt="Logo" class="h-10 w-auto" />

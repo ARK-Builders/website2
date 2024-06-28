@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths'
+
 	const supportLogos = ['bitcoin', 'ethereum', 'buycoffee', 'patreon']
 </script>
 
@@ -22,7 +24,7 @@
 		</div>
 		<div class="my-5 grid grid-cols-2 gap-2 md:flex md:flex-row">
 			{#each supportLogos as logo}
-				<a href="/" target="_blank">
+				<a href="{base}/" target="_blank">
 					<img src="/images/support/{logo}.png" alt="support logo" />
 				</a>
 			{/each}

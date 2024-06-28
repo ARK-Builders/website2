@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths'
 	import { config } from '$lib/config'
 	import Github from '$lib/icons/github.svelte'
 	import Twitter from '$lib/icons/twitter.svelte'
@@ -41,7 +42,7 @@
 				<p class="text-xl font-semibold">Devs Dashboard</p>
 			</div>
 			<div>
-				<a href="/blog" class="text-xl font-semibold">Blog</a>
+				<a href="{base}/blog" class="text-xl font-semibold">Blog</a>
 			</div>
 		</div>
 	</div>
