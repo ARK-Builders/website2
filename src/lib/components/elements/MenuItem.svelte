@@ -12,7 +12,7 @@
 		<img src="{base}/images/app-logos/{logo || 'placeholder'}.png" alt="logo" />
 	</div>
 	<div class="flex cursor-pointer flex-col">
-		<a href={url} class="font-bold">{name}</a>
+		<a href={base + url} class="font-bold">{name}</a>
 		<p class="max-w-24 truncate">{description || 'Descritpion'}</p>
 	</div>
 </div>

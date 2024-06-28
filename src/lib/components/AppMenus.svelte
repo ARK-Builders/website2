@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths'
 	import MenuItem from '$lib/components/elements/MenuItem.svelte'
 	import { appList } from '$utils/constants'
 	export let link
@@ -6,7 +7,7 @@
 
 <div class="menus">
 	<a
-		href={link.href}
+		href={base + link.href}
 		class="p-1 font-medium text-white hover:text-arkOrange sm:p-2 dark:text-gray-100"
 		>{link.title}</a
 	>

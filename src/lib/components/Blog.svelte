@@ -95,7 +95,7 @@
 										<div
 											class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
 										>
-											<a href={`/blog/${post.prev.slug}`}>{post.prev.title}</a>
+											<a href={base + `/blog/${post.prev.slug}`}>{post.prev.title}</a>
 										</div>
 									</div>
 								{/if}
@@ -107,7 +107,7 @@
 										<div
 											class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
 										>
-											<a href={`/blog/${post.next.slug}`}>{post.next.title}</a>
+											<a href={base + `/blog/${post.next.slug}`}>{post.next.title}</a>
 										</div>
 									</div>
 								{/if}
