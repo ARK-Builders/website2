@@ -1,5 +1,5 @@
 <script lang="ts">
-	let activeType = 'ark'
+	let activeType = 'typical'
 </script>
 
 <section class="relative flex items-center bg-arkGray py-12">
@@ -32,10 +32,38 @@
 
 			<div class="flex w-full flex-col justify-center gap-16 lg:flex-row">
 				<div class="flex justify-center">
-					<img src="/images/process/{activeType}-left.png" alt="ARK process" />
+					<img class="h-fit" src="/images/process/{activeType}-left.png" alt="ARK process" />
 				</div>
-				<div class="flex justify-center lg:justify-end">
-					<img class="h-fit" src="/images/process/{activeType}-right.png" alt="ARK process" />
+				<div class="flex flex-col text-white {activeType != 'typical' && 'lg:justify-end'}">
+					<!-- ARK App -->
+					<p
+						class="{activeType == 'typical' &&
+							'text-center'} text-[32px] font-semibold lg:text-start"
+					>
+						Resources Needed
+					</p>
+					<div class="flex flex-col gap-3">
+						<img
+							class:hidden={activeType == 'typical'}
+							class="h-fit"
+							src="/images/process/{activeType}-right.png"
+							alt="ARK process"
+						/>
+					</div>
+
+					<!-- Typical App -->
+					<div class:hidden={activeType == 'ark'} class="mt-3 flex flex-col gap-5">
+						<!-- <p class="text-center text-[32px] font-semibold lg:text-start">Resources Needed</p> -->
+						<div class="flex flex-col items-center gap-3 lg:items-start">
+							<p class="text-2xl">People</p>
+							<img class="w-fit" src="/images/process/typical-right1.png" alt="typical" />
+						</div>
+						<div class="h-[1px] bg-arkGray3" />
+						<div class="flex flex-col items-center gap-3 lg:items-start">
+							<p class="text-2xl">Infrastructure</p>
+							<img class="w-fit" src="/images/process/typical-right2.png" alt="typical" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
