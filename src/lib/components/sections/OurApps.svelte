@@ -21,7 +21,7 @@
 						style="background-color: {activeApp.name == app.name ? app.colors[1] : ''};"
 						on:click={() => (activeApp = app)}
 						class="
-							flex w-full flex-col items-center gap-3 border-b bg-transparent px-5 py-3 font-semibold first:rounded-tl-lg first:rounded-tr-lg last:rounded-bl-lg last:rounded-br-lg lg:h-[88px] lg:flex-row"
+							flex w-full flex-col items-center gap-3 border-b bg-transparent px-5 py-3 font-semibold first:rounded-tl-lg last:rounded-br-lg lg:h-[88px] lg:flex-row lg:first:rounded-tr-lg lg:last:rounded-bl-lg"
 					>
 						<img src="/images/app-logos/{app.logo || 'placeholder'}.png" alt="app logo" />
 						{app.name}

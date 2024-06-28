@@ -5,10 +5,12 @@
 	import Blog from '$lib/components/sections/Blog.svelte'
 	import Contribute from '$lib/components/sections/Contribute.svelte'
 	import OurApps from '$lib/components/sections/OurApps.svelte'
+	import Process from '$lib/components/sections/Process.svelte'
 </script>
 
 <Head />
 <Hero />
+<Process />
 <OurApps />
 <Blog />
 <Contribute />

@@ -2,7 +2,7 @@
 	import Cta from '$lib/components/elements/CTA.svelte'
 </script>
 
-<div class="flex w-full flex-col">
+<div class="mb-16 flex w-full flex-col">
 	<div class="relative flex w-full flex-row items-center justify-between gap-1">
 		<div class="flex-1">
 			<img class="hidden md:block" src="/images/left.png" alt="left" />
