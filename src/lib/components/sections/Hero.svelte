@@ -1,12 +1,13 @@
 <script lang="ts">
+	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
 </script>
 
 <div class="mb-16 flex w-full flex-col">
 	<div class="relative flex w-full flex-row items-center justify-between gap-1">
 		<div class="flex-1">
-			<img class="hidden md:block" src="/images/left.png" alt="left" />
-			<img class="sm:hidden" src="/images/mob-left.png" alt="left" />
+			<img class="hidden md:block" src="{base}/images/left.png" alt="left" />
+			<img class="sm:hidden" src="{base}/images/mob-left.png" alt="left" />
 		</div>
 
 		<div class="absolute flex max-w-2xl flex-col gap-5 md:relative md:gap-10">
@@ -33,15 +34,15 @@
 			</div>
 		</div>
 		<div class="flex flex-1 justify-end">
-			<img class="hidden md:block" src="/images/right.png" alt="right" />
-			<img class="sm:hidden" src="/images/mob-right.png" alt="right" />
+			<img class="hidden md:block" src="{base}/images/right.png" alt="right" />
+			<img class="sm:hidden" src="{base}/images/mob-right.png" alt="right" />
 		</div>
 	</div>
 
-	<div class="bg-arkBlueLight mx-auto flex w-full max-w-7xl flex-row justify-between rounded-xl">
+	<div class="mx-auto flex w-full max-w-7xl flex-row justify-between rounded-xl bg-arkBlueLight">
 		<p class="mt-10 pl-5 text-3xl font-medium">Connect all your devices using P2P technology</p>
 		<div class="p-1">
-			<img src="/images/animations/feature-1.gif" alt="animation" />
+			<img src="{base}/images/animations/feature-1.gif" alt="animation" />
 		</div>
 	</div>
 </div>

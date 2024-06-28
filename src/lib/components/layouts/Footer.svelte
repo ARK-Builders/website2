@@ -9,7 +9,7 @@
 	<div class="mx-auto flex w-full max-w-7xl flex-row">
 		<div class="flex flex-1 flex-col gap-5">
 			<div>
-				<img src="/images/footer-logo.png" class="h-10" alt="footer logo" />
+				<img src="{base}/images/footer-logo.png" class="h-10" alt="footer logo" />
 			</div>
 			<div class="flex flex-row gap-3">
 				<a class="social-icon" href={config.twitter} target="_blank">

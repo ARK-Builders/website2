@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths'
+
 	let activeType = 'ark'
 </script>
 
@@ -32,7 +34,7 @@
 
 			<div class="flex w-full flex-col justify-center gap-16 lg:flex-row">
 				<div class="flex justify-center">
-					<img class="h-fit" src="/images/process/{activeType}-left.png" alt="ARK process" />
+					<img class="h-fit" src="{base}/images/process/{activeType}-left.png" alt="ARK process" />
 				</div>
 				<div class="flex flex-col text-white {activeType != 'typical' && 'lg:justify-end'}">
 					<!-- ARK App -->
@@ -44,7 +46,11 @@
 					</p>
 					<div class="flex flex-col gap-3">
 						{#if activeType == 'ark'}
-							<img class="h-fit" src="/images/process/{activeType}-right.png" alt="ARK process" />
+							<img
+								class="h-fit"
+								src="{base}/images/process/{activeType}-right.png"
+								alt="ARK process"
+							/>
 						{/if}
 					</div>
 
@@ -53,12 +59,12 @@
 						<!-- <p class="text-center text-[32px] font-semibold lg:text-start">Resources Needed</p> -->
 						<div class="flex flex-col items-center gap-3 lg:items-start">
 							<p class="text-2xl">People</p>
-							<img class="w-fit" src="/images/process/typical-right1.png" alt="typical" />
+							<img class="w-fit" src="{base}/images/process/typical-right1.png" alt="typical" />
 						</div>
 						<div class="h-[1px] bg-arkGray3" />
 						<div class="flex flex-col items-center gap-3 lg:items-start">
 							<p class="text-2xl">Infrastructure</p>
-							<img class="w-fit" src="/images/process/typical-right2.png" alt="typical" />
+							<img class="w-fit" src="{base}/images/process/typical-right2.png" alt="typical" />
 						</div>
 					</div>
 				</div>

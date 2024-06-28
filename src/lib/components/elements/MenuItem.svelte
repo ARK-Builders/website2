@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths'
+
 	export let name,
 		description = '',
 		logo = '',
@@ -7,7 +9,7 @@
 
 <div class="flex flex-row gap-3 rounded-md p-1 hover:bg-gray-100">
 	<div class="flex">
-		<img src="/images/app-logos/{logo || 'placeholder'}.png" alt="logo" />
+		<img src="{base}/images/app-logos/{logo || 'placeholder'}.png" alt="logo" />
 	</div>
 	<div class="flex cursor-pointer flex-col">
 		<a href={url} class="font-bold">{name}</a>

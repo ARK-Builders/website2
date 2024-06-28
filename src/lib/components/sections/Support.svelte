@@ -25,10 +25,14 @@
 		<div class="my-5 grid grid-cols-2 gap-2 md:flex md:flex-row">
 			{#each supportLogos as logo}
 				<a href="{base}/" target="_blank">
-					<img src="/images/support/{logo}.png" alt="support logo" />
+					<img src="{base}/images/support/{logo}.png" alt="support logo" />
 				</a>
 			{/each}
 		</div>
 	</div>
-	<img class="absolute right-0 hidden lg:flex" src="/images/support/support.png" alt="support" />
+	<img
+		class="absolute right-0 hidden lg:flex"
+		src="{base}/images/support/support.png"
+		alt="support"
+	/>
 </section>
