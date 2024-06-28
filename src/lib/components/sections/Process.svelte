@@ -1,5 +1,5 @@
 <script lang="ts">
-	let activeType = 'typical'
+	let activeType = 'ark'
 </script>
 
 <section class="relative flex items-center bg-arkGray py-12">
