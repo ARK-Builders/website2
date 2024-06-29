@@ -7,23 +7,23 @@
 	const slides = [
 		{
 			text: 'Connect all your devices using P2P technology',
-			color: '#A5D6FF',
+			color: '#A1D3FF',
 			animation: 'feature-1'
 		},
 		{
 			text: 'Connect all your devices using P2P technology 2',
-			color: '#DBF5C8',
-			animation: 'feature-1'
+			color: '#D9EFC6',
+			animation: 'feature-2'
 		},
 		{
 			text: 'Connect all your devices using P2P technology 3',
-			color: '#E1D0F7',
-			animation: 'feature-1'
+			color: '#E1D4F9',
+			animation: 'feature-3'
 		},
 		{
 			text: 'Connect all your devices using P2P technology 4',
 			color: '#FFEDC3',
-			animation: 'feature-1'
+			animation: 'feature-4'
 		}
 	]
 </script>
@@ -66,15 +66,20 @@
 
 	<div class="mx-auto flex w-full max-w-7xl flex-row rounded-xl">
 		{#if browser}
-			<Carousel dots={false} arrows={false} autoplay autoplayDuration={3000}>
-				{#each slides as { color, text }, i}
+			<Carousel dots={false} arrows={false} autoplay autoplayDuration={5000}>
+				{#each slides as { color, text, animation }, i}
 					<div
 						class="flex w-full flex-row justify-between rounded-xl"
 						style="background-color: {color}"
 					>
 						<p class="mt-10 pl-5 text-3xl font-medium">{text}</p>
 						<div class="p-1">
-							<img src="{base}/images/animations/feature-1.gif" alt="animation" />
+							<!-- svelte-ignore a11y-media-has-caption -->
+							<video width="520" height="440" autoplay loop muted>
+								<source src="{base}/videos/{animation}.mp4" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<!-- <img src="{base}/images/animations/{animation}.gif" alt="animation" /> -->
 						</div>
 					</div>
 				{/each}
