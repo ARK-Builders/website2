@@ -69,17 +69,16 @@
 			<Carousel dots={false} arrows={false} autoplay autoplayDuration={5000}>
 				{#each slides as { color, text, animation }, i}
 					<div
-						class="flex w-full flex-row justify-between rounded-xl"
+						class="flex w-full flex-col justify-between rounded-xl lg:flex-row"
 						style="background-color: {color}"
 					>
-						<p class="mt-10 pl-5 text-3xl font-medium">{text}</p>
-						<div class="p-1">
+						<p class="mt-10 pl-5 text-center text-3xl font-medium lg:text-start">{text}</p>
+						<div class="flex justify-center p-1">
 							<!-- svelte-ignore a11y-media-has-caption -->
-							<video width="520" height="440" autoplay loop muted>
+							<video width="540" height="480" autoplay loop muted>
 								<source src="{base}/videos/{animation}.mp4" type="video/mp4" />
 								Your browser does not support the video tag.
 							</video>
-							<!-- <img src="{base}/images/animations/{animation}.gif" alt="animation" /> -->
 						</div>
 					</div>
 				{/each}
