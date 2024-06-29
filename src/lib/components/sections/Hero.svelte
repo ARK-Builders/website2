@@ -1,6 +1,31 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
+	import Carousel from 'svelte-carousel'
+	import { browser } from '$app/environment'
+
+	const slides = [
+		{
+			text: 'Connect all your devices using P2P technology',
+			color: '#A5D6FF',
+			animation: 'feature-1'
+		},
+		{
+			text: 'Connect all your devices using P2P technology 2',
+			color: '#DBF5C8',
+			animation: 'feature-1'
+		},
+		{
+			text: 'Connect all your devices using P2P technology 3',
+			color: '#E1D0F7',
+			animation: 'feature-1'
+		},
+		{
+			text: 'Connect all your devices using P2P technology 4',
+			color: '#FFEDC3',
+			animation: 'feature-1'
+		}
+	]
 </script>
 
 <div class="mb-16 flex w-full flex-col">
@@ -39,10 +64,21 @@
 		</div>
 	</div>
 
-	<div class="mx-auto flex w-full max-w-7xl flex-row justify-between rounded-xl bg-arkBlueLight">
-		<p class="mt-10 pl-5 text-3xl font-medium">Connect all your devices using P2P technology</p>
-		<div class="p-1">
-			<img src="{base}/images/animations/feature-1.gif" alt="animation" />
-		</div>
+	<div class="mx-auto flex w-full max-w-7xl flex-row rounded-xl">
+		{#if browser}
+			<Carousel dots={false} arrows={false} autoplay autoplayDuration={3000}>
+				{#each slides as { color, text }, i}
+					<div
+						class="flex w-full flex-row justify-between rounded-xl"
+						style="background-color: {color}"
+					>
+						<p class="mt-10 pl-5 text-3xl font-medium">{text}</p>
+						<div class="p-1">
+							<img src="{base}/images/animations/feature-1.gif" alt="animation" />
+						</div>
+					</div>
+				{/each}
+			</Carousel>
+		{/if}
 	</div>
 </div>

@@ -8,5 +8,8 @@ export default defineConfig({
 			$utils: path.resolve('./src/utils')
 		}
 	},
-	plugins: [sveltekit()]
+	plugins: [sveltekit()],
+	optimizeDeps: {
+		include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+	}
 })
