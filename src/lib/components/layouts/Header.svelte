@@ -23,7 +23,7 @@
 				</div>
 			</a>
 
-			<div class="relative ml-5 hidden flex-row items-center gap-1 md:flex">
+			<div class="relative ml-5 hidden flex-row items-center gap-1 lg:flex">
 				{#each navLinks as link}
 					{#if link.title == 'Apps'}
 						<AppMenus {link} />

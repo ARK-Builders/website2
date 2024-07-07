@@ -3,6 +3,7 @@
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Carousel from 'svelte-carousel'
 	import { browser } from '$app/environment'
+	import Icon from '@iconify/svelte'
 
 	const slides = [
 		{
@@ -54,8 +55,17 @@
 				daily user experiences through privacy enhancements and seamless cross-device
 				synchronization.
 			</p>
-			<div class="flex justify-center">
+			<div class="flex items-center justify-center gap-2">
 				<Cta text="Get Started" bgBlack />
+				<div class="flex items-center gap-0">
+					<Cta
+						target="_BLANK"
+						text="View Github"
+						classes="underline pr-2"
+						url="https://github.com/ARK-Builders"
+					/>
+					<Icon icon="ri:github-fill" width="24px" />
+				</div>
 			</div>
 		</div>
 		<div class="flex flex-1 justify-end">

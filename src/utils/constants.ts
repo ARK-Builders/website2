@@ -47,31 +47,31 @@ export const communityList = [
 	{
 		name: 'Discord',
 		logo: 'radix-icons:discord-logo',
-		url: '',
+		url: 'https://discord.gg/tPUJTxud',
 		colors: ['#FFF3E6', '#DD7409'] // 1st lighter, 2nd deeper
 	},
 	{
 		name: 'Telegram',
 		logo: 'iconoir:telegram',
-		url: '',
+		url: 'https://t.me/ark_builders',
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
 		name: 'Github',
 		logo: 'iconoir:github',
-		url: '',
+		url: 'https://github.com/ARK-Builders',
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
 		name: 'Twitter',
 		logo: 'iconoir:twitter',
-		url: '',
+		url: 'https://x.com/ARKBuilders_DEV',
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
 		name: 'Instagram',
 		logo: 'iconoir:instagram',
-		url: '',
+		url: 'https://www.instagram.com/ark.builders.design',
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
@@ -83,13 +83,13 @@ export const communityList = [
 	{
 		name: 'YoutTube',
 		logo: 'iconoir:youtube',
-		url: '',
+		url: 'https://www.youtube.com/@ARK-Builders-Dev',
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
 		name: 'Medium',
 		logo: 'iconoir:medium',
-		url: '',
+		url: 'https://medium.com/me/stories/public',
 		colors: ['#FFF3E6', '#DD7409']
 	}
 ]

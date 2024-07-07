@@ -5,9 +5,11 @@
 	export let bgBlack = false
 	export let classes = ''
 	export let url = '#'
+	export let target = ''
 </script>
 
 <a
+	target={target && target}
 	href={base + url}
 	class="{bgBlack
 		? 'bg-black text-white'
