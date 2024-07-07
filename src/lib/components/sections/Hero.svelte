@@ -30,13 +30,17 @@
 </script>
 
 <div class="mb-16 flex w-full flex-col">
-	<div class="relative mb-10 flex w-full flex-row items-center justify-between gap-1 py-10">
+	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
+		<!-- BG Images -->
 		<div class="flex-1">
 			<img class="hidden md:block" src="{base}/images/left.png" alt="left" />
 			<img class="sm:hidden" src="{base}/images/mob-left.png" alt="left" />
 		</div>
 
-		<div class="absolute flex max-w-2xl flex-col gap-5 md:relative md:gap-14">
+		<!-- Center part -->
+		<div
+			class="absolute flex max-w-2xl flex-col items-center gap-4 sm:w-1/2 sm:gap-10 md:relative lg:w-full"
+		>
 			<div class="flex flex-col items-center gap-2 md:gap-5">
 				<p class="text-center text-3xl font-semibold md:text-[40px] lg:text-[66px]">
 					Neat, efficient and
@@ -67,14 +71,36 @@
 					<Icon icon="ri:github-fill" width="24px" />
 				</div>
 			</div>
+
+			<div class="flex w-fit flex-col gap-2 rounded-full bg-arkOrangeLight px-10 py-5">
+				<p class="text-center">Be the first to know about our latest updates</p>
+				<div class="flex flex-row justify-center gap-5">
+					<a
+						class="bg-arkOrangeLight2 flex h-10 w-10 items-center justify-center rounded-full"
+						href="https://www.youtube.com/@ARK-Builders-Dev"
+						target="_blank"
+					>
+						<Icon icon="iconoir:youtube" width="24px" color="#DD7409" />
+					</a>
+					<a
+						class="bg-arkOrangeLight2 flex h-10 w-10 items-center justify-center rounded-full"
+						href="https://medium.com/me/stories/public"
+						target="_blank"
+					>
+						<Icon icon="iconoir:medium" width="24px" color="#DD7409" />
+					</a>
+				</div>
+			</div>
 		</div>
+
+		<!-- BG Images -->
 		<div class="flex flex-1 justify-end">
 			<img class="hidden md:block" src="{base}/images/right.png" alt="right" />
 			<img class="sm:hidden" src="{base}/images/mob-right.png" alt="right" />
 		</div>
 	</div>
 
-	<div class="mx-auto flex w-full max-w-7xl flex-row rounded-xl">
+	<div class="mx-auto flex w-full max-w-7xl flex-row rounded-xl sm:px-8 lg:px-0">
 		{#if browser}
 			<Carousel dots={false} arrows={false} autoplay autoplayDuration={5000}>
 				{#each slides as { color, text, animation }, i}

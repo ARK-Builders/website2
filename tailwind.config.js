@@ -11,6 +11,7 @@ export default {
 			colors: {
 				arkOrange: '#DD7409',
 				arkOrangeLight: '#FFF3E6',
+				arkOrangeLight2: '#FFE0BF',
 				arkOrangeLighter: '#FFF5DD',
 
 				arkBlueLight: '#A5D6FF',

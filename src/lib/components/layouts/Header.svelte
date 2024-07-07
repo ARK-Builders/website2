@@ -7,10 +7,11 @@
 	import { page } from '$app/stores'
 	import { base } from '$app/paths'
 	import CommunityMenus from '../CommunityMenus.svelte'
+	import Icon from '@iconify/svelte'
 </script>
 
 <header class="sticky top-0 z-10 bg-arkGray bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
-	<div class="mx-auto flex h-[72px] items-center justify-between xl:max-w-7xl">
+	<div class="mx-auto flex h-[72px] items-center justify-between sm:px-8 lg:px-0 xl:max-w-7xl">
 		<div class="flex flex-row items-center">
 			<a href="{base}/" aria-label={config.headerTitle}>
 				<div class="flex items-center justify-between">
@@ -46,12 +47,9 @@
 		</div>
 		<div class="flex flex-row items-center gap-3 text-base leading-5">
 			<GetStarted bgOrange classes="hidden sm:flex" />
-			<!-- <a class="hidden text-white md:flex" href={config.twitter} target="_blank">
-				<Twitter />
-			</a>
-			<a class="hidden text-white md:flex" href={config.github} target="_blank">
-				<Github />
-			</a> -->
+			<button class="flex lg:hidden">
+				<Icon icon="ic:outline-menu" width="34px" color="white" />
+			</button>
 			<!-- <MobileMenu /> -->
 		</div>
 	</div>

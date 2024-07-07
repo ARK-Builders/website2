@@ -12,7 +12,7 @@ export const config = {
 	email: 'info@ark-builders.dev',
 	github: 'https://github.com/ARK-Builders',
 	twitter: 'https://twitter.com/ARKBuilders_DEV',
-	linkedin: 'https://www.linkedin.com/in/prokawsar/',
+	linkedin: '',
 	locale: 'en-US',
 	primaryColor: '#06a261',
 	newsletter: 'mailchimp',
