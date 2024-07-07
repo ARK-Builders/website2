@@ -30,8 +30,9 @@ export const navLinks = [
 	{ href: '/', title: 'Home' },
 	{ href: '#', title: 'Apps' },
 	// { href: 'https://ark-builders.notion.site/Research-0e9029fa5e704ddfa8b6786b794a2f17', title: 'Research' },
-	{ href: '/#', title: 'Devs Dashboard' },
-	{ href: '/blog', title: 'Blog' }
+	{ href: '/devs-dashboard', title: 'Devs Dashboard' },
+	{ href: '/blog', title: 'Blog' },
+	{ href: '#', title: 'Community' }
 	// { href: '/', title: 'Support' },
 ]
 

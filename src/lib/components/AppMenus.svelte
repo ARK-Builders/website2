@@ -2,17 +2,22 @@
 	import { base } from '$app/paths'
 	import MenuItem from '$lib/components/elements/MenuItem.svelte'
 	import { appList } from '$utils/constants'
+	import Icon from '@iconify/svelte'
+
 	export let link
 </script>
 
 <div class="menus">
 	<a
 		href={base + link.href}
-		class="p-1 font-medium text-white hover:text-arkOrange sm:p-2 dark:text-gray-100"
-		>{link.title}</a
+		class="flex items-center p-1 font-medium text-white hover:text-arkOrange sm:p-2 dark:text-gray-100"
 	>
+		{link.title}
+		<Icon icon="ic:outline-keyboard-arrow-down" width="24px" />
+	</a>
 	<div
-		class="apps-menu absolute left-16 top-8 grid w-96 grid-cols-2 rounded-xl border border-gray-300 bg-white p-4"
+		id="apps-menu"
+		class="absolute left-16 top-10 grid w-96 grid-cols-2 rounded-xl border border-gray-300 bg-white p-4"
 	>
 		<div class="flex w-44 flex-col">
 			{#each appList.slice(0, 3) as menu}
@@ -28,10 +33,10 @@
 </div>
 
 <style lang="postcss">
-	.apps-menu {
+	#apps-menu {
 		display: none;
 	}
-	.menus:hover .apps-menu {
+	.menus:hover #apps-menu {
 		display: grid;
 	}
 </style>

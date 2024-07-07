@@ -6,6 +6,7 @@
 	import AppMenus from '$lib/components/AppMenus.svelte'
 	import { page } from '$app/stores'
 	import { base } from '$app/paths'
+	import CommunityMenus from '../CommunityMenus.svelte'
 </script>
 
 <header class="sticky top-0 z-10 bg-arkGray bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
@@ -22,10 +23,12 @@
 				</div>
 			</a>
 
-			<div class="relative ml-5 hidden flex-row gap-1 md:flex">
+			<div class="relative ml-5 hidden flex-row items-center gap-1 md:flex">
 				{#each navLinks as link}
 					{#if link.title == 'Apps'}
 						<AppMenus {link} />
+					{:else if link.title == 'Community'}
+						<CommunityMenus {link} />
 					{:else}
 						<div>
 							<a
@@ -43,12 +46,12 @@
 		</div>
 		<div class="flex flex-row items-center gap-3 text-base leading-5">
 			<GetStarted bgOrange classes="hidden sm:flex" />
-			<a class="hidden text-white md:flex" href={config.twitter} target="_blank">
+			<!-- <a class="hidden text-white md:flex" href={config.twitter} target="_blank">
 				<Twitter />
 			</a>
 			<a class="hidden text-white md:flex" href={config.github} target="_blank">
 				<Github />
-			</a>
+			</a> -->
 			<!-- <MobileMenu /> -->
 		</div>
 	</div>

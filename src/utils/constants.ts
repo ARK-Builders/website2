@@ -43,3 +43,53 @@ export const appList = [
 		colors: ['#A5D6FF', '#60B1F4']
 	}
 ]
+export const communityList = [
+	{
+		name: 'Discord',
+		logo: 'radix-icons:discord-logo',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409'] // 1st lighter, 2nd deeper
+	},
+	{
+		name: 'Telegram',
+		logo: 'iconoir:telegram',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409']
+	},
+	{
+		name: 'Github',
+		logo: 'iconoir:github',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409']
+	},
+	{
+		name: 'Twitter',
+		logo: 'iconoir:twitter',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409']
+	},
+	{
+		name: 'Instagram',
+		logo: 'iconoir:instagram',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409']
+	},
+	{
+		name: 'LinkedIn',
+		logo: 'iconoir:linkedin',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409']
+	},
+	{
+		name: 'YoutTube',
+		logo: 'iconoir:youtube',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409']
+	},
+	{
+		name: 'Medium',
+		logo: 'iconoir:medium',
+		url: '',
+		colors: ['#FFF3E6', '#DD7409']
+	}
+]
