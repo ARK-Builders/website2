@@ -63,7 +63,7 @@
 				<Cta text="Get Started" bgBlack />
 				<div class="flex items-center gap-0">
 					<Cta
-						target="_BLANK"
+						target="_blank"
 						text="View Github"
 						classes="underline pr-2"
 						url="https://github.com/ARK-Builders"

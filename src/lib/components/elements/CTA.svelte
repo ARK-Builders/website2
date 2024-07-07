@@ -10,7 +10,7 @@
 
 <a
 	target={target && target}
-	href={base + url}
+	href={url.indexOf('https://') != -1 ? url : base + url}
 	class="{bgBlack
 		? 'bg-black text-white'
 		: 'bg-white text-black'} flex h-11 w-fit items-center rounded-md px-4 text-xl {classes}"
