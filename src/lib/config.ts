@@ -11,7 +11,7 @@ export const config = {
 	// image: '/img/avatar.png',
 	email: 'info@ark-builders.dev',
 	github: 'https://github.com/ARK-Builders',
-	twitter: 'https://twitter.com/ARKBuilders_DEV',
+	twitter: 'https://x.com/ARKBuilders_DEV',
 	linkedin: '',
 	locale: 'en-US',
 	primaryColor: '#06a261',

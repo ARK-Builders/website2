@@ -19,12 +19,12 @@
 		id="apps-menu"
 		class="absolute left-16 top-10 grid w-96 grid-cols-2 rounded-xl border border-gray-300 bg-white p-4"
 	>
-		<div class="flex w-44 flex-col">
+		<div class="flex w-44 flex-col gap-2">
 			{#each appList.slice(0, 3) as menu}
 				<MenuItem description={menu.description} name={menu.name} logo={menu.logo} />
 			{/each}
 		</div>
-		<div class="flex w-40 flex-col">
+		<div class="flex w-40 flex-col gap-2">
 			{#each appList.slice(3) as menu}
 				<MenuItem name={menu.name} logo={menu.logo} />
 			{/each}
