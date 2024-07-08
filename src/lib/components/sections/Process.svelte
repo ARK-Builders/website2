@@ -7,12 +7,12 @@
 <section class="relative flex items-center bg-arkGray py-12">
 	<div class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-5 lg:gap-10 lg:px-0">
 		<div class="flex w-full flex-col gap-4">
-			<p class="text-center text-6xl font-bold text-white">Process</p>
+			<p class="text-center text-4xl font-bold text-white lg:text-6xl">Process</p>
 		</div>
 
 		<div class="flex w-full flex-col items-center justify-center gap-7">
 			<div
-				class="flex h-12 w-fit flex-row items-center justify-between overflow-hidden rounded-full bg-arkOrange bg-opacity-40 text-2xl font-semibold text-white"
+				class="flex h-11 w-fit flex-row items-center justify-between overflow-hidden rounded-full bg-arkOrange bg-opacity-40 text-lg font-semibold text-white lg:h-12 lg:text-2xl"
 			>
 				<button
 					on:click={() => (activeType = 'ark')}

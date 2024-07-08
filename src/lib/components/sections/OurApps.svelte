@@ -6,10 +6,10 @@
 	let activeApp = appList[0]
 </script>
 
-<section class="relative flex items-center py-12">
-	<div class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-5 lg:gap-10 lg:px-0">
+<section class="relative flex py-12">
+	<div class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 lg:gap-10 lg:px-0">
 		<div class="flex w-full flex-col gap-4">
-			<p class="text-center text-6xl font-bold">Our Apps</p>
+			<p class="text-center text-4xl font-bold lg:text-6xl">Our Apps</p>
 		</div>
 
 		<div class="flex w-full flex-col gap-7 lg:flex-row">
@@ -33,11 +33,19 @@
 			<!-- App details -->
 			<div
 				style="background-color: {activeApp.colors[0]};"
-				class="flex w-full flex-col justify-between rounded-md p-5 lg:w-4/5"
+				class="flex w-full flex-col items-center justify-between gap-3 rounded-md p-5 lg:w-4/5 lg:items-start"
 			>
-				<div class="flex flex-col gap-3">
-					<p class="text-3xl font-bold">{activeApp.name}</p>
-					<p>{activeApp.description}</p>
+				<div class="flex flex-col items-center gap-3 lg:items-start">
+					<p class="text-center text-2xl font-bold lg:text-start lg:text-3xl">{activeApp.name}</p>
+					<p class="text-center lg:text-start">{activeApp.description}</p>
+					<div class="flex-flow flex gap-3 overflow-auto">
+						{#each new Array(3) as a, i}
+							<img
+								src="{base}/images/apps/{activeApp.name.toLowerCase() + '/' + (i + 1)}.png"
+								alt="app screens"
+							/>
+						{/each}
+					</div>
 				</div>
 				<Cta text="Learn More" bgBlack classes="" />
 			</div>

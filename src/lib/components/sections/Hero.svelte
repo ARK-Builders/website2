@@ -72,18 +72,20 @@
 				</div>
 			</div>
 
-			<div class="flex w-fit flex-col gap-2 rounded-full bg-arkOrangeLight px-10 py-5">
+			<div
+				class="flex w-fit flex-col gap-2 rounded-full bg-arkOrangeLight px-7 py-3 lg:px-10 lg:py-5"
+			>
 				<p class="text-center">Be the first to know about our latest updates</p>
 				<div class="flex flex-row justify-center gap-5">
 					<a
-						class="bg-arkOrangeLight2 flex h-10 w-10 items-center justify-center rounded-full"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
 						href="https://www.youtube.com/@ARK-Builders-Dev"
 						target="_blank"
 					>
 						<Icon icon="iconoir:youtube" width="24px" color="#DD7409" />
 					</a>
 					<a
-						class="bg-arkOrangeLight2 flex h-10 w-10 items-center justify-center rounded-full"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
 						href="https://medium.com/me/stories/public"
 						target="_blank"
 					>
