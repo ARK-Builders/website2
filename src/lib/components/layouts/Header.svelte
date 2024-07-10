@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { config, navLinks } from '$lib/config'
-	import Twitter from '$lib/icons/twitter.svelte'
-	import Github from '$lib/icons/github.svelte'
 	import GetStarted from '$lib/components/GetStarted.svelte'
 	import AppMenus from '$lib/components/AppMenus.svelte'
 	import { page } from '$app/stores'
 	import { base } from '$app/paths'
-	import CommunityMenus from '../CommunityMenus.svelte'
+	import CommunityMenus from '$lib/components/CommunityMenus.svelte'
 	import Icon from '@iconify/svelte'
+	import MobileMenu from '$lib/components/layouts/MobileMenu.svelte'
+
+	let showMobileMenu = false
 </script>
 
 <header class="sticky top-0 z-10 bg-arkGray bg-opacity-95 px-5 md:px-0 dark:bg-gray-900">
@@ -47,10 +48,12 @@
 		</div>
 		<div class="flex flex-row items-center gap-3 text-base leading-5">
 			<GetStarted bgOrange classes="hidden sm:flex" />
-			<button class="flex lg:hidden">
+			<button class="flex lg:hidden" on:click={() => (showMobileMenu = !showMobileMenu)}>
 				<Icon icon="ic:outline-menu" width="34px" color="white" />
 			</button>
-			<!-- <MobileMenu /> -->
 		</div>
+		{#if showMobileMenu}
+			<MobileMenu bind:showMobileMenu />
+		{/if}
 	</div>
 </header>

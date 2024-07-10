@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
-	import { config } from '$lib/config'
-	import Github from '$lib/icons/github.svelte'
-	import Twitter from '$lib/icons/twitter.svelte'
+	import { communityList } from '$utils/constants'
+	import Icon from '@iconify/svelte'
 </script>
 
 <footer class="bg-white px-5 pb-10 pt-40 md:px-0">
@@ -11,13 +10,21 @@
 			<div>
 				<img src="{base}/images/footer-logo.png" class="h-10" alt="footer logo" />
 			</div>
-			<div class="flex flex-row gap-3">
-				<a class="social-icon" href={config.twitter} target="_blank">
-					<Twitter />
-				</a>
-				<a class="social-icon" href={config.github} target="_blank">
-					<Github />
-				</a>
+			<div class="grid grid-cols-2 flex-row gap-3 lg:flex">
+				{#each communityList as community}
+					<a
+						target="_blank"
+						href={community.url}
+						class="flex h-10 cursor-pointer flex-row items-center gap-4 hover:text-arkOrange"
+					>
+						<div
+							class="flex h-full w-10 items-center justify-center rounded-full"
+							style="background-color: {community.colors[0]}"
+						>
+							<Icon icon={community.logo} color={community.colors[1]} width="24px" />
+						</div>
+					</a>
+				{/each}
 			</div>
 		</div>
 		<div class="flex w-full flex-1 auto-rows-auto grid-cols-3 flex-col gap-3 md:grid">
