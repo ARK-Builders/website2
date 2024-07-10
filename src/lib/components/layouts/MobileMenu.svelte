@@ -22,6 +22,7 @@
 			{:else}
 				<div>
 					<a
+						on:click={() => (showMobileMenu = false)}
 						href={base + link.href}
 						class:underline={$page.url.pathname == link.href}
 						class:!text-arkOrange={$page.url.pathname == link.href}
