@@ -1,7 +1,22 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 
-	const supportLogos = ['bitcoin', 'ethereum', 'buycoffee', 'patreon']
+	const supportLogos = [
+		{
+			name: 'bitcoin',
+			onClick: () => {
+				console.log('bitcoin')
+			}
+		},
+		{
+			name: 'ethereum',
+			onClick: () => {
+				console.log('ethereum')
+			}
+		},
+		{ name: 'buycoffee', url: 'https://buymeacoffee.com/arkbuilders' },
+		{ name: 'patreon', url: 'https://www.patreon.com/ARKBuilders' }
+	]
 </script>
 
 <section class="relative flex items-center bg-arkOrangeLight py-14">
@@ -24,8 +39,15 @@
 		</div>
 		<div class="my-5 grid grid-cols-2 gap-2 md:flex md:flex-row">
 			{#each supportLogos as logo}
-				<a href="{base}/" target="_blank">
-					<img src="{base}/images/support/{logo}.png" alt="support logo" />
+				<a
+					href={logo.url || base + '/'}
+					target="_blank"
+					on:click={(e) => {
+						if (['bitcoin', 'ethereum'].includes(logo.name)) e.preventDefault()
+						logo.onClick ? logo.onClick() : ''
+					}}
+				>
+					<img src="{base}/images/support/{logo.name}.png" alt="support logo" />
 				</a>
 			{/each}
 		</div>

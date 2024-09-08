@@ -56,10 +56,6 @@
 </footer>
 
 <style lang="postcss">
-	.social-icon {
-		@apply flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight text-arkOrange;
-	}
-
 	tr td {
 		@apply py-1;
 	}
