@@ -29,7 +29,7 @@
 		</div>
 		<div class="flex w-full flex-1 auto-rows-auto grid-cols-3 flex-col gap-3 md:grid">
 			<div>
-				<p class="text-xl font-semibold">Apps</p>
+				<p class="pb-2 text-xl font-semibold">Apps</p>
 				<table class="text-xl text-gray-400">
 					<tr>
 						<td> Memo </td>
@@ -58,5 +58,9 @@
 <style lang="postcss">
 	.social-icon {
 		@apply flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight text-arkOrange;
+	}
+
+	tr td {
+		@apply py-1;
 	}
 </style>

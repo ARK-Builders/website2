@@ -27,6 +27,8 @@
 			animation: 'feature-4'
 		}
 	]
+
+	let hoverGithub = false
 </script>
 
 <div class="mb-16 flex w-full flex-col">
@@ -63,12 +65,13 @@
 				<Cta text="Get Started" bgBlack />
 				<div class="flex items-center gap-0">
 					<Cta
+						on:hover={(e) => (hoverGithub = e.detail)}
 						target="_blank"
 						text="View Github"
 						classes="underline pr-2"
 						url="https://github.com/ARK-Builders"
 					/>
-					<Icon icon="ri:github-fill" width="24px" />
+					<Icon class={hoverGithub ? 'text-arkOrange' : ''} icon="ri:github-fill" width="24px" />
 				</div>
 			</div>
 

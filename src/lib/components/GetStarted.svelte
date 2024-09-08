@@ -8,7 +8,7 @@
 <a
 	href="{base}#"
 	class="{bgOrange
-		? 'bg-arkOrange'
+		? 'hover:bg-arkOrangeDeep bg-arkOrange'
 		: 'bg-black'} flex h-10 items-center rounded-md px-4 text-white {classes}"
 >
 	Get Started
