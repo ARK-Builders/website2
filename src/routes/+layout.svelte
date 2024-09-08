@@ -4,8 +4,6 @@
 	import Header from '$lib/components/layouts/Header.svelte'
 	import Transition from '$lib/components/layouts/Transition.svelte'
 	import Footer from '$lib/components/layouts/Footer.svelte'
-
-	export let data
 </script>
 
 <div class="mx-auto md:px-0">

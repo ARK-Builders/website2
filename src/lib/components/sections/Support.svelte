@@ -1,22 +1,44 @@
 <script lang="ts">
 	import { base } from '$app/paths'
+	import Modal from '$lib/components/elements/Modal.svelte'
+	import Icon from '@iconify/svelte'
+
+	let modalData = {
+		show: false,
+		type: '',
+		address: ''
+	}
+	let copied = false
+	let timeout: ReturnType<typeof setTimeout> | null = null
 
 	const supportLogos = [
 		{
 			name: 'bitcoin',
 			onClick: () => {
-				console.log('bitcoin')
+				modalData.show = true
+				modalData.type = 'bitcoin'
+				modalData.address = 'bc1qx8n9r4uwpgrhgnamt2uew53lmrxd8tuevp7lv5'
 			}
 		},
 		{
 			name: 'ethereum',
 			onClick: () => {
-				console.log('ethereum')
+				modalData.show = true
+				modalData.type = 'etheruem'
+				modalData.address = '0x9765C5aC38175BFbd2dC7a840b63e50762B80a1b'
 			}
 		},
 		{ name: 'buycoffee', url: 'https://buymeacoffee.com/arkbuilders' },
 		{ name: 'patreon', url: 'https://www.patreon.com/ARKBuilders' }
 	]
+
+	const copyAddress = (value: string) => {
+		navigator.clipboard.writeText(value)
+		copied = true
+
+		if (timeout) clearTimeout(timeout)
+		timeout = setTimeout(() => (copied = false), 3000)
+	}
 </script>
 
 <section class="relative flex items-center bg-arkOrangeLight py-14">
@@ -58,3 +80,26 @@
 		alt="support"
 	/>
 </section>
+
+<Modal bind:show={modalData.show}>
+	<div class="flex flex-col items-center gap-2">
+		<div class="flex w-full flex-col items-center gap-3">
+			<p class="text-xl font-bold">Donate using {modalData.type}</p>
+			<div class="flex h-10 w-full flex-row">
+				<input class="w-full border px-2" value={modalData.address} disabled readonly />
+				<button
+					disabled={copied}
+					class="border px-2"
+					on:click={() => copyAddress(modalData.address)}
+				>
+					<Icon icon={copied ? 'tabler:copy-check-filled' : 'lucide:copy'} width="18px" />
+				</button>
+			</div>
+
+			<p class="mt-10 px-5 text-center text-sm">
+				Send us the transaction id by email support@ark-builders.dev to receive premium support. We
+				will make our best to help you with any issue you encounter while using our Software.
+			</p>
+		</div>
+	</div>
+</Modal>
