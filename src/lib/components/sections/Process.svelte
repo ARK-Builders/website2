@@ -1,7 +1,26 @@
 <script lang="ts">
 	import { base } from '$app/paths'
+	import { onMount } from 'svelte'
 
-	let activeType = 'ark'
+	type Tab = 'typical' | 'ark'
+
+	let activeType: Tab = 'typical'
+	let intervalId: number | undefined = undefined
+
+	onMount(() => {
+		intervalId = setInterval(() => {
+			activeType = activeType == 'typical' ? 'ark' : 'typical'
+		}, 5000)
+
+		return () => {
+			clearInterval(intervalId)
+		}
+	})
+
+	const setActiveType = (type: Tab) => {
+		activeType = type
+		clearInterval(intervalId)
+	}
 </script>
 
 <section class="relative flex items-center bg-arkGray py-12">
@@ -15,7 +34,7 @@
 				class="flex h-11 w-fit flex-row items-center justify-between overflow-hidden rounded-full bg-arkOrange bg-opacity-40 text-lg font-semibold text-white lg:h-12 lg:text-2xl"
 			>
 				<button
-					on:click={() => (activeType = 'ark')}
+					on:click={() => setActiveType('ark')}
 					class:bg-arkOrange={activeType == 'ark'}
 					class:text-arkGray4={activeType != 'ark'}
 					class="flex h-full items-center justify-center rounded-full px-6"
@@ -23,7 +42,7 @@
 					Suggested by ARK
 				</button>
 				<button
-					on:click={() => (activeType = 'typical')}
+					on:click={() => setActiveType('typical')}
 					class:bg-arkOrange={activeType == 'typical'}
 					class:text-arkGray4={activeType != 'typical'}
 					class="flex h-full items-center justify-center rounded-full px-5"
