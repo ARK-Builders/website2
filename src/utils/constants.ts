@@ -93,3 +93,6 @@ export const communityList = [
 		colors: ['#FFF3E6', '#DD7409']
 	}
 ]
+
+export const BTC_ADDRESS = 'bc1qx8n9r4uwpgrhgnamt2uew53lmrxd8tuevp7lv5'
+export const ETH_ADDRESS = '0x9765C5aC38175BFbd2dC7a840b63e50762B80a1b'

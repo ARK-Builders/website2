@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import Modal from '$lib/components/elements/Modal.svelte'
+	import { BTC_ADDRESS, ETH_ADDRESS } from '$utils/constants'
 	import Icon from '@iconify/svelte'
+	import QR from '@svelte-put/qr/img/QR.svelte'
 
 	let modalData = {
 		show: false,
@@ -17,7 +19,7 @@
 			onClick: () => {
 				modalData.show = true
 				modalData.type = 'bitcoin'
-				modalData.address = 'bc1qx8n9r4uwpgrhgnamt2uew53lmrxd8tuevp7lv5'
+				modalData.address = BTC_ADDRESS
 			}
 		},
 		{
@@ -25,7 +27,7 @@
 			onClick: () => {
 				modalData.show = true
 				modalData.type = 'etheruem'
-				modalData.address = '0x9765C5aC38175BFbd2dC7a840b63e50762B80a1b'
+				modalData.address = ETH_ADDRESS
 			}
 		},
 		{ name: 'buycoffee', url: 'https://buymeacoffee.com/arkbuilders' },
@@ -85,6 +87,15 @@
 	<div class="flex flex-col items-center gap-2">
 		<div class="flex w-full flex-col items-center gap-3">
 			<p class="text-xl font-bold">Donate using {modalData.type}</p>
+			<QR
+				data={modalData.address}
+				backgroundFill="white"
+				moduleFill="#DD7409"
+				anchorInnerFill="#DD7409"
+				anchorOuterFill="#C96000"
+				width="400"
+				height="400"
+			/>
 			<div class="flex h-10 w-full flex-row">
 				<input class="w-full border px-2" value={modalData.address} disabled readonly />
 				<button
@@ -96,7 +107,7 @@
 				</button>
 			</div>
 
-			<p class="mt-10 px-5 text-center text-sm">
+			<p class="mt-6 px-5 text-center text-sm">
 				Send us the transaction id by email support@ark-builders.dev to receive premium support. We
 				will make our best to help you with any issue you encounter while using our Software.
 			</p>

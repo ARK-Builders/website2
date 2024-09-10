@@ -17,7 +17,7 @@
 			class="relative flex w-1/4 flex-col rounded border bg-white p-2 shadow"
 		>
 			<button
-				class="absolute right-0 top-0 w-fit rounded-full p-[3px]"
+				class="absolute right-0 top-0 flex w-fit items-center justify-center rounded-full p-[2px] hover:bg-gray-100"
 				on:click|stopPropagation={() => (show = false)}
 			>
 				<Icon icon="majesticons:multiply" width="20px" />
