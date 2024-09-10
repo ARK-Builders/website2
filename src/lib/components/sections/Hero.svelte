@@ -35,7 +35,7 @@
 	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
 		<!-- BG Images -->
 		<div class="flex-1">
-			<img class="hidden md:block" src="{base}/images/left.png" alt="left" />
+			<img class="hidden max-w-[60%] md:block" src="{base}/images/left.png" alt="left" />
 			<img class="sm:hidden" src="{base}/images/mob-left.png" alt="left" />
 		</div>
 
@@ -100,7 +100,7 @@
 
 		<!-- BG Images -->
 		<div class="flex flex-1 justify-end">
-			<img class="hidden md:block" src="{base}/images/right.png" alt="right" />
+			<img class="hidden max-w-[50%] md:block" src="{base}/images/right.png" alt="right" />
 			<img class="sm:hidden" src="{base}/images/mob-right.png" alt="right" />
 		</div>
 	</div>
