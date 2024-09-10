@@ -8,22 +8,22 @@
 	const slides = [
 		{
 			text: 'Connect all your devices using P2P technology',
-			color: '#A1D3FF',
+			color: '#ACD6FC',
 			animation: 'feature-1'
 		},
 		{
 			text: 'Connect all your devices using P2P technology 2',
-			color: '#D9EFC6',
+			color: '#DDEDCC',
 			animation: 'feature-2'
 		},
 		{
 			text: 'Connect all your devices using P2P technology 3',
-			color: '#E1D4F9',
+			color: '#E3D6F7',
 			animation: 'feature-3'
 		},
 		{
 			text: 'Connect all your devices using P2P technology 4',
-			color: '#FFEDC3',
+			color: '#FDEAC8',
 			animation: 'feature-4'
 		}
 	]
@@ -127,3 +127,10 @@
 		{/if}
 	</div>
 </div>
+
+<style>
+	video {
+		filter: brightness(105%);
+		-webkit-filter: brightness(105%);
+	}
+</style>
