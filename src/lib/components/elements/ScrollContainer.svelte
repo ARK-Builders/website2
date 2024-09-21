@@ -4,6 +4,7 @@
 	export let maxHeight = '380px'
 
 	let containerRef: HTMLDivElement
+	let contentRef: HTMLDivElement
 	let isScrolling = false
 	let isVisible = false
 	let observer: IntersectionObserver
@@ -15,13 +16,22 @@
 		const container = containerRef
 		const { scrollTop, scrollHeight, clientHeight } = container
 		const isAtTop = scrollTop === 0
-		console.log(window.scrollY)
-		console.log(clientHeight, container.offsetTop)
-
+		const isAtBottom = contentRef.clientHeight === Math.floor(scrollTop + clientHeight)
+		const scrollDiv = () => {
+			event.preventDefault()
+			event.stopPropagation()
+			container.scrollTop += event.deltaY
+		}
 		if (event.deltaY > 0) {
 			// Scrolling down
+			if (!isAtBottom) {
+				scrollDiv()
+			}
 		} else if (event.deltaY < 0) {
 			// Scrolling up
+			if (!isAtTop) {
+				scrollDiv()
+			}
 		}
 
 		isScrolling = false
@@ -55,10 +65,12 @@
 
 <div
 	bind:this={containerRef}
-	class="flex w-full snap-y flex-col gap-2 overflow-y-auto rounded-xl"
+	class="flex w-full snap-y flex-col overflow-y-auto rounded-xl"
 	style="max-height: {maxHeight};"
 >
-	<slot></slot>
+	<div bind:this={contentRef} class="flex flex-col gap-2">
+		<slot />
+	</div>
 </div>
 
 <style>

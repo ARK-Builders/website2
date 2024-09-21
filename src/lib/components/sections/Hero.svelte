@@ -3,6 +3,7 @@
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import { browser } from '$app/environment'
 	import Icon from '@iconify/svelte'
+	import ScrollContainer from '$lib/components/elements/ScrollContainer.svelte'
 
 	const slides = [
 		{
@@ -106,12 +107,10 @@
 
 	<div class="mx-auto flex w-full max-w-7xl flex-row sm:px-8 lg:px-0">
 		{#if browser}
-			<div
-				class="flex max-h-[380px] w-full snap-y snap-proximity flex-col gap-2 overflow-y-auto rounded-xl"
-			>
+			<ScrollContainer>
 				{#each slides as { color, text, animation }, i}
 					<div
-						class="flex w-full snap-center flex-col justify-between rounded-xl lg:flex-row"
+						class="flex w-full flex-col justify-between rounded-xl lg:flex-row"
 						style="background-color: {color}"
 					>
 						<p class="mt-10 pl-5 text-center text-3xl font-medium lg:text-start">{text}</p>
@@ -124,7 +123,7 @@
 						</div>
 					</div>
 				{/each}
-			</div>
+			</ScrollContainer>
 		{/if}
 	</div>
 </div>
