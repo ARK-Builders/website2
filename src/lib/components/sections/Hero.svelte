@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
-	import Carousel from 'svelte-carousel'
 	import { browser } from '$app/environment'
 	import Icon from '@iconify/svelte'
+	import ScrollContainer from '$lib/components/elements/ScrollContainer.svelte'
 
 	const slides = [
 		{
@@ -105,9 +105,9 @@
 		</div>
 	</div>
 
-	<div class="mx-auto flex w-full max-w-7xl flex-row rounded-xl sm:px-8 lg:px-0">
+	<div class="mx-auto flex w-full max-w-7xl flex-row sm:px-8 lg:px-0">
 		{#if browser}
-			<Carousel dots={false} arrows={false} autoplay autoplayDuration={5000}>
+			<ScrollContainer>
 				{#each slides as { color, text, animation }, i}
 					<div
 						class="flex w-full flex-col justify-between rounded-xl lg:flex-row"
@@ -123,7 +123,7 @@
 						</div>
 					</div>
 				{/each}
-			</Carousel>
+			</ScrollContainer>
 		{/if}
 	</div>
 </div>
@@ -132,5 +132,9 @@
 	video {
 		filter: brightness(105%);
 		-webkit-filter: brightness(105%);
+	}
+
+	::-webkit-scrollbar {
+		display: none;
 	}
 </style>
