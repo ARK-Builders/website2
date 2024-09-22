@@ -20,7 +20,7 @@
 		const scrollDiv = () => {
 			event.preventDefault()
 			event.stopPropagation()
-			container.scrollTop += event.deltaY
+			container.scrollTop += event.deltaY * 3.8
 		}
 		if (event.deltaY > 0) {
 			// Scrolling down
@@ -46,7 +46,7 @@
 
 		observer = new IntersectionObserver(handleIntersection, {
 			root: null,
-			rootMargin: '0px',
+			rootMargin: '-100px',
 			threshold: 1.0
 		})
 
@@ -65,7 +65,7 @@
 
 <div
 	bind:this={containerRef}
-	class="flex w-full snap-y flex-col overflow-y-auto rounded-xl"
+	class="flex w-full flex-col overflow-y-auto scroll-smooth rounded-xl"
 	style="max-height: {maxHeight};"
 >
 	<div bind:this={contentRef} class="flex flex-col gap-2">
