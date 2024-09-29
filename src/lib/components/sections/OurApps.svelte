@@ -41,8 +41,9 @@
 					<div class="flex-flow flex gap-3 overflow-auto">
 						{#each new Array(3) as a, i}
 							<img
+								class="max-h-[500px]"
 								src="{base}/images/apps/{activeApp.name.toLowerCase() + '/' + (i + 1)}.png"
-								alt="app screens"
+								alt="{activeApp.name} app screens"
 							/>
 						{/each}
 					</div>
