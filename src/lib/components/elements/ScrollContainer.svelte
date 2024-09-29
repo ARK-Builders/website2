@@ -65,7 +65,7 @@
 
 <div
 	bind:this={containerRef}
-	class="flex w-full flex-col overflow-y-auto scroll-smooth rounded-xl"
+	class="flex w-full flex-col overflow-y-auto scroll-smooth rounded-xl lg:h-[317px] xl:h-full"
 	style="max-height: {maxHeight};"
 >
 	<div bind:this={contentRef} class="flex flex-col gap-2">

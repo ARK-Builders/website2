@@ -7,7 +7,7 @@
 	import Icon from '@iconify/svelte'
 </script>
 
-<section class="relative flex items-center bg-arkGray py-24">
+<section class="relative flex items-center bg-arkGray py-24 lg:px-5 xl:px-0">
 	<div
 		class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-5 lg:flex-row lg:items-start lg:px-0"
 	>
@@ -41,7 +41,7 @@
 			</ContributeCard>
 
 			<ContributeCard title="Replace alphabetical sorting by un-sorting">
-				<div class="flex flex-row gap-2" slot="title-tag">
+				<div class="flex flex-row flex-wrap gap-2" slot="title-tag">
 					<Tag>
 						<Icon icon="ri:svelte-line" />
 						Svelte</Tag

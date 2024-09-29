@@ -43,7 +43,7 @@
 	}
 </script>
 
-<section class="relative flex items-center bg-arkOrangeLight py-14">
+<section class="relative flex items-center bg-arkOrangeLight py-14 lg:px-5 xl:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 lg:items-start">
 		<div class="flex flex-col gap-3 px-10 md:px-0">
 			<p class="text-center text-xl font-semibold uppercase text-arkOrange lg:text-start">

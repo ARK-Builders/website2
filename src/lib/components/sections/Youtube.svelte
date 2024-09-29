@@ -10,7 +10,7 @@
 	]
 </script>
 
-<section class="relative flex items-center pb-16">
+<section class="relative flex items-center pb-16 lg:px-5 xl:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-col gap-5 rounded-xl bg-[#FC0D1B]/20 p-5">
 		<div class="flex flex-row items-center justify-between">
 			<div class="flex flex-col items-start gap-2 sm:flex-row sm:items-center">

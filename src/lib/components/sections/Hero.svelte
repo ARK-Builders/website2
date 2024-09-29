@@ -35,7 +35,7 @@
 	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
 		<!-- BG Images -->
 		<div class="flex-1">
-			<img class="hidden max-w-[60%] md:block" src="{base}/images/left.png" alt="left" />
+			<img class="hidden md:block xl:max-w-[60%]" src="{base}/images/left.png" alt="left" />
 			<img class="sm:hidden" src="{base}/images/mob-left.png" alt="left" />
 		</div>
 
@@ -100,12 +100,12 @@
 
 		<!-- BG Images -->
 		<div class="flex flex-1 justify-end">
-			<img class="hidden max-w-[50%] md:block" src="{base}/images/right.png" alt="right" />
+			<img class="hidden md:block xl:max-w-[50%]" src="{base}/images/right.png" alt="right" />
 			<img class="sm:hidden" src="{base}/images/mob-right.png" alt="right" />
 		</div>
 	</div>
 
-	<div class="mx-auto flex w-full max-w-7xl flex-row sm:px-8 lg:px-0">
+	<div class="mx-auto flex w-full max-w-7xl flex-row sm:px-8 lg:px-5 xl:px-0">
 		{#if browser}
 			<ScrollContainer>
 				{#each slides as { color, text, animation }, i}

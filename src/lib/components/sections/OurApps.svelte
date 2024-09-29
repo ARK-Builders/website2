@@ -6,7 +6,7 @@
 	let activeApp = appList[0]
 </script>
 
-<section class="relative flex py-12">
+<section class="relative flex py-12 lg:px-5 xl:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 lg:gap-10 lg:px-0">
 		<div class="flex w-full flex-col gap-4">
 			<p class="text-center text-4xl font-bold lg:text-6xl">Our Apps</p>
