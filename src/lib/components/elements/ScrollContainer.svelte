@@ -4,7 +4,6 @@
 	export let maxHeight = '380px'
 
 	let containerRef: HTMLDivElement
-	let contentRef: HTMLDivElement
 	let isScrolling = false
 	let isVisible = false
 	let observer: IntersectionObserver
@@ -13,25 +12,23 @@
 		if (!isVisible || isScrolling) return
 
 		isScrolling = true
-		const container = containerRef
-		const { scrollTop, scrollHeight, clientHeight } = container
+
+		const { scrollTop, scrollHeight, clientHeight } = containerRef
 		const isAtTop = scrollTop === 0
-		const isAtBottom = contentRef.clientHeight === Math.floor(scrollTop + clientHeight)
-		const scrollDiv = () => {
+		const isAtBottom = scrollHeight === Math.floor(scrollTop + clientHeight)
+
+		const scrollDiv = (offset: number) => {
 			event.preventDefault()
 			event.stopPropagation()
-			container.scrollTop += event.deltaY * 3.8
+			containerRef.scrollTop += offset
 		}
+
+		const offset = 20 * Math.max(event.deltaY, 10)
+
 		if (event.deltaY > 0) {
-			// Scrolling down
-			if (!isAtBottom) {
-				scrollDiv()
-			}
+			if (!isAtBottom) scrollDiv(offset)
 		} else if (event.deltaY < 0) {
-			// Scrolling up
-			if (!isAtTop) {
-				scrollDiv()
-			}
+			if (!isAtTop) scrollDiv(-offset)
 		}
 
 		isScrolling = false
@@ -65,12 +62,12 @@
 
 <div
 	bind:this={containerRef}
-	class="flex w-full flex-col overflow-y-auto scroll-smooth rounded-xl lg:h-[317px] xl:h-full"
+	class="flex w-full snap-y snap-mandatory flex-col gap-2 overflow-y-auto scroll-smooth rounded-xl lg:h-[317px] xl:h-full"
 	style="max-height: {maxHeight};"
 >
-	<div bind:this={contentRef} class="flex flex-col gap-2">
-		<slot />
-	</div>
+	<!-- <div bind:this={contentRef} class=" flex snap-y snap-mandatory flex-col gap-2 overflow-y-auto"> -->
+	<slot />
+	<!-- </div> -->
 </div>
 
 <style>

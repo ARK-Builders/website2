@@ -110,7 +110,7 @@
 			<ScrollContainer>
 				{#each slides as { color, text, animation }, i}
 					<div
-						class="flex w-full flex-col justify-between rounded-xl lg:flex-row"
+						class="flex w-full snap-center flex-col justify-between rounded-xl lg:flex-row"
 						style="background-color: {color}"
 					>
 						<p class="mt-10 pl-5 text-center text-3xl font-medium lg:text-start">{text}</p>
