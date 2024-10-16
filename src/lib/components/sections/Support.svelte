@@ -4,6 +4,18 @@
 	import { BTC_ADDRESS, ETH_ADDRESS } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 	import QR from '@svelte-put/qr/img/QR.svelte'
+	import SupportImage from '$lib/assets/images/support/support.png'
+	import BitcoinImage from '$lib/assets/images/support/bitcoin.png'
+	import EthereumImage from '$lib/assets/images/support/ethereum.png'
+	import BuyMeACoffeeImage from '$lib/assets/images/support/buycoffee.png'
+	import PatreonImage from '$lib/assets/images/support/patreon.png'
+
+	const supportImages: Record<string, string> = {
+		bitcoin: BitcoinImage,
+		ethereum: EthereumImage,
+		buycoffee: BuyMeACoffeeImage,
+		patreon: PatreonImage
+	}
 
 	let modalData = {
 		show: false,
@@ -71,16 +83,12 @@
 						logo.onClick ? logo.onClick() : ''
 					}}
 				>
-					<img src="{base}/images/support/{logo.name}.png" alt="support logo" />
+					<img src={supportImages[logo.name]} alt="support logo" />
 				</a>
 			{/each}
 		</div>
 	</div>
-	<img
-		class="absolute right-0 hidden lg:flex"
-		src="{base}/images/support/support.png"
-		alt="support"
-	/>
+	<img class="absolute right-0 hidden lg:flex" src={SupportImage} alt="support" />
 </section>
 
 <Modal bind:show={modalData.show}>
