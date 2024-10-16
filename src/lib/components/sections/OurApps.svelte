@@ -2,8 +2,29 @@
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import { appList } from '$utils/constants'
+	import RateLogo1 from '$lib/assets/images/apps/rate/1.png'
+	import RateLogo2 from '$lib/assets/images/apps/rate/2.png'
+	import RateLogo3 from '$lib/assets/images/apps/rate/3.png'
+	import MemoLogo1 from '$lib/assets/images/apps/memo/1.png'
+	import MemoLogo2 from '$lib/assets/images/apps/memo/2.png'
+	import MemoLogo3 from '$lib/assets/images/apps/memo/3.png'
+	import RetouchLogo1 from '$lib/assets/images/apps/retouch/1.png'
+	import RetouchLogo2 from '$lib/assets/images/apps/retouch/2.png'
+	import RetouchLogo3 from '$lib/assets/images/apps/retouch/3.png'
 
 	const currentApps = appList.slice(0, 3)
+	const logos: Record<string, string> = {
+		rate1: RateLogo1,
+		rate2: RateLogo2,
+		rate3: RateLogo3,
+		memo1: MemoLogo1,
+		memo2: MemoLogo2,
+		memo3: MemoLogo3,
+		retouch1: RetouchLogo1,
+		retouch2: RetouchLogo2,
+		retouch3: RetouchLogo3
+	}
+
 	let activeApp = currentApps[0]
 </script>
 
@@ -43,7 +64,7 @@
 						{#each new Array(3) as a, i}
 							<img
 								class="max-h-[500px]"
-								src="{base}/images/apps/{activeApp.name.toLowerCase() + '/' + (i + 1)}.png"
+								src={logos[activeApp.name.toLowerCase() + (i + 1)]}
 								alt="{activeApp.name} app screens"
 							/>
 						{/each}

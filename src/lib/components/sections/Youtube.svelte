@@ -40,7 +40,7 @@
 				View on YouTube
 			</a>
 		</div>
-		<div class="grid h-48 grid-cols-1 gap-4 overflow-x-auto sm:grid-cols-2 md:grid-cols-4">
+		<div class="grid h-48 grid-cols-1 gap-4 overflow-x-auto md:grid-cols-2 lg:grid-cols-4">
 			{#each videoLinks as video}
 				<VideoItem url={video} />
 			{/each}

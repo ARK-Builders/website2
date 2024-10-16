@@ -27,7 +27,7 @@
 				{/each}
 			</div>
 		</div>
-		<div class="flex w-full flex-1 auto-rows-auto grid-cols-3 flex-col gap-3 md:grid">
+		<div class="flex w-full flex-1 auto-rows-auto grid-cols-3 flex-col gap-3 lg:grid">
 			<div>
 				<p class="pb-2 text-xl font-semibold">Apps</p>
 				<table class="text-xl text-gray-400">

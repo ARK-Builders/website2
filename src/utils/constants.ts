@@ -9,21 +9,24 @@ export const appList = [
 	},
 	{
 		name: 'Rate',
-		description: '',
+		description:
+			'Rate - the indispensable companion for travelers, enables swift conversions among multiple currencies and allows you to set exchange rate alerts for both fiat and crypto, ensuring no lucrative deal slips past you.',
 		logo: 'rate',
 		url: '',
 		colors: ['#E1D0F7', '#C39EF2']
 	},
 	{
 		name: 'Retouch',
-		description: '',
+		description:
+			'Retouch is your powerful graphic assistant right in your pocket! This app is designed not only for photo editing but also for drawing, creating graphic notes with a stylus, and highlighting important information in screenshots.',
 		logo: 'retouch',
 		url: '',
 		colors: ['#DBF5C8', '#9EE67D']
 	},
 	{
 		name: 'Navigator',
-		description: '',
+		description:
+			'Navigator is a file browser that embraces tags as the novel method to locate your data. It effectively eliminates irrelevant system files, enabling you to find your documents or photos with ease through the use of tags.',
 		logo: 'navigator',
 		url: '',
 		colors: ['#A5D6FF', '#60B1F4']

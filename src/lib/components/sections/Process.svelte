@@ -54,7 +54,7 @@
 			<div class="flex w-full flex-col justify-center gap-16 lg:flex-row">
 				<div class="flex justify-center">
 					<img
-						class="h-fit max-h-[680px]"
+						class="h-fit max-h-[680px] w-fit"
 						src="{base}/images/process/{activeType}-left.png"
 						alt="ARK process"
 					/>
@@ -70,7 +70,7 @@
 					<div class="flex flex-col gap-3">
 						{#if activeType == 'ark'}
 							<img
-								class="h-fit max-h-[720px]"
+								class="h-fit max-h-[720px] w-fit"
 								src="{base}/images/process/{activeType}-right.png"
 								alt="ARK process"
 							/>
