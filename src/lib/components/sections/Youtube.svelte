@@ -3,10 +3,22 @@
 	import VideoItem from '$lib/components/elements/VideoItem.svelte'
 
 	const videoLinks = [
-		'https://www.youtube.com/embed/j1E9NWUNGfk?si=eczMSAZFvmeWiOC3',
-		'https://www.youtube.com/embed/coRL96N19fg?si=iugehynqZGAvpEY1',
-		'https://www.youtube.com/embed/coRL96N19fg?si=iugehynqZGAvpEY1',
-		'https://www.youtube.com/embed/loKbP5wZpYI?si=e_MN9QpFqhjuE4S6'
+		{
+			url: 'https://www.youtube.com/embed/loKbP5wZpYI?si=e_MN9QpFqhjuE4S6',
+			title: 'Publishing a Web App with Fission CLI: Step-by-Step Demo'
+		},
+		{
+			url: 'https://www.youtube.com/embed/j1E9NWUNGfk?si=eczMSAZFvmeWiOC3',
+			title: 'Develop Android UI from Scratch | ARK Drop - #1 Development Preparation'
+		},
+		{
+			url: 'https://www.youtube.com/embed/coRL96N19fg?si=iugehynqZGAvpEY1',
+			title: 'How to Do a UI/UX Quick Sketch | Memo app - #2 Sketch & Wireframing'
+		},
+		{
+			url: 'https://www.youtube.com/embed/jrmw2KEu27o?si=ZxuJnrnhrgQizvfs',
+			title: '*LIVE Footage* of Arranging Design Feedback Meeting | Memo App - #4 Design Review'
+		}
 	]
 </script>
 
@@ -28,7 +40,7 @@
 				View on YouTube
 			</a>
 		</div>
-		<div class="flex h-48 flex-row gap-4 overflow-x-auto">
+		<div class="grid h-48 grid-cols-1 gap-4 overflow-x-auto md:grid-cols-4">
 			{#each videoLinks as video}
 				<VideoItem url={video} />
 			{/each}
