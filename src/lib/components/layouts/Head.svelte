@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { config } from '$lib/config'
 
-	export let title: string = ''
+	export let title: string | null = null
 	export let description = config.description
 	export let author = config.author
 	export let url = config.siteUrl

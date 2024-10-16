@@ -3,7 +3,8 @@ import { getEntries } from '$utils/entries.js'
 
 /** @type {import('./$types').EntryGenerator} */
 export function entries() {
-	return [{ slug: 'about-ark' }]
+	const posts = getEntries('posts')
+	return posts.map((post) => ({ slug: post.slug }))
 }
 
 export const prerender = true
