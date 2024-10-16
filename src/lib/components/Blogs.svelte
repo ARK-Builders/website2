@@ -4,13 +4,14 @@
 	import Author from '$lib/components/Author.svelte'
 	import SearchBox from '$lib/components/SearchBox.svelte'
 	import { page } from '$app/stores'
-	import fuzzySearch from '$utils/search.js'
+	import fuzzySearch from '$utils/search'
 	import { onMount } from 'svelte'
 	import { base } from '$app/paths'
+	import type { Blog } from '$utils/constants'
 
 	export let title = ''
 	export let subtitle = ''
-	export let posts = []
+	export let posts: Blog[] = []
 	export let tags = []
 	export let more = true
 	export let search = false
