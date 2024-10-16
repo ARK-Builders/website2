@@ -4,6 +4,7 @@
 	import { browser } from '$app/environment'
 	import Icon from '@iconify/svelte'
 	import ScrollContainer from '$lib/components/elements/ScrollContainer.svelte'
+	import { communityList } from '$utils/constants'
 
 	const slides = [
 		{
@@ -27,6 +28,10 @@
 			animation: 'feature-4'
 		}
 	]
+
+	const contacts = communityList.filter((community) =>
+		['Telegram', 'Discord', 'Twitter'].includes(community.name)
+	)
 
 	let hoverGithub = false
 </script>
@@ -79,21 +84,17 @@
 				class="flex w-fit flex-col gap-2 rounded-full bg-arkOrangeLight px-7 py-3 lg:px-10 lg:py-5"
 			>
 				<p class="text-center">Be the first to know about our latest updates</p>
+
 				<div class="flex flex-row justify-center gap-5">
-					<a
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
-						href="https://www.youtube.com/@ARK-Builders-Dev"
-						target="_blank"
-					>
-						<Icon icon="iconoir:youtube" width="24px" color="#DD7409" />
-					</a>
-					<a
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
-						href="https://medium.com/me/stories/public"
-						target="_blank"
-					>
-						<Icon icon="iconoir:medium" width="24px" color="#DD7409" />
-					</a>
+					{#each contacts as community}
+						<a
+							class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
+							href={community.url}
+							target="_blank"
+						>
+							<Icon icon={community.logo} width="24px" color={community.colors[1]} />
+						</a>
+					{/each}
 				</div>
 			</div>
 		</div>
