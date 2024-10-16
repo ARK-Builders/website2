@@ -67,7 +67,7 @@
 				synchronization.
 			</p>
 			<div class="flex items-center justify-center gap-2">
-				<Cta text="Get Started" bgBlack />
+				<Cta url="/#apps" text="Get Started" bgBlack />
 				<div class="flex items-center gap-0">
 					<Cta
 						on:hover={(e) => (hoverGithub = e.detail)}

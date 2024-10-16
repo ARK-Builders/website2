@@ -8,20 +8,6 @@ export const appList = [
 		colors: ['#FFF5DD', '#FFD979'] // 1st lighter, 2nd deeper
 	},
 	{
-		name: 'Navigator',
-		description: '',
-		logo: 'navigator',
-		url: '',
-		colors: ['#A5D6FF', '#60B1F4']
-	},
-	{
-		name: 'Shelf',
-		description: '',
-		logo: 'shelf',
-		url: '',
-		colors: ['#A5D6FF', '#60B1F4']
-	},
-	{
 		name: 'Rate',
 		description: '',
 		logo: 'rate',
@@ -36,6 +22,20 @@ export const appList = [
 		colors: ['#DBF5C8', '#9EE67D']
 	},
 	{
+		name: 'Navigator',
+		description: '',
+		logo: 'navigator',
+		url: '',
+		colors: ['#A5D6FF', '#60B1F4']
+	},
+	{
+		name: 'Shelf',
+		description: '',
+		logo: 'shelf',
+		url: '',
+		colors: ['#A5D6FF', '#60B1F4']
+	},
+	{
 		name: 'Gallery',
 		description: '',
 		logo: '',
@@ -43,6 +43,7 @@ export const appList = [
 		colors: ['#A5D6FF', '#60B1F4']
 	}
 ]
+
 export const communityList = [
 	{
 		name: 'Discord',

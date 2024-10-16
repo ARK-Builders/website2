@@ -3,7 +3,8 @@
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import { appList } from '$utils/constants'
 
-	let activeApp = appList[0]
+	const currentApps = appList.slice(0, 3)
+	let activeApp = currentApps[0]
 </script>
 
 <section id="apps" class="relative flex py-12 lg:px-5 xl:px-0">
@@ -17,7 +18,7 @@
 			<div
 				class="grid h-fit w-full grid-cols-3 flex-row overflow-hidden rounded-lg bg-arkGray6 md:flex lg:w-1/5 lg:flex-col"
 			>
-				{#each appList as app}
+				{#each currentApps as app}
 					<button
 						style="background-color: {activeApp.name == app.name ? app.colors[1] : ''};"
 						on:click={() => (activeApp = app)}
