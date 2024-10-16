@@ -70,7 +70,13 @@
 						{/each}
 					</div>
 				</div>
-				<Cta text="Learn More" bgBlack classes="" />
+				<Cta
+					target="_blank"
+					url={'https://www.ark-builders.dev/apps/' + activeApp.name.toLowerCase()}
+					text="Learn More"
+					bgBlack
+					classes=""
+				/>
 			</div>
 		</div>
 	</div>
