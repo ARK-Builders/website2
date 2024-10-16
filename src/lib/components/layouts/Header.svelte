@@ -47,7 +47,7 @@
 			</div>
 		</div>
 		<div class="flex flex-row items-center gap-3 text-base leading-5">
-			<GetStarted bgOrange classes="hidden sm:flex" />
+			<GetStarted href="/#apps" bgOrange classes="hidden sm:flex" />
 			<button class="flex lg:hidden" on:click={() => (showMobileMenu = !showMobileMenu)}>
 				<Icon icon="ic:outline-menu" width="34px" color="white" />
 			</button>
