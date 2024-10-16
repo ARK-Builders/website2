@@ -67,7 +67,7 @@ export const communityList = [
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
-		name: 'Twitter',
+		name: 'X',
 		logo: 'iconoir:twitter',
 		url: 'https://x.com/ARKBuilders_DEV',
 		colors: ['#FFF3E6', '#DD7409']

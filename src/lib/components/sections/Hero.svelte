@@ -34,7 +34,7 @@
 	]
 
 	const contacts = communityList.filter((community) =>
-		['Telegram', 'Discord', 'Twitter'].includes(community.name)
+		['Telegram', 'Discord', 'X'].includes(community.name)
 	)
 
 	let hoverGithub = false
