@@ -33,16 +33,16 @@
 				<p class="pb-2 text-xl font-semibold">Apps</p>
 				<table class="text-xl text-gray-400">
 					<tr>
-						<td> Memo </td>
-						<td> Rate </td>
+						<td><a href="{base}/#"> Memo </a></td>
 					</tr>
 					<tr>
-						<td class="pr-10"> Navigator </td>
-						<td> Retouch </td>
+						<td><a href="{base}/#"> Rate </a></td>
+						<!-- <td class="pr-10"> Navigator </td> -->
 					</tr>
 					<tr>
-						<td> Shelf </td>
-						<td> Gallery </td>
+						<td><a href="{base}/#"> Retouch </a></td>
+						<!-- <td> Shelf </td>
+						<td> Gallery </td> -->
 					</tr>
 				</table>
 			</div>
