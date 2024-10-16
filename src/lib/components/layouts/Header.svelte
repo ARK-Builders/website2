@@ -7,6 +7,7 @@
 	import CommunityMenus from '$lib/components/CommunityMenus.svelte'
 	import Icon from '@iconify/svelte'
 	import MobileMenu from '$lib/components/layouts/MobileMenu.svelte'
+	import HeaderLogo from '$lib/assets/images/logo.png'
 
 	let showMobileMenu = false
 </script>
@@ -17,7 +18,7 @@
 			<a href="{base}/" aria-label={config.headerTitle}>
 				<div class="flex items-center justify-between">
 					<div class="mr-3">
-						<img src="{base}/images/logo.png" alt="Logo" class="h-10 w-auto" />
+						<img src={HeaderLogo} alt="Logo" class="h-10 w-auto" />
 					</div>
 					<!-- <div class="hidden text-4xl font-semibold sm:block font-title">
 					{config.headerTitle}
