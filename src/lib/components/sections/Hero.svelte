@@ -5,6 +5,10 @@
 	import Icon from '@iconify/svelte'
 	import ScrollContainer from '$lib/components/elements/ScrollContainer.svelte'
 	import { communityList } from '$utils/constants'
+	import leftImg from '$lib/assets/images/left.png'
+	import rightImg from '$lib/assets/images/right.png'
+	import mobLeftImg from '$lib/assets/images/mob-left.png'
+	import mobRightImg from '$lib/assets/images/mob-right.png'
 
 	const slides = [
 		{
@@ -40,8 +44,8 @@
 	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
 		<!-- BG Images -->
 		<div class="flex-1">
-			<img class="hidden md:block xl:max-w-[60%]" src="{base}/images/left.png" alt="left" />
-			<img class="sm:hidden" src="{base}/images/mob-left.png" alt="left" />
+			<img class="hidden md:block xl:max-w-[60%]" src={leftImg} alt="left" />
+			<img class="sm:hidden" src={mobLeftImg} alt="left" />
 		</div>
 
 		<!-- Center part -->
@@ -101,8 +105,8 @@
 
 		<!-- BG Images -->
 		<div class="flex flex-1 justify-end">
-			<img class="hidden md:block xl:max-w-[50%]" src="{base}/images/right.png" alt="right" />
-			<img class="sm:hidden" src="{base}/images/mob-right.png" alt="right" />
+			<img class="hidden md:block xl:max-w-[50%]" src={rightImg} alt="right" />
+			<img class="sm:hidden" src={mobRightImg} alt="right" />
 		</div>
 	</div>
 
