@@ -7,13 +7,15 @@
 	import OurApps from '$lib/components/sections/OurApps.svelte'
 	import Process from '$lib/components/sections/Process.svelte'
 	import Youtube from '$lib/components/sections/Youtube.svelte'
+
+	export let data
 </script>
 
 <Head />
 <Hero />
 <Process />
 <OurApps />
-<Blog />
+<Blog posts={data.posts} />
 <Youtube />
 <Contribute />
 <Support />
