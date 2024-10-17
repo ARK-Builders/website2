@@ -79,7 +79,7 @@
 
 					<!-- Typical App -->
 					{#if activeType == 'typical'}
-						<div class="mt-3 flex flex-col gap-5">
+						<div class="mt-[11px] flex flex-col gap-5">
 							<img
 								class="h-fit w-[350px] md:w-[490px]"
 								src="{base}/images/process/typical-right.png"
