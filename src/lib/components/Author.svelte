@@ -10,15 +10,16 @@
 	export let postDate = ''
 </script>
 
-<!-- {#if avatar}
-	<img src={base + avatar} width="38px" height="38px" alt="avatar" class="h-10 w-10 rounded-lg" />
-{/if} -->
-<Icon
-	icon="mdi:account-circle"
-	width="38px"
-	height="38px"
-	class="h-10 w-10 rounded-lg text-arkGray2"
-/>
+{#if avatar}
+	<!-- <img src={base + avatar} width="38px" height="38px" alt="avatar" class="h-10 w-10 rounded-lg" /> -->
+	<Icon
+		icon="mdi:account-circle"
+		width="38px"
+		height="38px"
+		class="h-10 w-10 rounded-lg text-arkGray2"
+	/>
+{/if}
+
 <dl class="whitespace-nowrap text-sm font-medium leading-5">
 	<dt class="sr-only">Author</dt>
 	<dd class="text-base font-bold leading-6 text-gray-600 dark:text-gray-300">{author}</dd>
