@@ -44,8 +44,8 @@
 	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
 		<!-- BG Images -->
 		<div class="flex-1">
-			<img class="hidden md:block xl:max-w-[60%]" src={base + leftImg} alt="left" />
-			<img class="md:hidden" src={base + mobLeftImg} alt="left" />
+			<img class="hidden md:block xl:max-w-[60%]" src={leftImg} alt="left" />
+			<img class="md:hidden" src={mobLeftImg} alt="left" />
 		</div>
 
 		<!-- Center part -->
@@ -105,8 +105,8 @@
 
 		<!-- BG Images -->
 		<div class="flex flex-1 justify-end">
-			<img class="hidden md:block xl:max-w-[50%]" src={base + rightImg} alt="right" />
-			<img class="md:hidden" src={base + mobRightImg} alt="right" />
+			<img class="hidden md:block xl:max-w-[50%]" src={rightImg} alt="right" />
+			<img class="md:hidden" src={mobRightImg} alt="right" />
 		</div>
 	</div>
 
