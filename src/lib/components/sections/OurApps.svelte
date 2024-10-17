@@ -2,27 +2,37 @@
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import { appList } from '$utils/constants'
-	import RateLogo1 from '$lib/assets/images/apps/rate/1.png'
-	import RateLogo2 from '$lib/assets/images/apps/rate/2.png'
-	import RateLogo3 from '$lib/assets/images/apps/rate/3.png'
-	import MemoLogo1 from '$lib/assets/images/apps/memo/1.png'
-	import MemoLogo2 from '$lib/assets/images/apps/memo/2.png'
-	import MemoLogo3 from '$lib/assets/images/apps/memo/3.png'
-	import RetouchLogo1 from '$lib/assets/images/apps/retouch/1.png'
-	import RetouchLogo2 from '$lib/assets/images/apps/retouch/2.png'
-	import RetouchLogo3 from '$lib/assets/images/apps/retouch/3.png'
+	import RateImage1 from '$lib/assets/images/apps/rate/1.png'
+	import RateImage2 from '$lib/assets/images/apps/rate/2.png'
+	import RateImage3 from '$lib/assets/images/apps/rate/3.png'
+	import MemoImage1 from '$lib/assets/images/apps/memo/1.png'
+	import MemoImage2 from '$lib/assets/images/apps/memo/2.png'
+	import MemoImage3 from '$lib/assets/images/apps/memo/3.png'
+	import RetouchImage1 from '$lib/assets/images/apps/retouch/1.png'
+	import RetouchImage2 from '$lib/assets/images/apps/retouch/2.png'
+	import RetouchImage3 from '$lib/assets/images/apps/retouch/3.png'
+	import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
+	import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
+	import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
+	import type { ComponentType } from 'svelte'
 
 	const currentApps = appList.slice(0, 3)
-	const logos: Record<string, string> = {
-		rate1: RateLogo1,
-		rate2: RateLogo2,
-		rate3: RateLogo3,
-		memo1: MemoLogo1,
-		memo2: MemoLogo2,
-		memo3: MemoLogo3,
-		retouch1: RetouchLogo1,
-		retouch2: RetouchLogo2,
-		retouch3: RetouchLogo3
+	const appImages: Record<string, string> = {
+		rate1: RateImage1,
+		rate2: RateImage2,
+		rate3: RateImage3,
+		memo1: MemoImage1,
+		memo2: MemoImage2,
+		memo3: MemoImage3,
+		retouch1: RetouchImage1,
+		retouch2: RetouchImage2,
+		retouch3: RetouchImage3
+	}
+
+	const appLogos: Record<string, ComponentType> = {
+		rate: RateLogo,
+		memo: MemoLogo,
+		retouch: RetouchLogo
 	}
 
 	let activeApp = currentApps[0]
@@ -46,7 +56,11 @@
 						class="
 							flex w-full flex-col items-center gap-3 border-b bg-transparent px-5 py-3 font-semibold first:rounded-tl-lg last:rounded-br-lg lg:h-[88px] lg:flex-row lg:first:rounded-tr-lg lg:last:rounded-bl-lg"
 					>
-						<img src="{base}/images/app-logos/{app.logo || 'placeholder'}.png" alt="app logo" />
+						{#if !app.logo}
+							<img src="{base}/images/placeholder.png" alt="app logo" />
+						{:else}
+							<svelte:component this={appLogos[app.name.toLowerCase()]} />
+						{/if}
 						{app.name}
 					</button>
 				{/each}
@@ -64,7 +78,7 @@
 						{#each new Array(3) as a, i}
 							<img
 								class="max-h-[500px]"
-								src={logos[activeApp.name.toLowerCase() + (i + 1)]}
+								src={appImages[activeApp.name.toLowerCase() + (i + 1)]}
 								alt="{activeApp.name} app screens"
 							/>
 						{/each}
