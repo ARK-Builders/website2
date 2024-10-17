@@ -4,7 +4,7 @@
 	import { BTC_ADDRESS, ETH_ADDRESS } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 	import QR from '@svelte-put/qr/img/QR.svelte'
-	import SupportImage from '$lib/assets/images/support/support.png'
+	import SupportImage from '$lib/assets/images/support/support.svelte'
 	import BitcoinImage from '$lib/assets/images/support/bitcoin.svelte'
 	import EthereumImage from '$lib/assets/images/support/ethereum.svelte'
 	import BuyMeACoffeeImage from '$lib/assets/images/support/buycoffee.png'
@@ -68,7 +68,7 @@
 			<p class="text-center text-xl font-semibold uppercase text-arkOrange lg:text-start">
 				Support us
 			</p>
-			<p class="text-center text-[40px] font-bold lg:text-start">
+			<p class="z-10 text-center text-[40px] font-bold lg:text-start">
 				We greatly appreciate every bit of support!
 			</p>
 			<div class="flex w-full justify-center lg:justify-start">
@@ -103,7 +103,9 @@
 			{/each}
 		</div>
 	</div>
-	<img class="absolute right-0 hidden lg:flex" src={SupportImage} alt="support" />
+	<span class="absolute right-0 z-0 hidden lg:flex">
+		<svelte:component this={SupportImage} />
+	</span>
 </section>
 
 <Modal bind:show={modalData.show}>
