@@ -2,14 +2,14 @@
 	import { base } from '$app/paths'
 	import { communityList } from '$utils/constants'
 	import Icon from '@iconify/svelte'
-	import FooterLogo from '$lib/assets/images/footer-logo.png'
+	import FooterLogo from '$lib/assets/images/footer-logo.svelte'
 </script>
 
 <footer class="bg-white px-5 pb-10 pt-40 lg:px-5 xl:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-row">
 		<div class="flex flex-1 flex-col gap-5">
-			<div>
-				<img src={FooterLogo} class="h-10" alt="footer logo" />
+			<div class="h-10 w-fit">
+				<FooterLogo />
 			</div>
 			<div class="grid grid-cols-2 flex-row gap-3 lg:flex">
 				{#each communityList as community}
