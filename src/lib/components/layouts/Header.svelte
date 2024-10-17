@@ -12,7 +12,7 @@
 	let showMobileMenu = false
 </script>
 
-<header class="sticky top-0 z-10 bg-arkGray bg-opacity-95 px-5 xl:px-0 dark:bg-gray-900">
+<header class="sticky top-0 z-10 bg-arkGray bg-opacity-95 px-5 dark:bg-gray-900 xl:px-0">
 	<div class="mx-auto flex h-[72px] items-center justify-between sm:px-8 lg:px-0 xl:max-w-7xl">
 		<div class="flex flex-row items-center">
 			<a href="{base}/" aria-label={config.headerTitle}>
@@ -20,9 +20,6 @@
 					<div class="mr-3">
 						<img src={HeaderLogo} alt="Logo" class="h-10 w-auto" />
 					</div>
-					<!-- <div class="hidden text-4xl font-semibold sm:block font-title">
-					{config.headerTitle}
-				</div> -->
 				</div>
 			</a>
 
