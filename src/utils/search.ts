@@ -1,10 +1,9 @@
-const fuzzySearch = (items, query: string) => {
+const fuzzySearch = (items: any[], query: string) => {
 	let search = query?.toLowerCase().split(' ')
 
-	console.log('search >>>', search)
-	let ret = items.reduce((found, i) => {
+	let ret = items.reduce((found: any[], i: any) => {
 		let matches = 0
-		search.forEach((s) => {
+		search.forEach((s: string) => {
 			let props = 0
 			for (var prop in i) {
 				let p = i[prop]?.toString().toLowerCase()

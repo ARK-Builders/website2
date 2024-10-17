@@ -8,8 +8,25 @@ export const appList = [
 		colors: ['#FFF5DD', '#FFD979'] // 1st lighter, 2nd deeper
 	},
 	{
+		name: 'Rate',
+		description:
+			'Rate - the indispensable companion for travelers, enables swift conversions among multiple currencies and allows you to set exchange rate alerts for both fiat and crypto, ensuring no lucrative deal slips past you.',
+		logo: 'rate',
+		url: '',
+		colors: ['#E1D0F7', '#C39EF2']
+	},
+	{
+		name: 'Retouch',
+		description:
+			'Retouch is your powerful graphic assistant right in your pocket! This app is designed not only for photo editing but also for drawing, creating graphic notes with a stylus, and highlighting important information in screenshots.',
+		logo: 'retouch',
+		url: '',
+		colors: ['#DBF5C8', '#9EE67D']
+	},
+	{
 		name: 'Navigator',
-		description: '',
+		description:
+			'Navigator is a file browser that embraces tags as the novel method to locate your data. It effectively eliminates irrelevant system files, enabling you to find your documents or photos with ease through the use of tags.',
 		logo: 'navigator',
 		url: '',
 		colors: ['#A5D6FF', '#60B1F4']
@@ -22,20 +39,6 @@ export const appList = [
 		colors: ['#A5D6FF', '#60B1F4']
 	},
 	{
-		name: 'Rate',
-		description: '',
-		logo: 'rate',
-		url: '',
-		colors: ['#E1D0F7', '#C39EF2']
-	},
-	{
-		name: 'Retouch',
-		description: '',
-		logo: 'retouch',
-		url: '',
-		colors: ['#DBF5C8', '#9EE67D']
-	},
-	{
 		name: 'Gallery',
 		description: '',
 		logo: '',
@@ -43,6 +46,7 @@ export const appList = [
 		colors: ['#A5D6FF', '#60B1F4']
 	}
 ]
+
 export const communityList = [
 	{
 		name: 'Discord',
@@ -63,7 +67,7 @@ export const communityList = [
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
-		name: 'Twitter',
+		name: 'X',
 		logo: 'iconoir:twitter',
 		url: 'https://x.com/ARKBuilders_DEV',
 		colors: ['#FFF3E6', '#DD7409']
@@ -96,3 +100,20 @@ export const communityList = [
 
 export const BTC_ADDRESS = 'bc1qx8n9r4uwpgrhgnamt2uew53lmrxd8tuevp7lv5'
 export const ETH_ADDRESS = '0x9765C5aC38175BFbd2dC7a840b63e50762B80a1b'
+
+export type Blog = {
+	author: string
+	content: string
+	date: string
+	draft: boolean
+	image: string
+	next: any
+	prev: any
+	slug: string
+	summary: string
+	tag: any
+	tags: string[]
+	title: string
+	youtube: any
+	type: string
+}

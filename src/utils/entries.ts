@@ -33,7 +33,7 @@ const getEntriesByType = (entryType: string) => {
 	}
 }
 
-const getMetadata = (entryType: string, filepath, entry) => {
+const getMetadata = (entryType: string, filepath: string, entry: any) => {
 	return {
 		...entry.metadata,
 
@@ -86,12 +86,18 @@ export const getEntries = (entryType: string) => {
 	)
 }
 
+interface Tag {
+	text: string
+	slug: string
+	count: number
+}
+
 export const getTags = () => {
 	const posts = getEntries('posts')
 	let tags = posts
 		.flatMap(({ tags }) => tags)
 		.map((tag) => ({ text: tag, slug: slug(tag) }))
-		.reduce((arr, tag) => {
+		.reduce((arr: Tag[], tag) => {
 			let index = arr.findIndex((t) => t.slug === tag.slug)
 			if (index > -1) arr[index].count++
 			else arr.push({ text: tag.text, slug: tag.slug, count: 1 })

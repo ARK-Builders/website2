@@ -4,6 +4,22 @@
 	import { BTC_ADDRESS, ETH_ADDRESS } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 	import QR from '@svelte-put/qr/img/QR.svelte'
+	import SupportImage from '$lib/assets/images/support/support.svelte'
+	import BitcoinImage from '$lib/assets/images/support/bitcoin.svelte'
+	import EthereumImage from '$lib/assets/images/support/ethereum.svelte'
+	import BuyMeACoffeeImage from '$lib/assets/images/support/buycoffee.png'
+	import PatreonImage from '$lib/assets/images/support/patreon.png'
+	import type { SvelteComponent } from 'svelte'
+
+	const supportImages: Record<string, string> = {
+		buycoffee: BuyMeACoffeeImage,
+		patreon: PatreonImage
+	}
+
+	const supportImagesCrypto: Record<string, typeof SvelteComponent> = {
+		bitcoin: BitcoinImage,
+		ethereum: EthereumImage
+	}
 
 	let modalData = {
 		show: false,
@@ -13,7 +29,7 @@
 	let copied = false
 	let timeout: ReturnType<typeof setTimeout> | null = null
 
-	const supportLogos = [
+	const supportLogosCrypto = [
 		{
 			name: 'bitcoin',
 			onClick: () => {
@@ -29,7 +45,10 @@
 				modalData.type = 'etheruem'
 				modalData.address = ETH_ADDRESS
 			}
-		},
+		}
+	]
+
+	const supportLogos = [
 		{ name: 'buycoffee', url: 'https://buymeacoffee.com/arkbuilders' },
 		{ name: 'patreon', url: 'https://www.patreon.com/ARKBuilders' }
 	]
@@ -49,7 +68,7 @@
 			<p class="text-center text-xl font-semibold uppercase text-arkOrange lg:text-start">
 				Support us
 			</p>
-			<p class="text-center text-[40px] font-bold lg:text-start">
+			<p class="z-10 text-center text-[40px] font-bold lg:text-start">
 				We greatly appreciate every bit of support!
 			</p>
 			<div class="flex w-full justify-center lg:justify-start">
@@ -61,26 +80,32 @@
 				</p>
 			</div>
 		</div>
-		<div class="my-5 grid grid-cols-2 gap-2 md:flex md:flex-row">
-			{#each supportLogos as logo}
-				<a
-					href={logo.url || base + '/'}
-					target="_blank"
+		<div class="my-5 grid grid-cols-2 gap-2 md:flex md:h-[40px] md:flex-row">
+			{#each supportLogosCrypto as logo}
+				<button
+					class="h-full w-[150px] overflow-hidden rounded-md"
 					on:click={(e) => {
 						if (['bitcoin', 'ethereum'].includes(logo.name)) e.preventDefault()
 						logo.onClick ? logo.onClick() : ''
 					}}
 				>
-					<img src="{base}/images/support/{logo.name}.png" alt="support logo" />
+					<svelte:component this={supportImagesCrypto[logo.name]} class="w-full" />
+				</button>
+			{/each}
+			{#each supportLogos as logo}
+				<a
+					class="h-11 w-[150px] overflow-hidden rounded-md md:h-full md:w-[120px]"
+					href={logo.url || base + '/'}
+					target="_blank"
+				>
+					<img class="h-full w-full" src={supportImages[logo.name]} alt="support logo" />
 				</a>
 			{/each}
 		</div>
 	</div>
-	<img
-		class="absolute right-0 hidden lg:flex"
-		src="{base}/images/support/support.png"
-		alt="support"
-	/>
+	<span class="absolute right-0 z-0 hidden lg:flex">
+		<svelte:component this={SupportImage} />
+	</span>
 </section>
 
 <Modal bind:show={modalData.show}>

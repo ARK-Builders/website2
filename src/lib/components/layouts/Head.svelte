@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { config } from '$lib/config'
 
-	export let title = null
+	export let title: string | null = null
 	export let description = config.description
 	export let author = config.author
 	export let url = config.siteUrl
 	export let domain = config.domain
 	export let rtl = false
+
 	let titleFromUrl = url ? url.split('/').pop().replace('-', ' ') : ''
 	export let img = `${url}/og?message=${rtl ? titleFromUrl : title}`
 </script>
