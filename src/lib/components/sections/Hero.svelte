@@ -45,12 +45,12 @@
 		<!-- BG Images -->
 		<div class="flex-1">
 			<img class="hidden md:block xl:max-w-[60%]" src={leftImg} alt="left" />
-			<img class="sm:hidden" src={mobLeftImg} alt="left" />
+			<img class="md:hidden" src={mobLeftImg} alt="left" />
 		</div>
 
 		<!-- Center part -->
 		<div
-			class="absolute flex max-w-2xl flex-col items-center gap-4 sm:w-1/2 sm:gap-10 md:relative lg:w-full"
+			class="absolute flex max-w-2xl flex-col items-center gap-4 sm:relative sm:w-1/2 sm:gap-10 lg:w-full"
 		>
 			<div class="flex flex-col items-center gap-2 md:gap-5">
 				<p class="text-center text-3xl font-semibold md:text-[40px] lg:text-[66px]">
@@ -106,7 +106,7 @@
 		<!-- BG Images -->
 		<div class="flex flex-1 justify-end">
 			<img class="hidden md:block xl:max-w-[50%]" src={rightImg} alt="right" />
-			<img class="sm:hidden" src={mobRightImg} alt="right" />
+			<img class="md:hidden" src={mobRightImg} alt="right" />
 		</div>
 	</div>
 

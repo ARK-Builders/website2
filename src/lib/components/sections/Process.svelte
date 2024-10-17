@@ -62,8 +62,8 @@
 
 				<!-- Right Column -->
 				<div
-					class="flex flex-col text-white md:h-[750px] {activeType != 'typical' &&
-						'lg:justify-end'}"
+					class="flex flex-col justify-start text-white md:h-[750px] {activeType != 'typical' &&
+						'xl:justify-end'}"
 				>
 					<!-- ARK App -->
 					<!-- <p
