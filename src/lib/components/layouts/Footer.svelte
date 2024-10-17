@@ -9,7 +9,7 @@
 	<div class="mx-auto flex w-full max-w-7xl flex-row">
 		<div class="flex flex-1 flex-col gap-5">
 			<div>
-				<img src={FooterLogo} class="h-10" alt="footer logo" />
+				<img src={base + FooterLogo} class="h-10" alt="footer logo" />
 			</div>
 			<div class="grid grid-cols-2 flex-row gap-3 lg:flex">
 				{#each communityList as community}
