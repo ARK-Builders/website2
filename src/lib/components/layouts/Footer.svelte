@@ -33,14 +33,22 @@
 				<p class="pb-2 text-xl font-semibold">Apps</p>
 				<table class="text-xl text-gray-400">
 					<tr>
-						<td><a href="{base}/#" class="hover:text-black"> Memo </a></td>
+						<td>
+							<a href="https://www.ark-builders.dev/apps/memo" class="hover:text-black"> Memo </a>
+						</td>
 					</tr>
 					<tr>
-						<td><a href="{base}/#" class="hover:text-black"> Rate </a></td>
+						<td>
+							<a href="https://www.ark-builders.dev/apps/rate" class="hover:text-black"> Rate </a>
+						</td>
 						<!-- <td class="pr-10"> Navigator </td> -->
 					</tr>
 					<tr>
-						<td><a href="{base}/#" class="hover:text-black"> Retouch </a></td>
+						<td>
+							<a href="https://www.ark-builders.dev/apps/retouch" class="hover:text-black">
+								Retouch
+							</a>
+						</td>
 						<!-- <td> Shelf </td>
 						<td> Gallery </td> -->
 					</tr>
