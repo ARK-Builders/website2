@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 
-	export let maxHeight = '380px'
-
 	let containerRef: HTMLDivElement
 	let isScrolling = false
 	let isVisible = false
@@ -62,8 +60,7 @@
 
 <div
 	bind:this={containerRef}
-	class="flex w-full snap-y snap-mandatory flex-col gap-2 overflow-y-auto scroll-smooth rounded-xl lg:h-[317px] xl:h-full"
-	style="max-height: {maxHeight};"
+	class="flex max-h-[480px] w-full snap-y snap-mandatory flex-col gap-2 overflow-y-auto scroll-smooth rounded-xl lg:max-h-[380px] xl:h-full"
 >
 	<!-- <div bind:this={contentRef} class=" flex snap-y snap-mandatory flex-col gap-2 overflow-y-auto"> -->
 	<slot />
