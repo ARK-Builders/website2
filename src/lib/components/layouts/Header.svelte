@@ -18,7 +18,7 @@
 			<a href="{base}/" aria-label={config.headerTitle}>
 				<div class="flex items-center justify-between">
 					<div class="mr-3">
-						<img src={base + HeaderLogo} alt="Logo" class="h-10 w-auto" />
+						<img src={HeaderLogo} alt="Logo" class="h-10 w-auto" />
 					</div>
 				</div>
 			</a>
