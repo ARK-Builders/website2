@@ -16,7 +16,7 @@
 					<div class=" w-full pb-6">
 						<img
 							alt={post.title}
-							src={post.image}
+							src={base + post.image}
 							class="h-auto w-full object-cover object-center"
 						/>
 					</div>
@@ -24,7 +24,7 @@
 				<div class="space-y-1 text-center">
 					<div>
 						<h1
-							class="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-5xl dark:text-gray-100"
+							class="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl"
 						>
 							{post.title}
 						</h1>
@@ -47,7 +47,7 @@
 				</div>
 			</header>
 			<div
-				class="divide-y divide-gray-200 pb-8 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0 dark:divide-gray-700"
+				class="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
 				style="grid-template-rows: auto 1fr;"
 			>
 				<dl class="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
@@ -63,7 +63,7 @@
 					</dd>
 				</dl>
 				<div
-					class="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700"
+					class="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0"
 				>
 					<div class="prose dark:prose-dark max-w-none pb-8 pt-10">
 						{@html post.content}
@@ -71,7 +71,7 @@
 				</div>
 				<footer class="">
 					<div
-						class="divide-gray-200 text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 xl:divide-y dark:divide-gray-700"
+						class="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y"
 					>
 						{#if post.tags}
 							<div class="py-4 xl:py-8">
