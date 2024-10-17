@@ -52,57 +52,39 @@
 			</div>
 
 			<div class="flex w-full flex-col justify-center gap-16 lg:flex-row">
-				<div class="flex justify-center">
+				<div class="flex justify-center md:w-2/4">
 					<img
-						class="h-fit max-h-[680px] w-fit {activeType == 'ark' && 'ml-8'}"
+						class="h-fit max-h-[680px] w-fit {activeType == 'ark' && 'ml-8'} 
+						{activeType == 'typical' && 'pr-10'}"
 						src="{base}/images/process/{activeType}-left.png"
 						alt="ARK process"
 					/>
 				</div>
 
 				<!-- Right Column -->
-				<div
-					class="flex flex-col justify-start text-white md:h-[750px] {activeType != 'typical' &&
-						'xl:justify-end'}"
-				>
+				<div class="flex flex-col justify-start text-white md:h-[750px] md:w-2/4">
 					<!-- ARK App -->
-					<!-- <p
-						class="{activeType == 'typical' &&
-							'text-center'} text-[32px] font-semibold lg:text-start"
-					>
+					<p class="text-center text-2xl font-semibold md:text-[32px] lg:text-start">
 						Resources Needed
-					</p> -->
-					<div class="flex flex-col gap-3">
-						{#if activeType == 'ark'}
+					</p>
+					{#if activeType == 'ark'}
+						<div class="flex flex-col gap-3">
 							<img
-								class="h-fit max-h-[720px] w-fit"
+								class="-ml-2 h-fit max-h-[720px] w-fit"
 								src="{base}/images/process/{activeType}-right.png"
 								alt="ARK process"
 							/>
-						{/if}
-					</div>
+						</div>
+					{/if}
 
 					<!-- Typical App -->
 					{#if activeType == 'typical'}
 						<div class="mt-3 flex flex-col gap-5">
-							<!-- <p class="text-center text-[32px] font-semibold lg:text-start">Resources Needed</p> -->
-							<div class="flex flex-col items-center gap-3 lg:items-start">
-								<p class="text-2xl">People</p>
-								<img
-									class="max-h-[110px] w-fit"
-									src="{base}/images/process/typical-right1.png"
-									alt="typical"
-								/>
-							</div>
-							<div class="h-[1px] bg-arkGray3" />
-							<div class="flex flex-col items-center gap-3 lg:items-start">
-								<p class="text-2xl">Infrastructure</p>
-								<img
-									class="max-h-[70px] w-fit"
-									src="{base}/images/process/typical-right2.png"
-									alt="typical"
-								/>
-							</div>
+							<img
+								class="h-fit w-[350px] md:w-[490px]"
+								src="{base}/images/process/typical-right.png"
+								alt="ARK process"
+							/>
 						</div>
 					{/if}
 				</div>
