@@ -129,14 +129,3 @@
 		{/if}
 	</div>
 </div>
-
-<style>
-	video {
-		filter: brightness(105%);
-		-webkit-filter: brightness(105%);
-	}
-
-	::-webkit-scrollbar {
-		display: none;
-	}
-</style>

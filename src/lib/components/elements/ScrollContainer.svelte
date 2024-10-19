@@ -60,7 +60,7 @@
 
 <div
 	bind:this={containerRef}
-	class="flex max-h-[480px] w-full snap-y snap-mandatory flex-col gap-2 overflow-y-auto scroll-smooth rounded-xl lg:max-h-[380px] xl:h-full"
+	class="hide-scrollbar flex max-h-[480px] w-full snap-y snap-mandatory flex-col gap-2 overflow-y-auto scroll-smooth rounded-xl lg:max-h-[380px] xl:h-full"
 >
 	<!-- <div bind:this={contentRef} class=" flex snap-y snap-mandatory flex-col gap-2 overflow-y-auto"> -->
 	<slot />
@@ -68,6 +68,11 @@
 </div>
 
 <style>
+	.hide-scrollbar {
+		overflow: auto;
+		scrollbar-width: none; /* Firefox 64 */
+	}
+
 	div::-webkit-scrollbar {
 		display: none;
 	}
