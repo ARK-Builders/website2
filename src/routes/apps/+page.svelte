@@ -1,23 +1,19 @@
 <script lang="ts">
 	import Title from '$lib/components/Title.svelte'
+	import Head from '$lib/components/layouts/Head.svelte'
 
 	export let data
-	const projects = data.projects
+	const apps = data.apps
 </script>
 
-<div class="divide-y divide-gray-200 dark:divide-gray-700">
+<Head title="Apps" />
+
+<div class="mx-auto w-full max-w-7xl divide-y divide-gray-200 dark:divide-gray-700">
 	<div class="space-y-2 pb-8 pt-6 md:space-y-5">
-		<Title title="Apps" subtitle="All the apps are completely open-source and ads-free" />
-	</div>
-	<div class="container py-12">
-		<div class="-m-4 flex flex-wrap">
-			<!-- {#if !projects.length}
-				No project found.
-			{:else}
-				{#each projects as project}
-					<Card card={project} />
-				{/each}
-			{/if} -->
+		<div class="grid gap-4 lg:grid-cols-2">
+			<div>
+				<Title title="All Apps" />
+			</div>
 		</div>
 	</div>
 </div>

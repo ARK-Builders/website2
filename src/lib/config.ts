@@ -21,16 +21,14 @@ export const config = {
 
 export const user = {
 	name: 'admin',
-	// avatar value can be removed for image
-	avatar: '/icon-32.png',
 	twitter: ''
 }
 
 export const navLinks = [
 	{ href: '/', title: 'Home' },
-	{ href: '#', title: 'Apps' },
+	{ href: '/apps', title: 'Apps' },
 	// { href: 'https://ark-builders.notion.site/Research-0e9029fa5e704ddfa8b6786b794a2f17', title: 'Research' },
-	{ href: '/devs-dashboard', title: 'Devs Dashboard' },
+	{ href: '/contribute', title: 'Contribute' },
 	{ href: '/blog', title: 'Blog' },
 	{ href: '#', title: 'Community' }
 	// { href: '/', title: 'Support' },

@@ -52,25 +52,25 @@
 			</div>
 
 			<div class="flex w-full flex-col justify-center gap-16 lg:flex-row">
-				<div class="flex justify-center md:w-2/4">
+				<div class="flex justify-center lg:w-2/4">
 					<img
-						class="h-fit max-h-[680px] w-fit {activeType == 'ark' && 'ml-8'} 
-						{activeType == 'typical' && 'pr-10'}"
+						class="h-fit max-h-[680px] {activeType == 'ark' && 'ml-8'} 
+						{activeType == 'typical' && 'pr-7'}"
 						src="{base}/images/process/{activeType}-left.png"
 						alt="ARK process"
 					/>
 				</div>
 
 				<!-- Right Column -->
-				<div class="flex flex-col justify-start text-white md:h-[750px] md:w-2/4">
+				<div class="flex flex-col items-center text-white lg:h-[750px] lg:w-2/4 lg:items-start">
 					<!-- ARK App -->
 					<p class="text-center text-2xl font-semibold md:text-[32px] lg:text-start">
 						Resources Needed
 					</p>
 					{#if activeType == 'ark'}
-						<div class="flex flex-col gap-3">
+						<div class="flex flex-col items-center gap-3">
 							<img
-								class="-ml-2 h-fit max-h-[720px] w-fit"
+								class="-ml-4 h-fit max-h-[720px]"
 								src="{base}/images/process/{activeType}-right.png"
 								alt="ARK process"
 							/>

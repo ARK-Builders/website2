@@ -4,7 +4,7 @@ import { config, user } from '$lib/config'
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
-	throw new Error(`projects can only be imported server-side`)
+	throw new Error(`apps can only be imported server-side`)
 }
 
 // we have to have separate functions for this because Vite only accepts literal strings for import.meta.glob
@@ -12,8 +12,8 @@ const getPosts = () => {
 	return Object.entries(import.meta.glob('/content/posts/**/*.md', { eager: true }))
 }
 
-const getProjects = () => {
-	return Object.entries(import.meta.glob('/content/projects/**/*.md', { eager: true }))
+const getApps = () => {
+	return Object.entries(import.meta.glob('/content/apps/**/*.md', { eager: true }))
 }
 
 const getAuthors = () => {
@@ -24,8 +24,8 @@ const getEntriesByType = (entryType: string) => {
 	switch (entryType) {
 		case 'posts':
 			return getPosts()
-		case 'projects':
-			return getProjects()
+		case 'apps':
+			return getApps()
 		case 'authors':
 			return getAuthors()
 		default:
@@ -67,7 +67,7 @@ const getMetadata = (entryType: string, filepath: string, entry: any) => {
 export const getEntries = (entryType: string) => {
 	if (!config.multiuser && entryType === 'authors') return [user]
 
-	let entries = getEntriesByType(entryType)
+	const entries = getEntriesByType(entryType)
 
 	return (
 		entries

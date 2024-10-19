@@ -1,14 +1,14 @@
-import { getEntries } from '$utils/entries.js'
+import { getEntries } from '$utils/entries'
 import { error } from '@sveltejs/kit'
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-	const projects = getEntries('projects')
-	if (!projects) {
-		throw error(404, 'No project found')
+	const apps = getEntries('apps')
+	if (!apps) {
+		throw error(404, 'No app found')
 	}
 
 	return {
-		projects: projects
+		apps
 	}
 }
