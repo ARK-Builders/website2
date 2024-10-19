@@ -30,7 +30,7 @@
 		</div>
 		<div class="flex w-full flex-1 auto-rows-auto grid-cols-3 flex-col gap-3 lg:grid">
 			<div>
-				<p class="pb-2 text-xl font-semibold">Apps</p>
+				<a href="{base}/apps" class="pb-2 text-xl font-semibold">Apps</a>
 				<table class="text-xl text-gray-400">
 					<tr>
 						<td>
