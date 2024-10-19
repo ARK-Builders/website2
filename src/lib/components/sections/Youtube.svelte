@@ -25,18 +25,22 @@
 <section class="relative flex items-center pb-16 lg:px-5 xl:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-col gap-5 rounded-xl bg-[#FC0D1B]/20 p-5">
 		<div class="flex flex-row items-center justify-between">
-			<div class="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
+			<a
+				target="_blank"
+				href="https://www.youtube.com/@ARK-Builders-Dev"
+				class="flex flex-col items-start gap-2 sm:flex-row sm:items-center"
+			>
 				<Icon icon="ri:youtube-fill" width="44px" class="hidden sm:block" color="#FC0D1B" />
 				<Icon icon="ri:youtube-fill" width="34px" class="sm:hidden" color="#FC0D1B" />
 				<p class="text-lg font-bold lg:text-3xl">Check out our latest videos</p>
-			</div>
+			</a>
 
 			<a
 				target="_blank"
-				class="text-bold flex items-center gap-1 rounded-lg bg-white px-2 py-1 text-xs lg:text-base"
+				class="text-bold flex items-center gap-1 rounded-lg bg-white px-2 py-1 text-xs text-gray-600 hover:text-[#FC0D1B] lg:text-base"
 				href="https://www.youtube.com/@ARK-Builders-Dev"
 			>
-				<Icon icon="mingcute:youtube-line" width="20px" />
+				<Icon icon="line-md:youtube-filled" width="20px" color="#FC0D1B" />
 				View on YouTube
 			</a>
 		</div>
