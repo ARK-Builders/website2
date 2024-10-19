@@ -26,7 +26,7 @@
 					us going!
 				</p>
 			</div>
-			<Cta text="View More" classes="hidden lg:flex mt-5" />
+			<Cta url="/contribute" text="View More" classes="hidden lg:flex mt-5" />
 		</div>
 		<div class="flex w-full flex-col gap-3 md:grid md:grid-cols-2">
 			<ContributeCard title="Automatically extract Domain tags">
@@ -89,6 +89,5 @@
 				</div>
 			</ContributeCard>
 		</div>
-		<Cta text="View More" classes="lg:hidden" />
 	</div>
 </section>
