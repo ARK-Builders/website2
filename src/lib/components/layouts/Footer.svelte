@@ -55,7 +55,7 @@
 				</table>
 			</div>
 			<div>
-				<p class="text-xl font-semibold">Devs Dashboard</p>
+				<a href="{base}/contribute" class="text-xl font-semibold">Contribute</a>
 			</div>
 			<div>
 				<a href="{base}/blog" class="text-xl font-semibold">Blog</a>
