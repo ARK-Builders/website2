@@ -81,7 +81,7 @@
 					{#if activeType == 'typical'}
 						<div class="mt-[11px] flex flex-col gap-5">
 							<img
-								class="h-fit w-[350px] md:w-[490px]"
+								class="h-fit w-[350px] md:w-[480px]"
 								src="{base}/images/process/typical-right.png"
 								alt="ARK process"
 							/>
