@@ -1,19 +1,23 @@
 <script lang="ts">
-	import Title from '$lib/components/Title.svelte'
+	import AppsCard from '$lib/components/elements/AppsCard.svelte'
+	import Cta from '$lib/components/elements/CTA.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
+	import Title from '$lib/components/Title.svelte'
+	import Icon from '@iconify/svelte'
 
 	export let data
-	const apps = data.apps
 </script>
 
 <Head title="Apps" />
 
-<div class="mx-auto w-full max-w-7xl divide-y divide-gray-200 dark:divide-gray-700">
-	<div class="space-y-2 pb-8 pt-6 md:space-y-5">
-		<div class="grid gap-4 lg:grid-cols-2">
-			<div>
-				<Title title="All Apps" />
-			</div>
-		</div>
+<div class="flex h-full w-full flex-col items-center">
+	<div class="my-10">
+		<Title title="Our Apps" h2 />
+	</div>
+
+	<div class="mx-auto grid w-full max-w-7xl grid-cols-3 gap-4">
+		{#each data.apps as app}
+			<AppsCard {app} />
+		{/each}
 	</div>
 </div>
