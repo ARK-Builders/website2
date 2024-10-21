@@ -2,6 +2,10 @@
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
 	import Title from '$lib/components/Title.svelte'
+	import { config } from '$lib/config'
+	import Icon from '@iconify/svelte'
+
+	let hoverGithub = false
 </script>
 
 <Head title="Contribute" />
@@ -16,7 +20,21 @@
 
 		<div class="flex flex-row gap-3">
 			<Cta text="View documentation" />
-			<Cta text="View Github" />
+
+			<div class="flex items-center rounded-lg bg-white pr-2">
+				<Cta
+					on:hover={(e) => (hoverGithub = e.detail)}
+					target="_blank"
+					text="View Github"
+					classes="px-2"
+					url={config.github}
+				/>
+				<Icon
+					class={hoverGithub ? 'text-arkOrange' : 'text-black'}
+					icon="pajamas:github"
+					width="24px"
+				/>
+			</div>
 		</div>
 	</div>
 
