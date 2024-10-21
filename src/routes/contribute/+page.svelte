@@ -1,0 +1,26 @@
+<script lang="ts">
+	import Cta from '$lib/components/elements/CTA.svelte'
+	import Head from '$lib/components/layouts/Head.svelte'
+	import Title from '$lib/components/Title.svelte'
+</script>
+
+<Head title="Contribute" />
+
+<div class="flex h-full w-full flex-col items-center bg-arkGray bg-opacity-95">
+	<div
+		class="mx-auto mt-10 flex w-full max-w-7xl flex-row justify-between rounded-md bg-arkGray2 px-4 py-6 text-white"
+	>
+		<div>
+			<p class="text-2xl">Research</p>
+		</div>
+
+		<div class="flex flex-row gap-3">
+			<Cta text="View documentation" />
+			<Cta text="View Github" />
+		</div>
+	</div>
+
+	<div class="my-10 text-white">
+		<Title title="Contribute" h2 />
+	</div>
+</div>

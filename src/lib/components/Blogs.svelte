@@ -12,7 +12,7 @@
 	export let title = ''
 	export let subtitle = ''
 	export let posts: Blog[] = []
-	export let tags = []
+	export let tags: any[] = []
 	export let more = true
 	export let search = false
 	export let h2 = false

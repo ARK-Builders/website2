@@ -10,7 +10,7 @@
 		this={selected}
 		class="{h2
 			? 'text-2xl sm:text-3xl md:text-5xl'
-			: 'text-3xl sm:text-4xl md:text-6xl'} md:leading-14 font-extrabold capitalize leading-9 tracking-tight text-gray-900 sm:leading-10 dark:text-gray-100"
+			: 'text-3xl sm:text-4xl md:text-6xl'} md:leading-14 font-extrabold capitalize leading-9 tracking-tight sm:leading-10"
 	>
 		{title}
 	</svelte:element>
