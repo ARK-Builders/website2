@@ -34,20 +34,18 @@
 				<table class="text-xl text-gray-400">
 					<tr>
 						<td>
-							<a href="https://www.ark-builders.dev/apps/memo" class="hover:text-black"> Memo </a>
+							<a href="/apps/memo" class="hover:text-black"> Memo </a>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<a href="https://www.ark-builders.dev/apps/rate" class="hover:text-black"> Rate </a>
+							<a href="/apps/rate" class="hover:text-black"> Rate </a>
 						</td>
 						<!-- <td class="pr-10"> Navigator </td> -->
 					</tr>
 					<tr>
 						<td>
-							<a href="https://www.ark-builders.dev/apps/retouch" class="hover:text-black">
-								Retouch
-							</a>
+							<a href="/apps/retouch" class="hover:text-black"> Retouch </a>
 						</td>
 						<!-- <td> Shelf </td>
 						<td> Gallery </td> -->

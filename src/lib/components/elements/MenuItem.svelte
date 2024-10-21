@@ -4,6 +4,7 @@
 	import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
 	import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
 	import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
+	import { goto } from '$app/navigation'
 
 	export let name,
 		description = '',
@@ -18,6 +19,7 @@
 </script>
 
 <a
+	target="_self"
 	href={base + url + '/' + name.toLowerCase()}
 	class="flex flex-row gap-3 rounded-md p-1 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
 >
