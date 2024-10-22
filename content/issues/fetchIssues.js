@@ -54,4 +54,4 @@ async function callApi() {
 	}
 }
 
-module.exports = callApi
+console.log(JSON.stringify(callApi()))
