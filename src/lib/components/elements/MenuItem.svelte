@@ -4,7 +4,6 @@
 	import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
 	import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
 	import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
-	import { goto } from '$app/navigation'
 
 	export let name,
 		description = '',

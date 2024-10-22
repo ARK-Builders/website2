@@ -1,9 +1,7 @@
 <script lang="ts">
 	import AppsCard from '$lib/components/elements/AppsCard.svelte'
-	import Cta from '$lib/components/elements/CTA.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
 	import Title from '$lib/components/Title.svelte'
-	import Icon from '@iconify/svelte'
 
 	export let data
 </script>

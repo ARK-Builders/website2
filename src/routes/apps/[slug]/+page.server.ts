@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit'
 /** @type {import('./$types').EntryGenerator} */
 export function entries() {
 	const apps = getEntries('apps') || []
-	return apps.map((post) => ({ slug: post.slug }))
+	return apps.map((app) => ({ slug: app.slug }))
 }
 
 export const load = ({ params }) => {
