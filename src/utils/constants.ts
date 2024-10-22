@@ -117,3 +117,15 @@ export type Blog = {
 	youtube: any
 	type: string
 }
+
+export interface Issue {
+	title: string
+	labels: string[]
+	user: string
+	user_avatar: string
+	date: string
+	repo: string
+	number: number
+	platforms: string[]
+	languages: string[]
+}

@@ -1,15 +1,26 @@
 <script lang="ts">
 	import Cta from '$lib/components/elements/CTA.svelte'
+	import Dropdown from '$lib/components/elements/Dropdown.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import { config } from '$lib/config'
+	import type { Issue } from '$utils/constants.ts'
 	import Icon from '@iconify/svelte'
 
 	export let data
 
 	$: issues = JSON.parse(data.data).default
 
+	$: languages = [...new Set(issues.map((issue: Issue) => issue.languages).flat())] as string[]
+	$: platforms = [...new Set(issues.map((issue: Issue) => issue.platforms).flat())] as string[]
+	$: categories = [...new Set(issues.map((issue: Issue) => issue.labels).flat())] as string[]
+
 	let hoverGithub = false
+
+	// Track selected items
+	let selectedLanguages: string[] = []
+	let selectedPlatforms: string[] = []
+	let selectedCategory: string[] = []
 </script>
 
 <Head title="Contribute" />
@@ -47,7 +58,12 @@
 	</div>
 
 	<div class="flex w-full max-w-6xl flex-col text-white">
-		<table class="hidden border-separate border-spacing-y-3 lg:table">
+		<div class="flex flex-row gap-3">
+			<Dropdown items={languages} values={selectedLanguages} title="Language" />
+			<Dropdown items={platforms} values={selectedPlatforms} title="Platforms" />
+			<Dropdown items={categories} values={selectedCategory} title="Category" />
+		</div>
+		<table class="mt-5 hidden border-separate border-spacing-y-3 lg:table">
 			<thead>
 				<tr>
 					<td class="w-[45%]">Titile</td>

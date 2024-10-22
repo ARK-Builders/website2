@@ -8,7 +8,7 @@
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Icon from '@iconify/svelte'
-	import { config } from '$lib/config.js'
+	import { config } from '$lib/config'
 
 	export let data
 
