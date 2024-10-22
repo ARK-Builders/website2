@@ -2,7 +2,7 @@ name: Return Data from JavaScript Function
 
 on:
   push:
-    branches: ['main']
+    branches: ['update-ui']
   workflow_dispatch:
   schedule:
     - cron: '0 0,8,16 * * *'
@@ -28,13 +28,13 @@ jobs:
       - name: Run JavaScript File
         id: fetchIssues
         run: |
-          data=$(node -e "const fetchIssues = require('./content/issues/fetchIssues'); async function main() { try { const data = await fetchIssues(); console.log(JSON.stringify(data));} catch (error) { console.error('Error retrieving data:', error);}}; main()")
-          cp ./content/issues/issues.json issues.json.res
-          echo "$data" > ./content/issues/issues.json
+          data=$(node -e "import fetchIssues from '/content/issues/fetchIssues'; async function main() { try { const data = await fetchIssues(); console.log(JSON.stringify(data));} catch (error) { console.error('Error retrieving data:', error);}}; main()")
+          cp /content/issues/issues.json issues.json.res
+          echo "$data" > /content/issues/issues.json
 
       - name: Push into Git
         run: |-
-          if ! diff -q ./content/issues/issues.json{,.res} > /dev/null
+          if ! diff -q /content/issues/issues.json{,.res} > /dev/null
           then
             git config --global user.email "bot@ark-builders.dev"
             git config --global user.name "ARK Builders Bot"
