@@ -25,7 +25,7 @@
 			{/if}
 		</div>
 
-		<p class="text-2xl font-extrabold">{app.title}</p>
+		<p class="text-2xl font-bold">{app.title}</p>
 	</div>
 
 	<img
@@ -36,6 +36,7 @@
 
 	<a
 		href="{base}/apps/{app.slug}"
-		class="w-full rounded-md bg-arkGray p-2 text-center font-bold text-white">Learn More</a
+		class="w-full rounded-md bg-arkGray p-2 text-center font-bold text-white hover:bg-opacity-90"
+		>Learn More</a
 	>
 </div>

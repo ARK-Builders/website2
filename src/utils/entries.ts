@@ -13,7 +13,7 @@ const getPosts = () => {
 }
 
 const getApps = () => {
-	return Object.entries(import.meta.glob('/content/apps/**/*.md', { eager: true }))
+	return Object.entries(import.meta.glob('/content/apps/*.md', { eager: true }))
 }
 
 const getAuthors = () => {
