@@ -28,12 +28,12 @@ jobs:
       - name: Run JavaScript File
         id: fetchIssues
         run: |
-          node /content/issues/fetchIssues.js > /content/issues/issues.json
-          cp /content/issues/issues.json issues.json.res
+          node ./content/issues/fetchIssues.js > ./content/issues/issues.json
+          cp ./content/issues/issues.json issues.json.res
 
       - name: Push into Git
         run: |-
-          if ! diff -q /content/issues/issues.json{,.res} > /dev/null
+          if ! diff -q ./content/issues/issues.json{,.res} > /dev/null
           then
             git config --global user.email "bot@ark-builders.dev"
             git config --global user.name "ARK Builders Bot"
