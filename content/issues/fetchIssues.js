@@ -54,4 +54,9 @@ async function callApi() {
 	}
 }
 
-console.log(JSON.stringify(callApi()))
+async function main() {
+	const data = await callApi()
+	console.log(JSON.stringify(data))
+}
+
+main()
