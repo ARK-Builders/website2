@@ -13,7 +13,7 @@
 		<Title title="Our Apps" h2 />
 	</div>
 
-	<div class="mx-auto grid w-full max-w-7xl grid-cols-3 gap-4">
+	<div class="mx-auto grid w-full max-w-7xl grid-cols-2 gap-4 px-3 lg:grid-cols-3 lg:px-0">
 		{#each data.apps as app}
 			<AppsCard {app} />
 		{/each}

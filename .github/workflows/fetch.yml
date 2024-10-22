@@ -1,0 +1,44 @@
+name: Return Data from JavaScript Function
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0,8,16 * * *'
+
+jobs:
+  call_api_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js and NPM
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: |
+          npm install axios
+        working-directory: ${{ github.workspace }}
+
+      - name: Run JavaScript File
+        id: fetchIssues
+        run: |
+          data=$(node -e "const fetchIssues = require('./content/issues/fetchIssues'); async function main() { try { const data = await fetchIssues(); console.log(JSON.stringify(data));} catch (error) { console.error('Error retrieving data:', error);}}; main()")
+          cp ./content/issues/issues.json issues.json.res
+          echo "$data" > ./content/issues/issues.json
+
+      - name: Push into Git
+        run: |-
+          if ! diff -q ./content/issues/issues.json{,.res} > /dev/null
+          then
+            git config --global user.email "bot@ark-builders.dev"
+            git config --global user.name "ARK Builders Bot"
+            git add ./content/issues/issues.json
+            git commit -m "Indexing GitHub issues"
+            git push
+          fi

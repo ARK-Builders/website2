@@ -29,7 +29,7 @@
 	</div>
 
 	<img
-		class="max-h-[350px] rounded-md object-cover"
+		class="max-h-[220px] rounded-md object-cover lg:max-h-[350px]"
 		src={MemoImage1}
 		alt="{app.title} app screens"
 	/>

@@ -1,0 +1,52 @@
+[
+	{
+		"name": "ark-rust",
+		"languages": ["Rust"],
+		"platforms": ["Desktop", "Android"]
+	},
+	{
+		"name": "ark-android",
+		"languages": ["Kotlin", "Rust"],
+		"platforms": ["Android"]
+	},
+	{
+		"name": "ARK-Navigator",
+		"languages": ["Kotlin"],
+		"platforms": ["Android"]
+	},
+	{
+		"name": "ARK-Shelf",
+		"languages": ["Kotlin"],
+		"platforms": ["Android"]
+	},
+	{
+		"name": "ARK-Shelf-Desktop",
+		"languages": ["Rust", "Svelte", "TypeScript"],
+		"platforms": ["Desktop"]
+	},
+	{
+		"name": "ARK-Retouch",
+		"languages": ["Kotlin"],
+		"platforms": ["Android"]
+	},
+	{
+		"name": "ARK-Rate",
+		"languages": ["Kotlin"],
+		"platforms": ["Android"]
+	},
+	{
+		"name": "ARK-Rate-Desktop",
+		"languages": ["Rust", "TypeScript"],
+		"platforms": ["Desktop"]
+	},
+	{
+		"name": "ARK-Memo",
+		"languages": ["Kotlin"],
+		"platforms": ["Android"]
+	},
+	{
+		"name": "ARK-Globe",
+		"languages": ["Kotlin"],
+		"platforms": ["Android"]
+	}
+]
