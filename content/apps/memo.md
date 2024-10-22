@@ -2,7 +2,12 @@
 title: Memo
 date: '2024-01-04'
 draft: false
-preview: ['/images/apps/memo/1.png', '/images/apps/memo/2.png', '/images/apps/memo/3.png']
+preview:
+  [
+    'https://ark-builders.github.io/website2/images/apps/memo/1.png',
+    'https://ark-builders.github.io/website2/images/apps/memo/2.png',
+    'https://ark-builders.github.io/website2/images/apps/memo/3.png'
+  ]
 author: ARK-Builders
 ---
 
