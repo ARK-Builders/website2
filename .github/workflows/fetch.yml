@@ -2,7 +2,7 @@ name: Return Data from JavaScript Function
 
 on:
   push:
-    branches: ['update-ui']
+    branches: ['main']
   workflow_dispatch:
   schedule:
     - cron: '0 0,8,16 * * *'
