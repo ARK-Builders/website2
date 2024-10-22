@@ -12,6 +12,10 @@ const getPosts = () => {
 	return Object.entries(import.meta.glob('/content/posts/**/*.md', { eager: true }))
 }
 
+const getIssues = () => {
+	return Object.entries(import.meta.glob('/content/issues/issues.json', { eager: true }))
+}
+
 const getApps = () => {
 	return Object.entries(import.meta.glob('/content/apps/*.md', { eager: true }))
 }
@@ -66,7 +70,10 @@ const getMetadata = (entryType: string, filepath: string, entry: any) => {
 // Get all entries and add metadata
 export const getEntries = (entryType: string) => {
 	if (!config.multiuser && entryType === 'authors') return [user]
-
+	if (entryType == 'issues') {
+		const issues = getIssues()
+		return issues.map(([filepath, entry]) => entry)[0]
+	}
 	const entries = getEntriesByType(entryType)
 
 	return (

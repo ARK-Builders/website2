@@ -5,6 +5,10 @@
 	import { config } from '$lib/config'
 	import Icon from '@iconify/svelte'
 
+	export let data
+
+	$: issues = JSON.parse(data.data).default
+
 	let hoverGithub = false
 </script>
 
