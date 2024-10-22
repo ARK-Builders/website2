@@ -1,4 +1,4 @@
-const axios = require('axios')
+import axios from 'axios'
 
 async function callApi() {
 	var issuesList = []
@@ -54,4 +54,9 @@ async function callApi() {
 	}
 }
 
-module.exports = callApi
+async function main() {
+	const data = await callApi()
+	console.log(JSON.stringify(data))
+}
+
+main()
