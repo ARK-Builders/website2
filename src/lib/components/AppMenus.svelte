@@ -12,7 +12,7 @@
 <div class="menus">
 	<a
 		href={base + link.href}
-		class="flex items-center p-1 font-medium text-white hover:text-arkOrange sm:p-2 dark:text-gray-100"
+		class="flex items-center p-1 font-medium text-white hover:text-arkOrange dark:text-gray-100 sm:p-2"
 	>
 		{link.title}
 		<Icon icon="ic:outline-keyboard-arrow-down" width="24px" />
@@ -23,12 +23,22 @@
 	>
 		<div class="flex w-44 flex-col gap-2">
 			{#each currentApps.slice(0, 2) as menu}
-				<MenuItem description={menu.description} name={menu.name} logo={menu.logo} />
+				<MenuItem
+					url={link.href}
+					description={menu.description}
+					name={menu.name}
+					logo={menu.logo}
+				/>
 			{/each}
 		</div>
 		<div class="flex w-40 flex-col gap-2">
 			{#each currentApps.slice(2) as menu}
-				<MenuItem description={menu.description} name={menu.name} logo={menu.logo} />
+				<MenuItem
+					url={link.href}
+					description={menu.description}
+					name={menu.name}
+					logo={menu.logo}
+				/>
 			{/each}
 		</div>
 	</div>

@@ -8,4 +8,4 @@
 
 <Head title="Blog" />
 
-<Blogs title="All Posts" {posts} />
+<Blogs title="Blog" {posts} />

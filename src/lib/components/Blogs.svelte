@@ -1,18 +1,18 @@
 <script lang="ts">
 	import Tag from '$lib/components/Tag.svelte'
 	import Title from '$lib/components/Title.svelte'
-	import Author from '$lib/components/Author.svelte'
+	import BlogItem from '$lib/components/elements/BlogItem.svelte'
 	import SearchBox from '$lib/components/SearchBox.svelte'
 	import { page } from '$app/stores'
 	import fuzzySearch from '$utils/search'
 	import { onMount } from 'svelte'
-	import { base } from '$app/paths'
 	import type { Blog } from '$utils/constants'
+	import { base } from '$app/paths'
 
 	export let title = ''
 	export let subtitle = ''
 	export let posts: Blog[] = []
-	export let tags = []
+	export let tags: any[] = []
 	export let more = true
 	export let search = false
 	export let h2 = false
@@ -30,12 +30,10 @@
 	$: currentPosts = filter ? fuzzySearch(posts, filter) : posts
 </script>
 
-<div class="mx-auto w-full max-w-7xl divide-y divide-gray-200 dark:divide-gray-700">
+<div class="mx-auto w-full max-w-7xl">
 	<div class="space-y-2 pb-8 pt-6 md:space-y-5">
-		<div class="grid gap-4 lg:grid-cols-2">
-			<div>
-				<Title {title} {subtitle} {h2} />
-			</div>
+		<div class="flex w-full justify-center">
+			<Title {title} {subtitle} {h2} />
 
 			<div class="pl-4" class:border-l-2={search}>
 				{#if search}
@@ -60,9 +58,9 @@
 	{#if !currentPosts.length}
 		No post found.
 	{:else}
-		<ul>
+		<div class="grid grid-cols-2 gap-4">
 			{#each currentPosts as post}
-				<li class="py-12">
+				<!-- <li class="py-12">
 					<article>
 						<div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
 							<Author author={post.author} postDate={post.date} />
@@ -101,8 +99,9 @@
 							</div>
 						</div>
 					</article>
-				</li>
+				</li> -->
+				<BlogItem {post} />
 			{/each}
-		</ul>
+		</div>
 	{/if}
 </div>
