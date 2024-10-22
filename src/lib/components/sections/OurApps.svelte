@@ -85,7 +85,7 @@
 						{/each}
 					</div>
 				</div>
-				<Cta url={'/apps/' + activeApp.name.toLowerCase()} text="Learn More" bgBlack classes="" />
+				<Cta url={base + '/apps/' + activeApp.name.toLowerCase()} text="Learn More" bgBlack />
 			</div>
 		</div>
 	</div>
