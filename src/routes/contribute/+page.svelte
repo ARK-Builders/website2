@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Dropdown from '$lib/components/elements/Dropdown.svelte'
+	import Language from '$lib/components/elements/Language.svelte'
+	import Platform from '$lib/components/elements/Platform.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import { config } from '$lib/config'
@@ -80,9 +82,21 @@
 			<tbody>
 				{#each generalIssues as issue}
 					<tr class="">
-						<td class="truncate">{issue.title}</td>
-						<td>{issue.languages}</td>
-						<td>{issue.platforms}</td>
+						<td class="w-[40%] truncate">{issue.title}</td>
+						<td class="">
+							<div class="flex w-fit flex-row gap-2">
+								{#each issue.languages as language}
+									<Language name={language} />
+								{/each}
+							</div>
+						</td>
+						<td>
+							<div class="flex w-fit flex-row gap-2">
+								{#each issue.platforms as platform}
+									<Platform name={platform} />
+								{/each}
+							</div>
+						</td>
 						<td>{issue.labels}</td>
 					</tr>
 				{/each}

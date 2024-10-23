@@ -24,7 +24,8 @@ export default {
 				arkGray5: '#F5F4F2',
 				arkGray6: '#F9F9F9',
 
-				arkDeep: '#444444'
+				arkDeep: '#444444',
+				arkDeep2: '#4F4F4F'
 			}
 		}
 	},
