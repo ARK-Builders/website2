@@ -21,6 +21,20 @@
 	$: platforms = [...new Set(issues.map((issue: Issue) => issue.platforms).flat())] as string[]
 	$: categories = [...new Set(issues.map((issue: Issue) => issue.labels).flat())] as string[]
 
+	$: filteredIssues = generalIssues.filter((issue) => {
+		const languageMatch =
+			selectedLanguages.length === 0 ||
+			issue.languages.some((lang) => selectedLanguages.includes(lang))
+		const platformMatch =
+			selectedPlatforms.length === 0 ||
+			issue.platforms.some((platform) => selectedPlatforms.includes(platform))
+		const categoryMatch =
+			selectedCategory.length === 0 ||
+			issue.labels.some((label) => selectedCategory.includes(label))
+
+		return languageMatch && platformMatch && categoryMatch
+	})
+
 	let hoverGithub = false
 
 	// Track selected items
@@ -65,9 +79,9 @@
 
 	<div class="flex w-full max-w-6xl flex-col text-white">
 		<div class="flex flex-row gap-3">
-			<Dropdown items={languages} values={selectedLanguages} title="Language" />
-			<Dropdown items={platforms} values={selectedPlatforms} title="Platforms" />
-			<Dropdown items={categories} values={selectedCategory} title="Category" />
+			<Dropdown items={languages} bind:values={selectedLanguages} title="Language" />
+			<Dropdown items={platforms} bind:values={selectedPlatforms} title="Platforms" />
+			<Dropdown items={categories} bind:values={selectedCategory} title="Category" />
 		</div>
 		<table class="mt-5 hidden border-separate border-spacing-y-3 lg:table">
 			<thead>
