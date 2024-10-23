@@ -8,7 +8,7 @@
 	let showList = false
 </script>
 
-<div class="relative w-36">
+<div class="relative w-40">
 	<button
 		class="flex h-9 w-full items-center justify-between rounded bg-arkGray2 px-2 text-arkGray5 focus:border focus:border-arkOrange"
 		on:click={() => (showList = !showList)}

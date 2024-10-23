@@ -8,9 +8,13 @@
 	import Icon from '@iconify/svelte'
 
 	export let data
+	let issues: Issue[]
 
 	$: issues = JSON.parse(data.data).default
 
+	$: generalIssues = [
+		...new Set(issues.filter((issue: Issue) => !issue.labels.length).flat())
+	] as Issue[]
 	$: languages = [...new Set(issues.map((issue: Issue) => issue.languages).flat())] as string[]
 	$: platforms = [...new Set(issues.map((issue: Issue) => issue.platforms).flat())] as string[]
 	$: categories = [...new Set(issues.map((issue: Issue) => issue.labels).flat())] as string[]
@@ -74,18 +78,14 @@
 			</thead>
 
 			<tbody>
-				<tr class="">
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-				</tr>
-				<tr>
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-				</tr>
+				{#each generalIssues as issue}
+					<tr class="">
+						<td class="truncate">{issue.title}</td>
+						<td>{issue.languages}</td>
+						<td>{issue.platforms}</td>
+						<td>{issue.labels}</td>
+					</tr>
+				{/each}
 			</tbody>
 		</table>
 	</div>
