@@ -7,6 +7,7 @@
 </script>
 
 <a
+	on:click
 	href="{base}{href}"
 	class="{bgOrange
 		? 'bg-arkOrange hover:bg-arkOrangeDeep'

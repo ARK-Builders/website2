@@ -1,10 +1,15 @@
+import type { ComponentType } from 'svelte'
+import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
+import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
+import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
+
 export const appList = [
 	{
 		name: 'Memo',
 		description:
 			'Navigator is a file browser that embraces tags as the novel method to locate your data. It effectively eliminates irrelevant system files, enabling you to find your documents or photos with ease through the use of tags.',
 		logo: 'memo',
-		url: '',
+		url: '/memo',
 		colors: ['#FFF5DD', '#FFD979'] // 1st lighter, 2nd deeper
 	},
 	{
@@ -12,7 +17,7 @@ export const appList = [
 		description:
 			'Rate - the indispensable companion for travelers, enables swift conversions among multiple currencies and allows you to set exchange rate alerts for both fiat and crypto, ensuring no lucrative deal slips past you.',
 		logo: 'rate',
-		url: '',
+		url: '/rate',
 		colors: ['#E1D0F7', '#C39EF2']
 	},
 	{
@@ -20,7 +25,7 @@ export const appList = [
 		description:
 			'Retouch is your powerful graphic assistant right in your pocket! This app is designed not only for photo editing but also for drawing, creating graphic notes with a stylus, and highlighting important information in screenshots.',
 		logo: 'retouch',
-		url: '',
+		url: '/retouch',
 		colors: ['#DBF5C8', '#9EE67D']
 	},
 	{
@@ -46,6 +51,8 @@ export const appList = [
 		colors: ['#A5D6FF', '#60B1F4']
 	}
 ]
+
+export const currentApps = appList.slice(0, 3)
 
 export const communityList = [
 	{
@@ -128,4 +135,10 @@ export interface Issue {
 	number: number
 	platforms: string[]
 	languages: string[]
+}
+
+export const appLogos: Record<string, ComponentType> = {
+	rate: RateLogo,
+	memo: MemoLogo,
+	retouch: RetouchLogo
 }

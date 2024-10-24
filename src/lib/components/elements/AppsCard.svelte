@@ -1,18 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths'
-	import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
-	import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
-	import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
-	import type { ComponentType } from 'svelte'
 	import MemoImage1 from '$lib/assets/images/apps/memo/1.png'
+	import { appLogos } from '$utils/constants'
 
 	export let app: any
-
-	const appLogos: Record<string, ComponentType> = {
-		rate: RateLogo,
-		memo: MemoLogo,
-		retouch: RetouchLogo
-	}
 </script>
 
 <div class="flex flex-col gap-3 rounded-xl bg-arkGray5 p-5">

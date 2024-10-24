@@ -1,22 +1,13 @@
 <script lang="ts">
 	import Head from '$lib/components/layouts/Head.svelte'
 	import Title from '$lib/components/Title.svelte'
-	import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
-	import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
-	import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
-	import type { ComponentType } from 'svelte'
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Icon from '@iconify/svelte'
 	import { config } from '$lib/config'
+	import { appLogos } from '$utils/constants'
 
 	export let data
-
-	const appLogos: Record<string, ComponentType> = {
-		rate: RateLogo,
-		memo: MemoLogo,
-		retouch: RetouchLogo
-	}
 
 	$: app = data.app
 </script>

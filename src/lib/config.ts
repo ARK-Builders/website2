@@ -25,13 +25,11 @@ export const user = {
 }
 
 export const navLinks = [
-	{ href: '/', title: 'Home' },
+	{ href: '/', title: 'Home', icon: 'mdi:home' },
 	{ href: '/apps', title: 'Apps' },
-	// { href: 'https://ark-builders.notion.site/Research-0e9029fa5e704ddfa8b6786b794a2f17', title: 'Research' },
-	{ href: '/contribute', title: 'Contribute' },
-	{ href: '/blog', title: 'Blog' },
+	{ href: '/contribute', title: 'Contribute', icon: 'fluent:window-dev-tools-20-filled' },
+	{ href: '/blog', title: 'Blog', icon: 'mdi:paper' },
 	{ href: '#', title: 'Community' }
-	// { href: '/', title: 'Support' },
 ]
 
 export const openGraph = {

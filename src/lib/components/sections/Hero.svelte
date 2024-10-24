@@ -6,6 +6,10 @@
 	import ScrollContainer from '$lib/components/elements/ScrollContainer.svelte'
 	import { communityList } from '$utils/constants'
 	import LottieAnimation from '$lib/components/elements/LottieAnimation.svelte'
+	import LeftImage from '$lib/assets/images/left.svelte'
+	import RightImage from '$lib/assets/images/right.svelte'
+	import MobLeftImage from '$lib/assets/images/mob-left.svelte'
+	import MobRightImage from '$lib/assets/images/mob-right.svelte'
 
 	const slides = [
 		{
@@ -41,69 +45,81 @@
 	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
 		<!-- BG Images -->
 		<div class="flex-1">
-			<img class="hidden md:block xl:max-w-[60%]" src={base + '/images/left.png'} alt="left" />
-			<img class="md:hidden" src={base + '/images/mob-left.png'} alt="left" />
+			<span class="hidden md:block">
+				<LeftImage />
+			</span>
+			<span class="md:hidden">
+				<MobLeftImage />
+			</span>
+			<!-- <img class="hidden md:block xl:max-w-[60%]" src={base + '/images/left.png'} alt="left" /> -->
+			<!-- <img class="md:hidden" src={base + '/images/mob-left.png'} alt="left" /> -->
 		</div>
 
 		<!-- Center part -->
-		<div
-			class="absolute flex max-w-2xl flex-col items-center gap-4 sm:relative sm:w-1/2 sm:gap-10 lg:w-full"
-		>
-			<div class="flex flex-col items-center gap-2 md:gap-5">
-				<p class="text-center text-3xl font-semibold md:text-[40px] lg:text-[66px]">
-					Neat, efficient and
-				</p>
-				<p
-					class="w-fit rounded-lg bg-arkOrange px-4 text-center text-2xl font-semibold text-white md:text-4xl md:leading-snug lg:text-[66px]"
-				>
-					privacy-focused apps
-				</p>
-				<p class="text-center text-3xl font-bold md:text-[40px] lg:text-[66px]">
-					for your productivity
-				</p>
-			</div>
-			<p class="max-w-[650px] px-5 text-center md:px-2 md:text-xl">
-				ARK Builders crafts contemporary software for all platforms, with the mission to elevate
-				daily user experiences through privacy enhancements and seamless cross-device
-				synchronization.
-			</p>
-			<div class="flex items-center justify-center gap-2">
-				<Cta url="/#apps" text="Get Started" bgBlack />
-				<div class="flex items-center gap-0">
-					<Cta
-						on:hover={(e) => (hoverGithub = e.detail)}
-						target="_blank"
-						text="View Github"
-						classes="underline pr-2"
-						url="https://github.com/ARK-Builders"
-					/>
-					<Icon class={hoverGithub ? 'text-arkOrange' : ''} icon="ri:github-fill" width="24px" />
+		<div class="absolute flex w-full flex-col items-center justify-center sm:gap-10">
+			<div class="flex max-w-2xl flex-col items-center gap-4 sm:w-1/2 sm:gap-10 lg:w-full">
+				<div class="flex flex-col items-center gap-2 md:gap-5">
+					<p class="text-center text-3xl font-semibold md:text-[40px] lg:text-[66px]">
+						Neat, efficient and
+					</p>
+					<p
+						class="w-fit rounded-lg bg-arkOrange px-4 text-center text-2xl font-semibold text-white md:text-4xl md:leading-snug lg:text-[66px]"
+					>
+						privacy-focused apps
+					</p>
+					<p class="text-center text-3xl font-bold md:text-[40px] lg:text-[66px]">
+						for your productivity
+					</p>
 				</div>
-			</div>
-
-			<div
-				class="flex w-fit flex-col gap-2 rounded-full bg-arkOrangeLight px-7 py-3 lg:px-10 lg:py-5"
-			>
-				<p class="text-center">Be the first to know about our latest updates</p>
-
-				<div class="flex flex-row justify-center gap-5">
-					{#each contacts as community}
-						<a
-							class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
-							href={community.url}
+				<p class="max-w-[650px] px-5 text-center md:px-2 md:text-xl">
+					ARK Builders crafts contemporary software for all platforms, with the mission to elevate
+					daily user experiences through privacy enhancements and seamless cross-device
+					synchronization.
+				</p>
+				<div class="flex items-center justify-center gap-2">
+					<Cta url="/#apps" text="Get Started" bgBlack />
+					<div class="flex items-center gap-0">
+						<Cta
+							on:hover={(e) => (hoverGithub = e.detail)}
 							target="_blank"
-						>
-							<Icon icon={community.logo} width="24px" color={community.colors[1]} />
-						</a>
-					{/each}
+							text="View Github"
+							classes="underline pr-2"
+							url="https://github.com/ARK-Builders"
+						/>
+						<Icon class={hoverGithub ? 'text-arkOrange' : ''} icon="ri:github-fill" width="24px" />
+					</div>
+				</div>
+
+				<div
+					class="flex w-fit flex-col gap-2 rounded-full bg-arkOrangeLight px-7 py-3 lg:px-10 lg:py-5"
+				>
+					<p class="text-center">Be the first to know about our latest updates</p>
+
+					<div class="flex flex-row justify-center gap-5">
+						{#each contacts as community}
+							<a
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
+								href={community.url}
+								target="_blank"
+							>
+								<Icon icon={community.logo} width="24px" color={community.colors[1]} />
+							</a>
+						{/each}
+					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- BG Images -->
 		<div class="flex flex-1 justify-end">
-			<img class="hidden md:block xl:max-w-[50%]" src={base + '/images/right.png'} alt="right" />
-			<img class="md:hidden" src={base + '/images/mob-right.png'} alt="right" />
+			<span class="hidden md:block">
+				<RightImage />
+			</span>
+			<span class=" md:hidden">
+				<MobRightImage />
+			</span>
+
+			<!-- <img class="hidden md:block xl:max-w-[50%]" src={base + '/images/right.png'} alt="right" /> -->
+			<!-- <img class="md:hidden" src={base + '/images/mob-right.png'} alt="right" /> -->
 		</div>
 	</div>
 

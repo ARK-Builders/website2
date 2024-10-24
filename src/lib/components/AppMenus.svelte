@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import MenuItem from '$lib/components/elements/MenuItem.svelte'
-	import { appList } from '$utils/constants'
+	import { appList, currentApps } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 
 	export let link
-
-	const currentApps = appList.slice(0, 3)
 </script>
 
 <div class="menus">
