@@ -16,7 +16,7 @@
 	{#if issue.labels}
 		{#each issue.labels as label}
 			<div
-				class="flex h-7 w-fit items-center gap-1 rounded-lg px-2 text-black"
+				class="flex h-6 w-fit items-center gap-1 rounded-lg px-2 text-black lg:h-7"
 				style="background-color: {category[label].color};"
 			>
 				<Icon icon={category[label].icon} />

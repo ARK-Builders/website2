@@ -5,25 +5,32 @@
 	import Platform from './Platform.svelte'
 
 	export let issue: Issue
+
+	const gotoIssue = () => {
+		window.open(issue.repo + '/issues/' + issue.number, '_blank')
+	}
 </script>
 
-<div
-	class="flex cursor-pointer flex-col gap-5 rounded-lg bg-arkDeep px-5 py-4 text-white hover:bg-arkDeep2"
+<button
+	on:click={gotoIssue}
+	class="flex cursor-pointer flex-col gap-5 rounded-lg bg-arkDeep px-6 py-5 text-white hover:bg-arkDeep2"
 >
-	<p>{issue.title}</p>
+	<p class="max-w-full truncate text-start text-xl">{issue.title}</p>
 
-	<div class="flex flex-row gap-4">
-		<div class="flex flex-col gap-1">
-			<p>Language</p>
-			<Language {issue} />
+	<div class="flex flex-col-reverse gap-2 sm:flex-row sm:gap-10">
+		<div class="flex flex-row gap-3 sm:gap-10">
+			<div class="flex flex-col gap-1">
+				<p class="text-start font-bold">Language</p>
+				<Language {issue} />
+			</div>
+			<div class="flex flex-col gap-1">
+				<p class="text-start font-bold">Platforms</p>
+				<Platform {issue} />
+			</div>
 		</div>
 		<div class="flex flex-col gap-1">
-			<p>Platforms</p>
-			<Platform {issue} />
-		</div>
-		<div class="flex flex-col gap-1">
-			<p>Category</p>
+			<p class="text-start font-bold">Category</p>
 			<Category {issue} />
 		</div>
 	</div>
-</div>
+</button>

@@ -50,23 +50,23 @@
 
 <Head title="Contribute" />
 
-<div class="flex h-full w-full flex-col items-center bg-arkGray bg-opacity-95">
+<div class="flex h-full w-full flex-col items-center bg-arkGray bg-opacity-95 px-4 lg:px-0">
 	<div
-		class="mx-auto mt-10 flex w-full max-w-6xl flex-row justify-between rounded-md bg-arkGray2 px-4 py-6 text-white"
+		class="mt-10 flex w-full max-w-6xl flex-col justify-between rounded-md bg-arkGray2 px-4 py-6 text-white lg:flex-row"
 	>
 		<div>
 			<p class="text-2xl">Research</p>
 		</div>
 
 		<div class="flex flex-row gap-3">
-			<Cta text="View documentation" />
+			<Cta text="View documentation" classes="!text-base lg:!text-xl" />
 
 			<div class="flex items-center rounded-lg bg-white pr-2">
 				<Cta
 					on:hover={(e) => (hoverGithub = e.detail)}
 					target="_blank"
 					text="View Github"
-					classes="px-2"
+					classes="px-2 !text-base lg:!text-xl"
 					url={config.github}
 				/>
 				<Icon
@@ -82,13 +82,13 @@
 		<Title title="Contribute" h2 />
 	</div>
 
-	<div class="flex w-full max-w-6xl flex-col text-white">
-		<div class="flex flex-row gap-3">
+	<div class="flex w-full max-w-6xl flex-col gap-5 text-white">
+		<div class="grid grid-cols-2 flex-row gap-3 sm:flex">
 			<Dropdown items={languages} bind:values={selectedLanguages} title="Language" />
 			<Dropdown items={platforms} bind:values={selectedPlatforms} title="Platforms" />
 			<Dropdown items={categories} bind:values={selectedCategory} title="Category" />
 		</div>
-		<table class="mt-5 hidden table-fixed border-separate border-spacing-y-3 lg:table">
+		<table class="hidden table-fixed border-separate border-spacing-y-3 lg:table">
 			<thead>
 				<tr>
 					<td class="">Titile</td>
@@ -116,7 +116,7 @@
 			</tbody>
 		</table>
 
-		<div class="flex flex-col gap-3 lg:hidden">
+		<div class="flex flex-col gap-4 lg:hidden">
 			{#each hasFilter ? filteredIssues : generalIssues as issue}
 				<ContributeRow {issue} />
 			{/each}
