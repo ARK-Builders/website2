@@ -1,22 +1,29 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte'
+	import { slide } from 'svelte/transition'
 
 	export let title = ''
 	export let items: string[] = []
 	export let values: string[] = []
 
 	let showList = false
+
+	$: label = values.length > 1 ? `${values[0]} + ${values.length - 1}` : values.toString()
 </script>
 
-<div class="relative w-36">
+<div class="relative w-44">
 	<button
-		class="flex h-9 w-full items-center justify-between rounded bg-arkGray2 px-2 text-arkGray5 focus:border focus:border-arkOrange"
+		class="flex h-9 w-full items-center justify-between truncate rounded bg-arkGray2 px-2 capitalize text-arkGray5 focus:border focus:border-arkOrange"
 		on:click={() => (showList = !showList)}
-		>{title}
+	>
+		{label ? label : title}
 		<Icon icon={showList ? 'mdi:chevron-up' : 'mdi:chevron-down'} width="24px" />
 	</button>
 	{#if showList}
-		<div class="absolute top-10 flex w-full flex-col items-center bg-arkGray2 py-2">
+		<div
+			transition:slide={{ axis: 'y', duration: 200 }}
+			class="absolute top-10 flex w-full flex-col items-center bg-arkGray2 py-2"
+		>
 			{#each items as item}
 				<label
 					class="flex w-full cursor-pointer flex-row items-center justify-between p-2 hover:bg-arkGray"

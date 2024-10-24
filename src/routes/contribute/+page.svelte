@@ -1,6 +1,10 @@
 <script lang="ts">
+	import Category from '$lib/components/elements/Category.svelte'
+	import ContributeRow from '$lib/components/elements/ContributeRow.svelte'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Dropdown from '$lib/components/elements/Dropdown.svelte'
+	import Language from '$lib/components/elements/Language.svelte'
+	import Platform from '$lib/components/elements/Platform.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import { config } from '$lib/config'
@@ -9,39 +13,60 @@
 
 	export let data
 
+	let hoverGithub = false
+	let issues: Issue[]
+	let selectedLanguages: string[] = []
+	let selectedPlatforms: string[] = []
+	let selectedCategory: string[] = []
+
 	$: issues = JSON.parse(data.data).default
 
+	$: generalIssues = [
+		...new Set(issues.filter((issue: Issue) => !issue.labels.length).flat())
+	] as Issue[]
 	$: languages = [...new Set(issues.map((issue: Issue) => issue.languages).flat())] as string[]
 	$: platforms = [...new Set(issues.map((issue: Issue) => issue.platforms).flat())] as string[]
 	$: categories = [...new Set(issues.map((issue: Issue) => issue.labels).flat())] as string[]
 
-	let hoverGithub = false
+	$: filteredIssues = issues.filter((issue) => {
+		const languageMatch =
+			selectedLanguages.length === 0 ||
+			issue.languages.some((lang) => selectedLanguages.includes(lang))
+		const platformMatch =
+			selectedPlatforms.length === 0 ||
+			issue.platforms.some((platform) => selectedPlatforms.includes(platform))
+		const categoryMatch =
+			selectedCategory.length === 0 ||
+			issue.labels.some((label) => selectedCategory.includes(label))
 
-	// Track selected items
-	let selectedLanguages: string[] = []
-	let selectedPlatforms: string[] = []
-	let selectedCategory: string[] = []
+		return languageMatch && platformMatch && categoryMatch
+	})
+	$: hasFilter = selectedLanguages.length || selectedPlatforms.length || selectedCategory.length
+
+	const gotoIssue = (issue: Issue) => {
+		window.open(issue.repo + '/issues/' + issue.number, '_blank')
+	}
 </script>
 
 <Head title="Contribute" />
 
-<div class="flex h-full w-full flex-col items-center bg-arkGray bg-opacity-95">
+<div class="flex h-full w-full flex-col items-center bg-arkGray bg-opacity-95 px-4 lg:px-0">
 	<div
-		class="mx-auto mt-10 flex w-full max-w-6xl flex-row justify-between rounded-md bg-arkGray2 px-4 py-6 text-white"
+		class="mt-10 flex w-full max-w-6xl flex-col justify-between rounded-md bg-arkGray2 px-4 py-6 text-white lg:flex-row"
 	>
 		<div>
 			<p class="text-2xl">Research</p>
 		</div>
 
 		<div class="flex flex-row gap-3">
-			<Cta text="View documentation" />
+			<Cta text="View documentation" classes="!text-base lg:!text-xl" />
 
 			<div class="flex items-center rounded-lg bg-white pr-2">
 				<Cta
 					on:hover={(e) => (hoverGithub = e.detail)}
 					target="_blank"
 					text="View Github"
-					classes="px-2"
+					classes="px-2 !text-base lg:!text-xl"
 					url={config.github}
 				/>
 				<Icon
@@ -57,16 +82,16 @@
 		<Title title="Contribute" h2 />
 	</div>
 
-	<div class="flex w-full max-w-6xl flex-col text-white">
-		<div class="flex flex-row gap-3">
-			<Dropdown items={languages} values={selectedLanguages} title="Language" />
-			<Dropdown items={platforms} values={selectedPlatforms} title="Platforms" />
-			<Dropdown items={categories} values={selectedCategory} title="Category" />
+	<div class="flex w-full max-w-6xl flex-col gap-5 text-white">
+		<div class="grid grid-cols-2 flex-row gap-3 sm:flex">
+			<Dropdown items={languages} bind:values={selectedLanguages} title="Language" />
+			<Dropdown items={platforms} bind:values={selectedPlatforms} title="Platforms" />
+			<Dropdown items={categories} bind:values={selectedCategory} title="Category" />
 		</div>
-		<table class="mt-5 hidden border-separate border-spacing-y-3 lg:table">
+		<table class="hidden table-fixed border-separate border-spacing-y-3 lg:table">
 			<thead>
 				<tr>
-					<td class="w-[45%]">Titile</td>
+					<td class="">Titile</td>
 					<td>Language</td>
 					<td>Platforms</td>
 					<td>Category</td>
@@ -74,20 +99,28 @@
 			</thead>
 
 			<tbody>
-				<tr class="">
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-				</tr>
-				<tr>
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-					<td>Sample text</td>
-				</tr>
+				{#each hasFilter ? filteredIssues : generalIssues as issue}
+					<tr class="" on:click={() => gotoIssue(issue)}>
+						<td class="truncate lg:max-w-80 xl:max-w-[400px]">{issue.title}</td>
+						<td class="">
+							<Language {issue} />
+						</td>
+						<td>
+							<Platform {issue} />
+						</td>
+						<td>
+							<Category {issue} />
+						</td>
+					</tr>
+				{/each}
 			</tbody>
 		</table>
+
+		<div class="flex flex-col gap-4 lg:hidden">
+			{#each hasFilter ? filteredIssues : generalIssues as issue}
+				<ContributeRow {issue} />
+			{/each}
+		</div>
 	</div>
 </div>
 
