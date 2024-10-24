@@ -10,7 +10,12 @@
 	import Icon from '@iconify/svelte'
 
 	export let data
+
+	let hoverGithub = false
 	let issues: Issue[]
+	let selectedLanguages: string[] = []
+	let selectedPlatforms: string[] = []
+	let selectedCategory: string[] = []
 
 	$: issues = JSON.parse(data.data).default
 
@@ -21,7 +26,7 @@
 	$: platforms = [...new Set(issues.map((issue: Issue) => issue.platforms).flat())] as string[]
 	$: categories = [...new Set(issues.map((issue: Issue) => issue.labels).flat())] as string[]
 
-	$: filteredIssues = generalIssues.filter((issue) => {
+	$: filteredIssues = issues.filter((issue) => {
 		const languageMatch =
 			selectedLanguages.length === 0 ||
 			issue.languages.some((lang) => selectedLanguages.includes(lang))
@@ -34,13 +39,7 @@
 
 		return languageMatch && platformMatch && categoryMatch
 	})
-
-	let hoverGithub = false
-
-	// Track selected items
-	let selectedLanguages: string[] = []
-	let selectedPlatforms: string[] = []
-	let selectedCategory: string[] = []
+	$: hasFilter = selectedLanguages.length || selectedPlatforms.length || selectedCategory.length
 </script>
 
 <Head title="Contribute" />
@@ -94,7 +93,7 @@
 			</thead>
 
 			<tbody>
-				{#each generalIssues as issue}
+				{#each hasFilter ? filteredIssues : generalIssues as issue}
 					<tr class="">
 						<td class="w-[40%] truncate">{issue.title}</td>
 						<td class="">
