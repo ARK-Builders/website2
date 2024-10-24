@@ -54,8 +54,8 @@
 			<div class="flex w-full flex-col justify-center gap-16 lg:flex-row">
 				<div class="flex justify-center lg:w-2/4">
 					<img
-						class="h-fit max-h-[680px] {activeType == 'ark' && 'ml-8'} 
-						{activeType == 'typical' && 'pr-7'}"
+						class="h-fit max-h-[680px] {activeType == 'ark' && 'ml-9'} 
+						{activeType == 'typical' && 'pr-6'}"
 						src="{base}/images/process/{activeType}-left.png"
 						alt="ARK process"
 					/>
@@ -83,7 +83,7 @@
 							<img
 								class="h-fit w-[350px] md:w-[480px]"
 								src="{base}/images/process/typical-right.png"
-								alt="ARK process"
+								alt="Typical process"
 							/>
 						</div>
 					{/if}
