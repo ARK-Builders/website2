@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
-	import { appList } from '$utils/constants'
+	import { appLogos, currentApps } from '$utils/constants'
 	import RateImage1 from '$lib/assets/images/apps/rate/1.png'
 	import RateImage2 from '$lib/assets/images/apps/rate/2.png'
 	import RateImage3 from '$lib/assets/images/apps/rate/3.png'
@@ -11,12 +11,7 @@
 	import RetouchImage1 from '$lib/assets/images/apps/retouch/1.png'
 	import RetouchImage2 from '$lib/assets/images/apps/retouch/2.png'
 	import RetouchImage3 from '$lib/assets/images/apps/retouch/3.png'
-	import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
-	import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
-	import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
-	import type { ComponentType } from 'svelte'
 
-	const currentApps = appList.slice(0, 3)
 	const appImages: Record<string, string> = {
 		rate1: RateImage1,
 		rate2: RateImage2,
@@ -27,12 +22,6 @@
 		retouch1: RetouchImage1,
 		retouch2: RetouchImage2,
 		retouch3: RetouchImage3
-	}
-
-	const appLogos: Record<string, ComponentType> = {
-		rate: RateLogo,
-		memo: MemoLogo,
-		retouch: RetouchLogo
 	}
 
 	let activeApp = currentApps[0]
