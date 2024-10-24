@@ -4,9 +4,9 @@ date: '2024-01-04'
 draft: false
 preview:
   [
-    'https://ark-builders.github.io/website2/images/apps/memo/1.png',
-    'https://ark-builders.github.io/website2/images/apps/memo/2.png',
-    'https://ark-builders.github.io/website2/images/apps/memo/3.png'
+    'https://ark-builders.github.io/website2/images/apps/memo/blog1.png',
+    'https://ark-builders.github.io/website2/images/apps/memo/blog2.png',
+    'https://ark-builders.github.io/website2/images/apps/memo/blog3.png'
   ]
 author: ARK-Builders
 ---
