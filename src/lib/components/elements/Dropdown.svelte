@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte'
+	import { slide } from 'svelte/transition'
 
 	export let title = ''
 	export let items: string[] = []
@@ -19,7 +20,10 @@
 		<Icon icon={showList ? 'mdi:chevron-up' : 'mdi:chevron-down'} width="24px" />
 	</button>
 	{#if showList}
-		<div class="absolute top-10 flex w-full flex-col items-center bg-arkGray2 py-2">
+		<div
+			transition:slide={{ axis: 'y', duration: 200 }}
+			class="absolute top-10 flex w-full flex-col items-center bg-arkGray2 py-2"
+		>
 			{#each items as item}
 				<label
 					class="flex w-full cursor-pointer flex-row items-center justify-between p-2 hover:bg-arkGray"
