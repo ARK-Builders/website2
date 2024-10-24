@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Issue } from '$utils/constants'
-	import Category from './Category.svelte'
-	import Language from './Language.svelte'
-	import Platform from './Platform.svelte'
+	import Category from '$lib/components/elements/Category.svelte'
+	import Language from '$lib/components/elements/Language.svelte'
+	import Platform from '$lib/components/elements/Platform.svelte'
 
 	export let issue: Issue
 
