@@ -33,8 +33,11 @@
 						href={base + link.href}
 						class:underline={$page.url.pathname == link.href}
 						class:!text-arkOrange2={$page.url.pathname == link.href}
-						class="p-1 text-xl font-medium text-white hover:text-arkOrange sm:p-2"
+						class="flex items-center gap-2 p-1 text-xl font-medium text-white hover:text-arkOrange sm:p-2"
 					>
+						{#if link.icon}
+							<Icon icon={link.icon} />
+						{/if}
 						{link.title}
 					</a>
 				</div>
@@ -84,7 +87,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="absolute bottom-2 w-[90%]">
+	<div class="absolute bottom-2 w-[90%] sm:w-[95%]">
 		<GetStarted on:click={offMenu} href="/#apps" bgOrange classes="justify-center" />
 	</div>
 </div>
