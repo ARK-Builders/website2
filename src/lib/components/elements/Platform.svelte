@@ -1,7 +1,8 @@
 <script lang="ts">
+	import type { Issue } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 
-	export let name = ''
+	export let issue: Issue
 
 	const platforms: Record<string, string> = {
 		Desktop: 'devicon:windows8',
@@ -11,6 +12,12 @@
 	}
 </script>
 
-<div class="flex h-7 items-center">
-	<Icon icon={platforms[name]} color={name == 'OSX' ? 'white' : ''} />
+<div class="flex w-fit flex-row gap-2">
+	{#if issue && issue.platforms}
+		{#each issue.platforms as platform}
+			<div class="flex h-7 items-center">
+				<Icon icon={platforms[platform]} color={platform == 'OSX' ? 'white' : ''} />
+			</div>
+		{/each}
+	{/if}
 </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Category from '$lib/components/elements/Category.svelte'
+	import ContributeRow from '$lib/components/elements/ContributeRow.svelte'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Dropdown from '$lib/components/elements/Dropdown.svelte'
 	import Language from '$lib/components/elements/Language.svelte'
@@ -100,32 +101,26 @@
 			<tbody>
 				{#each hasFilter ? filteredIssues : generalIssues as issue}
 					<tr class="" on:click={() => gotoIssue(issue)}>
-						<td class="truncate">{issue.title}</td>
+						<td class="truncate lg:max-w-80 xl:max-w-[400px]">{issue.title}</td>
 						<td class="">
-							<div class="flex w-fit flex-row gap-2">
-								{#each issue.languages as language}
-									<Language name={language} />
-								{/each}
-							</div>
+							<Language {issue} />
 						</td>
 						<td>
-							<div class="flex w-fit flex-row gap-2">
-								{#each issue.platforms as platform}
-									<Platform name={platform} />
-								{/each}
-							</div>
+							<Platform {issue} />
 						</td>
 						<td>
-							<div class="flex w-fit flex-col gap-1">
-								{#each issue.labels as label}
-									<Category name={label} />
-								{/each}
-							</div>
+							<Category {issue} />
 						</td>
 					</tr>
 				{/each}
 			</tbody>
 		</table>
+
+		<div class="flex flex-col gap-3 lg:hidden">
+			{#each hasFilter ? filteredIssues : generalIssues as issue}
+				<ContributeRow {issue} />
+			{/each}
+		</div>
 	</div>
 </div>
 
