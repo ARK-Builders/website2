@@ -11,6 +11,6 @@
 	}
 </script>
 
-<div class="flex h-7 items-center rounded-md bg-arkDeep2 px-2">
+<div class="flex h-7 items-center">
 	<Icon icon={platforms[name]} color={name == 'OSX' ? 'white' : ''} />
 </div>
