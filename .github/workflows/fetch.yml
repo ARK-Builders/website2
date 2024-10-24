@@ -29,7 +29,7 @@ jobs:
         id: fetchIssues
         run: |
           node ./content/issues/fetchIssues.js > ./content/issues/issues.json
-          cp ./content/issues/issues.json issues.json.res
+          cp ./content/issues/issues.json ./content/issues/issues.json.res
 
       - name: Push into Git
         run: |-

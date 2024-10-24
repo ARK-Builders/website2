@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Category from '$lib/components/elements/Category.svelte'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Dropdown from '$lib/components/elements/Dropdown.svelte'
 	import Language from '$lib/components/elements/Language.svelte'
@@ -40,6 +41,10 @@
 		return languageMatch && platformMatch && categoryMatch
 	})
 	$: hasFilter = selectedLanguages.length || selectedPlatforms.length || selectedCategory.length
+
+	const gotoIssue = (issue: Issue) => {
+		window.open(issue.repo + '/issues/' + issue.number, '_blank')
+	}
 </script>
 
 <Head title="Contribute" />
@@ -82,10 +87,10 @@
 			<Dropdown items={platforms} bind:values={selectedPlatforms} title="Platforms" />
 			<Dropdown items={categories} bind:values={selectedCategory} title="Category" />
 		</div>
-		<table class="mt-5 hidden border-separate border-spacing-y-3 lg:table">
+		<table class="mt-5 hidden table-fixed border-separate border-spacing-y-3 lg:table">
 			<thead>
 				<tr>
-					<td class="w-[45%]">Titile</td>
+					<td class="">Titile</td>
 					<td>Language</td>
 					<td>Platforms</td>
 					<td>Category</td>
@@ -94,8 +99,8 @@
 
 			<tbody>
 				{#each hasFilter ? filteredIssues : generalIssues as issue}
-					<tr class="">
-						<td class="w-[40%] truncate">{issue.title}</td>
+					<tr class="" on:click={() => gotoIssue(issue)}>
+						<td class="truncate">{issue.title}</td>
 						<td class="">
 							<div class="flex w-fit flex-row gap-2">
 								{#each issue.languages as language}
@@ -110,7 +115,13 @@
 								{/each}
 							</div>
 						</td>
-						<td>{issue.labels}</td>
+						<td>
+							<div class="flex w-fit flex-col gap-1">
+								{#each issue.labels as label}
+									<Category name={label} />
+								{/each}
+							</div>
+						</td>
 					</tr>
 				{/each}
 			</tbody>
