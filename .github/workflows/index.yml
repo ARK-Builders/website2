@@ -1,4 +1,4 @@
-name: Return Data from JavaScript Function
+name: Index issues from configured GitHub repositories
 
 on:
   push:
