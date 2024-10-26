@@ -68,7 +68,7 @@
 			<p class="text-center text-xl font-semibold uppercase text-arkOrange lg:text-start">
 				Support us
 			</p>
-			<p class="z-10 text-center text-[40px] font-bold lg:text-start">
+			<p class="text-center text-[40px] font-bold lg:z-10 lg:text-start">
 				We greatly appreciate every bit of support!
 			</p>
 			<div class="flex w-full justify-center lg:justify-start">
