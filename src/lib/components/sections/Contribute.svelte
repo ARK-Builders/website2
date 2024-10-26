@@ -5,6 +5,45 @@
 	import Tag from '$lib/components/elements/TechTag.svelte'
 	import Android from '$lib/icons/android.svelte'
 	import Icon from '@iconify/svelte'
+
+	const contributions = [
+		{
+			title: 'Automatically extract Domain tags',
+			tags: [{ icon: 'mdi:language-kotlin', name: 'Kotlin' }],
+			labels: [{ name: 'Feature', background: '#56DD9E' }],
+			issueLink: 'https://github.com/ARK-Builders/ARK-Shelf/issues/3'
+		},
+		{
+			title: 'Replace alphabetical sorting by un-sorting',
+			tags: [
+				{ icon: 'ri:svelte-line', name: 'Svelte' },
+				{ icon: 'teenyicons:rust-outline', name: 'Rust' },
+				{ icon: 'teenyicons:typescript-outline', name: 'TypeScript' }
+			],
+			labels: [
+				{ name: 'Enhancement', background: '#DAD67B' },
+				{ name: 'Windows', icon: 'devicon:windows8' },
+				{ name: 'Linux', icon: 'flat-color-icons:linux' },
+				{ name: 'macOS', icon: 'uil:apple' }
+			],
+			issueLink: 'https://github.com/ARK-Builders/ARK-Shelf-Desktop/issues/20'
+		},
+		{
+			title: 'Move resources with their associated data',
+			tags: [{ icon: 'mdi:language-kotlin', name: 'Kotlin' }],
+			labels: [{ name: 'Enhancement', background: '#DAD67B' }],
+			issueLink: 'https://github.com/ARK-Builders/ARK-Navigator/issues/380'
+		},
+		{
+			title: 'Empty previews are generated',
+			tags: [
+				{ icon: 'teenyicons:rust-outline', name: 'Rust' },
+				{ icon: 'mdi:language-kotlin', name: 'Kotlin' }
+			],
+			labels: [{ name: 'Enhancement', background: '#DAD67B' }],
+			issueLink: 'https://github.com/ARK-Builders/ark-android/issues/62'
+		}
+	]
 </script>
 
 <section class="relative flex items-center bg-arkGray py-24 lg:px-5 xl:px-0">
@@ -29,65 +68,30 @@
 			<Cta url="/contribute" text="View More" classes="hidden lg:flex mt-5" />
 		</div>
 		<div class="flex w-full flex-col gap-3 md:grid md:grid-cols-2">
-			<ContributeCard title="Automatically extract Domain tags">
-				<Tag slot="title-tag">
-					<Icon icon="mdi:language-kotlin" />
-					Kotlin
-				</Tag>
-				<div class="flex flex-row items-center gap-2" slot="labels">
-					<Label name="Feature" --background="#56DD9E"></Label>
-					<Android />
-				</div>
-			</ContributeCard>
-
-			<ContributeCard title="Replace alphabetical sorting by un-sorting">
-				<div class="flex flex-row flex-wrap gap-2" slot="title-tag">
-					<Tag>
-						<Icon icon="ri:svelte-line" />
-						Svelte</Tag
-					>
-					<Tag><Icon icon="teenyicons:rust-outline" />Rust</Tag>
-					<Tag>
-						<Icon icon="teenyicons:typescript-outline" />
-						TypeScript
-					</Tag>
-				</div>
-
-				<div class="flex flex-row items-center gap-2" slot="labels">
-					<Label name="Enhancement" --background="#DAD67B"></Label>
-					<Icon icon="devicon:windows8" width="22px" />
-					<Icon icon="flat-color-icons:linux" width="32px" />
-					<Icon icon="uil:apple" width="26px" />
-				</div>
-			</ContributeCard>
-
-			<ContributeCard title="Move resources with their associated data">
-				<Tag slot="title-tag">
-					<Icon icon="mdi:language-kotlin" />
-					Kotlin
-				</Tag>
-				<div class="flex flex-row items-center gap-2" slot="labels">
-					<Label name="Enhancement" --background="#DAD67B"></Label>
-					<Android />
-				</div>
-			</ContributeCard>
-
-			<ContributeCard title="Empty previews are generated" classes="hidden md:flex">
-				<div class="flex flex-row gap-2" slot="title-tag">
-					<Tag>
-						<Icon icon="teenyicons:rust-outline" />
-						Rust
-					</Tag>
-					<Tag>
-						<Icon icon="mdi:language-kotlin" />
-						Kotlin
-					</Tag>
-				</div>
-				<div class="flex flex-row items-center gap-2" slot="labels">
-					<Label name="Enhancement" --background="#DAD67B"></Label>
-					<Android />
-				</div>
-			</ContributeCard>
+			{#each contributions as contribution}
+				<ContributeCard issueLink={contribution.issueLink} title={contribution.title}>
+					<div slot="title-tag" class="flex flex-row flex-wrap gap-2">
+						{#each contribution.tags as tag}
+							<Tag>
+								<Icon icon={tag.icon} />
+								{tag.name}
+							</Tag>
+						{/each}
+					</div>
+					<div class="flex flex-row items-center gap-2" slot="labels">
+						{#each contribution.labels as label}
+							{#if label.icon}
+								<Icon icon={label.icon} width="22px" />
+							{:else}
+								<Label name={label.name} --background={label.background}></Label>
+							{/if}
+						{/each}
+						{#if !contribution.title.includes('Replace')}
+							<Android />
+						{/if}
+					</div>
+				</ContributeCard>
+			{/each}
 		</div>
 	</div>
 </section>

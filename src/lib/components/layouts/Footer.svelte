@@ -6,17 +6,17 @@
 </script>
 
 <footer class="bg-white px-5 pb-10 pt-40 lg:px-5 xl:px-0">
-	<div class="mx-auto flex w-full max-w-7xl flex-row">
+	<div class="mx-auto flex w-full max-w-7xl flex-row gap-10">
 		<div class="flex flex-1 flex-col gap-5">
 			<div class="h-10 w-fit">
 				<FooterLogo />
 			</div>
-			<div class="grid grid-cols-2 flex-row gap-3 lg:flex">
+			<div class="grid w-fit grid-cols-4 flex-row gap-3 lg:flex">
 				{#each communityList as community}
 					<a
 						target="_blank"
 						href={community.url}
-						class="flex h-10 cursor-pointer flex-row items-center gap-4 hover:text-arkOrange"
+						class="flex h-10 w-fit cursor-pointer flex-row items-center gap-4 hover:text-arkOrange"
 					>
 						<div
 							class="flex h-full w-10 items-center justify-center rounded-full"
