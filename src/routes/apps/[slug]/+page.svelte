@@ -16,7 +16,7 @@
 
 <div class="flex h-full w-full flex-col items-center p-3 lg:p-0">
 	<div
-		class="my-10 flex w-full max-w-5xl flex-col justify-between gap-4 lg:flex-row lg:items-center"
+		class="my-10 flex w-full max-w-[50rem] flex-col justify-between gap-4 lg:flex-row lg:items-center"
 	>
 		<div class="flex flex-row items-center gap-4">
 			<div class="flex h-10 w-10 items-center">
@@ -39,8 +39,8 @@
 		</div>
 	</div>
 
-	<div class="mx-auto flex w-full max-w-5xl flex-col gap-5">
-		<div class="prose dark:prose-dark w-full">
+	<div class="mx-auto flex w-full max-w-[50rem] flex-col gap-5">
+		<div class="prose dark:prose-dark w-full text-justify">
 			{@html app.content}
 		</div>
 
