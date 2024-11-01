@@ -24,7 +24,9 @@
 </script>
 
 <section class="relative flex items-center bg-arkGray py-12">
-	<div class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-5 lg:gap-10 lg:px-0">
+	<div
+		class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-5 lg:gap-10 lg:px-4 xl:px-0"
+	>
 		<div class="flex w-full flex-col gap-4">
 			<p class="text-center text-4xl font-bold text-white lg:text-6xl">Process</p>
 		</div>

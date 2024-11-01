@@ -50,7 +50,7 @@
 
 <Head title="Contribute" />
 
-<div class="flex h-full w-full flex-col items-center bg-arkGray bg-opacity-95 px-4 lg:px-0">
+<div class="flex h-full w-full flex-col items-center bg-arkGray bg-opacity-95 px-5 xl:px-0">
 	<div
 		class="mt-10 flex w-full max-w-6xl flex-col justify-between rounded-md bg-arkGray2 px-4 py-6 text-white lg:flex-row"
 	>
