@@ -3,6 +3,7 @@ import axios from 'axios'
 async function callApi() {
 	let issuesList = []
 	let pullRequestList = []
+
 	try {
 		var repositories = await axios.get(
 			'https://raw.githubusercontent.com/ARK-Builders/website2/main/content/issues/repos-list.json'
@@ -14,30 +15,30 @@ async function callApi() {
 				const issues = await axios.get(
 					'https://api.github.com/repos/ARK-Builders/' + repo.name + '/issues'
 				)
-				const pullRequests = await axios.get(
-					'https://api.github.com/repos/ARK-Builders/' + repo.name + '/pulls'
-				)
 
-				if (pullRequests.status === 200) {
-					if (pullRequests.data.length > 0) {
-						for (const pulls of pullRequests.data) {
-							let repoUrl = pulls.url.replace('api.', '').replace('repos/', '')
-							if (pulls.user.login == 'dependabot[bot]') continue
+				// const pullRequests = await axios.get(
+				// 	'https://api.github.com/repos/ARK-Builders/' + repo.name + '/pulls'
+				// )
+				// if (pullRequests.status === 200) {
+				// 	if (pullRequests.data.length > 0) {
+				// 		for (const pulls of pullRequests.data) {
+				// 			let repoUrl = pulls.url.replace('api.', '').replace('repos/', '')
+				// 			if (pulls.user.login == 'dependabot[bot]') continue
 
-							pullRequestList.push({
-								title: pulls.title,
-								labels: ['pull request'],
-								user: pulls.user.login,
-								user_avatar: pulls.user.avatar_url,
-								date: new Date(pulls.created_at),
-								repo: repoUrl,
-								number: pulls.number,
-								platforms: repo.platforms,
-								languages: repo.languages
-							})
-						}
-					}
-				}
+				// 			pullRequestList.push({
+				// 				title: pulls.title,
+				// 				labels: ['pull request'],
+				// 				user: pulls.user.login,
+				// 				user_avatar: pulls.user.avatar_url,
+				// 				date: new Date(pulls.created_at),
+				// 				repo: repoUrl,
+				// 				number: pulls.number,
+				// 				platforms: repo.platforms,
+				// 				languages: repo.languages
+				// 			})
+				// 		}
+				// 	}
+				// }
 
 				if (issues.status === 200) {
 					if (issues.data.length > 0) {
@@ -70,7 +71,7 @@ async function callApi() {
 					throw new Error(`API request failed with status ${response.status}`)
 				}
 			}
-			return [...issuesList, ...pullRequestList]
+			return issuesList
 		} else {
 			throw new Error(`API request failed with status ${response.status}`)
 		}
