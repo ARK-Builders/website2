@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths'
+	import { page } from '$app/stores'
 	import MenuItem from '$lib/components/elements/MenuItem.svelte'
-	import { appList, currentApps } from '$utils/constants'
+	import { currentApps } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 
 	export let link
@@ -9,6 +10,8 @@
 
 <div class="menus">
 	<a
+		class:underline={$page.url.pathname.includes('/apps')}
+		class:!text-arkOrange={$page.url.pathname.includes('/apps')}
 		href={base + link.href}
 		class="flex items-center p-1 font-medium text-white hover:text-arkOrange dark:text-gray-100 sm:p-2"
 	>
