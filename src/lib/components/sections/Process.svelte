@@ -67,12 +67,12 @@
 				<div class="flex flex-col items-center text-white lg:h-[750px] lg:w-2/4 lg:items-start">
 					<!-- ARK App -->
 					<p class="text-center text-2xl font-semibold md:text-[32px] lg:text-start">
-						Resources Needed
+						Resources needed
 					</p>
 					{#if activeType == 'ark'}
 						<div class="flex flex-col items-center gap-3">
 							<img
-								class="-ml-4 h-fit max-h-[720px]"
+								class="-ml-4 max-h-[720px]"
 								src="{base}/images/process/{activeType}-right.png"
 								alt="ARK process"
 							/>
@@ -83,7 +83,7 @@
 					{#if activeType == 'typical'}
 						<div class="mt-[11px] flex flex-col gap-5">
 							<img
-								class="h-fit w-[350px] md:w-[480px]"
+								class="h-fit w-[350px] md:w-[400px] xl:w-[480px]"
 								src="{base}/images/process/typical-right.png"
 								alt="Typical process"
 							/>
