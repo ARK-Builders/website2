@@ -33,7 +33,7 @@
 			<p class="text-center text-4xl font-bold lg:text-6xl">Our Apps</p>
 		</div>
 
-		<div class="flex w-full flex-col gap-7 lg:flex-row">
+		<div class="flex w-full flex-col gap-4 lg:flex-row xl:gap-7">
 			<!-- Left side panel -->
 			<div
 				class="grid h-fit w-full grid-cols-3 flex-row overflow-hidden rounded-lg px-4 md:flex lg:w-1/5 lg:flex-col"
@@ -44,8 +44,8 @@
 						on:click={() => (activeApp = app)}
 						class="
 						{activeApp.name != app.name ? ' hover:bg-arkGray5' : ''} 
-						flex w-full flex-col items-center gap-3 border-b
-						bg-arkGray6 px-5 py-3 font-semibold first:rounded-tl-lg last:rounded-br-lg lg:h-[88px] lg:flex-row lg:first:rounded-tr-lg lg:last:rounded-bl-lg"
+						flex w-full flex-col items-center gap-3 border-b bg-arkGray6
+						px-5 py-3 font-semibold first:rounded-tl-lg last:rounded-br-lg last:border-b-0 lg:h-[88px] lg:flex-row lg:first:rounded-tr-lg lg:last:rounded-bl-lg"
 					>
 						{#if !app.logo}
 							<img src="{base}/images/placeholder.png" alt="app logo" />

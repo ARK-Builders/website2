@@ -83,7 +83,7 @@
 					{#if activeType == 'typical'}
 						<div class="mt-[11px] flex flex-col gap-5">
 							<img
-								class="h-fit w-[350px] md:w-[400px] xl:w-[480px]"
+								class="h-fit w-[350px] md:w-[380px] xl:w-[480px]"
 								src="{base}/images/process/typical-right.png"
 								alt="Typical process"
 							/>
