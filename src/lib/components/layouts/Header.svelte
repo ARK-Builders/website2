@@ -52,8 +52,9 @@
 				<Icon icon="ic:outline-menu" width="34px" color="white" />
 			</button>
 		</div>
-		{#if showMobileMenu}
-			<MobileMenu bind:showMobileMenu />
-		{/if}
 	</div>
 </header>
+
+{#if showMobileMenu}
+	<MobileMenu bind:showMobileMenu />
+{/if}
