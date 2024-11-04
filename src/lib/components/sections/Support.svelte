@@ -83,7 +83,7 @@
 		<div class="my-5 grid grid-cols-2 gap-2 md:flex md:h-[40px] md:flex-row">
 			{#each supportLogosCrypto as logo}
 				<button
-					class="h-full w-[150px] overflow-hidden rounded-md"
+					class="h-11 w-[150px] overflow-hidden rounded-md"
 					on:click={(e) => {
 						if (['bitcoin', 'ethereum'].includes(logo.name)) e.preventDefault()
 						logo.onClick ? logo.onClick() : ''

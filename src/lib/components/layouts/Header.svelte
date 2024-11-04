@@ -12,7 +12,9 @@
 	let showMobileMenu = false
 </script>
 
-<header class="fixed top-0 z-10 w-full bg-arkGray bg-opacity-95 px-5 dark:bg-gray-900 xl:px-0">
+<header
+	class="fixed top-0 z-10 w-full bg-arkGray bg-opacity-90 px-5 backdrop-blur-md dark:bg-gray-900 xl:px-0"
+>
 	<div class="mx-auto flex h-[72px] items-center justify-between lg:px-0 xl:max-w-7xl">
 		<div class="flex flex-row items-center">
 			<a href="{base}/" aria-label={config.headerTitle}>
