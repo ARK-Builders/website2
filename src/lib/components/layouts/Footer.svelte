@@ -5,7 +5,7 @@
 	import FooterLogo from '$lib/assets/images/footer-logo.svelte'
 </script>
 
-<footer class="bg-white px-5 pb-10 pt-40 lg:px-5 xl:px-0">
+<footer class="bg-white px-5 pb-10 pt-40 xl:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-row gap-10">
 		<div class="flex flex-1 flex-col gap-5">
 			<div class="h-10 w-fit">

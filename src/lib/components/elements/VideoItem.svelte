@@ -9,7 +9,7 @@
 <a
 	href={videoUrl.replace('watch?v=', 'embed/')}
 	target="_blank"
-	class="flex min-w-60 flex-col rounded-lg"
+	class="flex min-w-56 flex-col rounded-lg"
 >
 	<iframe
 		class="h-full w-full rounded-t-md"

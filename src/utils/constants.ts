@@ -125,6 +125,17 @@ export type Blog = {
 	type: string
 }
 
+export type Author = {
+	id: string
+	name: string
+	avatar?: string
+	occupation?: string
+	company?: string
+	email?: string
+	twitter?: string
+	linkedin?: string
+	github?: string
+}
 export interface Issue {
 	title: string
 	labels: string[]

@@ -14,7 +14,7 @@
 
 <div
 	transition:slide={{ axis: 'x', duration: 200 }}
-	class="fixed left-0 top-0 flex h-full w-full flex-col gap-3 bg-arkGray2 px-5"
+	class="fixed left-0 top-0 z-20 flex h-full w-full flex-col gap-3 bg-arkGray2 px-5"
 >
 	<div class="absolute right-5 flex flex-row justify-end">
 		<button class="mt-5" on:click={() => (showMobileMenu = !showMobileMenu)}>

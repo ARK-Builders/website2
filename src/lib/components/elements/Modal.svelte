@@ -14,7 +14,7 @@
 		<div
 			in:receive={{ key: id, duration: 200 }}
 			out:send={{ key: id, duration: 200 }}
-			class="relative flex w-4/5 flex-col rounded border bg-white p-2 shadow lg:w-1/4"
+			class="relative flex w-4/5 flex-col rounded border bg-white p-2 shadow lg:w-2/4 xl:w-1/4"
 		>
 			<button
 				class="absolute right-0 top-0 flex w-fit items-center justify-center rounded-full p-[2px] hover:bg-gray-100"
