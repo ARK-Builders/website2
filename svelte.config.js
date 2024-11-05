@@ -12,10 +12,10 @@ const config = {
 		}),
 		paths: {
 			base: process.env.BASE_PATH || ''
+		},
+		prerender: {
+			crawl: true
 		}
-		// prerender: {
-		// 	handleHttpError: 'warn'
-		// }
 	},
 	preprocess: [mdsvex(mdsvexConfig), vitePreprocess()]
 }

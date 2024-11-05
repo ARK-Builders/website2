@@ -3,7 +3,6 @@ import { getEntries, getTags } from '$utils/entries'
 import { error } from '@sveltejs/kit'
 
 /** @type {import('./$types').PageServerLoad} */
-// export const prerender = 'auto'
 
 export async function load() {
 	const posts = getEntries('posts') as Blog[]
