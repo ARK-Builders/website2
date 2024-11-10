@@ -44,15 +44,13 @@
 <div class="mb-16 flex w-full flex-col">
 	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
 		<!-- BG Images -->
-		<div class="flex-1">
-			<span class="hidden md:block">
+		<div class="h-full flex-1">
+			<span class="relative hidden h-full md:block">
 				<LeftImage />
 			</span>
 			<span class="md:hidden">
 				<MobLeftImage />
 			</span>
-			<!-- <img class="hidden md:block xl:max-w-[60%]" src={base + '/images/left.png'} alt="left" /> -->
-			<!-- <img class="md:hidden" src={base + '/images/mob-left.png'} alt="left" /> -->
 		</div>
 
 		<!-- Center part -->
@@ -110,16 +108,13 @@
 			</div>
 		</div>
 		<!-- BG Images -->
-		<div class="flex flex-1 justify-end">
-			<span class="hidden md:block">
+		<div class="flex h-full flex-1 justify-end overflow-hidden">
+			<span class="relative hidden h-[640px] md:block">
 				<RightImage />
 			</span>
 			<span class=" md:hidden">
 				<MobRightImage />
 			</span>
-
-			<!-- <img class="hidden md:block xl:max-w-[50%]" src={base + '/images/right.png'} alt="right" /> -->
-			<!-- <img class="md:hidden" src={base + '/images/mob-right.png'} alt="right" /> -->
 		</div>
 	</div>
 

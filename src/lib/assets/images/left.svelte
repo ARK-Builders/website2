@@ -1,5 +1,5 @@
 <svg
-	width="324"
+	class="absolute -left-24 w-80 xl:left-0"
 	height="640"
 	viewBox="0 0 324 640"
 	fill="none"

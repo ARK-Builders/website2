@@ -1,4 +1,11 @@
-<svg width="255" height="637" viewBox="0 0 255 637" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+	class="absolute -right-20 xl:right-0"
+	width="255"
+	height="637"
+	viewBox="0 0 255 637"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<rect x="72" width="64" height="64" rx="8" fill="#D5D5D5" />
 	<rect x="72" y="71" width="64" height="64" rx="8" fill="#D5D5D5" />
 	<rect x="216" y="71" width="64" height="64" rx="8" fill="#D5D5D5" />
