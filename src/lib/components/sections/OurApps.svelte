@@ -27,10 +27,10 @@
 	let activeApp = currentApps[0]
 </script>
 
-<section id="apps" class="relative flex py-12 lg:px-5 xl:px-0">
+<section id="apps" class="relative flex pb-12 pt-16 lg:px-5 xl:px-0">
 	<div class="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 lg:gap-10 lg:px-0">
-		<div class="flex w-full flex-col gap-4">
-			<p class="text-center text-4xl font-bold lg:text-6xl">Our Apps</p>
+		<div class="my-5 flex w-full flex-col">
+			<p class="text-center text-4xl font-bold md:text-5xl lg:text-6xl">Our Apps</p>
 		</div>
 
 		<div class="flex w-full flex-col gap-4 lg:flex-row xl:gap-7">
