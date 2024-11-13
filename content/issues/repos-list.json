@@ -1,6 +1,6 @@
 [
 	{
-		"name": "ark-rust",
+		"name": "ark-core",
 		"languages": ["Rust"],
 		"platforms": ["Desktop", "Android"]
 	},

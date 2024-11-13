@@ -115,7 +115,7 @@
 				{/each}
 			</tbody>
 		</table>
-
+		<!-- For mobile view -->
 		<div class="flex flex-col gap-4 lg:hidden">
 			{#each hasFilter ? filteredIssues : generalIssues as issue}
 				<ContributeRow {issue} />
