@@ -52,8 +52,9 @@
 					</tr>
 				</table>
 			</div>
-			<div>
+			<div class="flex flex-col gap-1">
 				<a href="{base}/contribute" class="text-xl font-semibold">Contribute</a>
+				<a href="{base}/framework" class="text-xl font-semibold">Framework</a>
 			</div>
 			<div>
 				<a href="{base}/blog" class="text-xl font-semibold">Blog</a>

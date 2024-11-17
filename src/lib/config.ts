@@ -29,6 +29,7 @@ export const navLinks = [
 	{ href: '/apps', title: 'Apps' },
 	{ href: '/contribute', title: 'Contribute', icon: 'fluent:window-dev-tools-20-filled' },
 	{ href: '/blog', title: 'Blog', icon: 'mdi:paper' },
+	{ href: '/framework', title: 'Framework', icon: 'simple-icons:framework' },
 	{ href: '#', title: 'Community' }
 ]
 
