@@ -18,6 +18,10 @@ async function callApi() {
 				if (issues.status === 200) {
 					if (issues.data.length > 0) {
 						for (const issue of issues.data) {
+							if (issue.pull_request?.url) {
+								continue
+							}
+
 							var repoUrl = issue.repository_url.replace('api.', '').replace('repos/', '')
 							const assignees = issue.assignees.map((element) => element.login)
 							const labels = issue.labels.map((element) => element.name)
