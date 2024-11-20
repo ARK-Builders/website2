@@ -58,7 +58,7 @@ export const communityList = [
 	{
 		name: 'Discord',
 		logo: 'radix-icons:discord-logo',
-		url: 'https://discord.gg/tPUJTxud',
+		url: 'https://discord.gg/uRWJyYBr',
 		colors: ['#FFF3E6', '#DD7409'] // 1st lighter, 2nd deeper
 	},
 	{
