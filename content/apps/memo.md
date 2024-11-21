@@ -6,7 +6,10 @@ preview:
   [
     'https://ark-builders.github.io/website2/images/apps/memo/blog1.png',
     'https://ark-builders.github.io/website2/images/apps/memo/blog2.png',
-    'https://ark-builders.github.io/website2/images/apps/memo/blog3.png'
+    'https://ark-builders.github.io/website2/images/apps/memo/blog3.png',
+    'https://ark-builders.github.io/website2/images/apps/memo/blog4.png',
+    'https://ark-builders.github.io/website2/images/apps/memo/blog5.png',
+    'https://ark-builders.github.io/website2/images/apps/memo/blog6.png'
   ]
 author: ARK-Builders
 github: https://github.com/ARK-Builders/ARK-Memo

@@ -8,6 +8,9 @@
 	import MemoImage1 from '$lib/assets/images/apps/memo/1.png'
 	import MemoImage2 from '$lib/assets/images/apps/memo/2.png'
 	import MemoImage3 from '$lib/assets/images/apps/memo/3.png'
+	import MemoImage4 from '$lib/assets/images/apps/memo/4.png'
+	import MemoImage5 from '$lib/assets/images/apps/memo/5.png'
+	import MemoImage6 from '$lib/assets/images/apps/memo/6.png'
 	import RetouchImage1 from '$lib/assets/images/apps/retouch/1.png'
 	import RetouchImage2 from '$lib/assets/images/apps/retouch/2.png'
 	import RetouchImage3 from '$lib/assets/images/apps/retouch/3.png'
@@ -19,10 +22,16 @@
 		memo1: MemoImage1,
 		memo2: MemoImage2,
 		memo3: MemoImage3,
+		memo4: MemoImage4,
+		memo5: MemoImage5,
+		memo6: MemoImage6,
 		retouch1: RetouchImage1,
 		retouch2: RetouchImage2,
 		retouch3: RetouchImage3
 	}
+
+	const getImagesWithName = (name: string) =>
+		Object.entries(appImages).filter((value) => value[0].includes(name))
 
 	let activeApp = currentApps[0]
 </script>
@@ -66,7 +75,7 @@
 					<p class="text-center text-2xl font-bold lg:text-start lg:text-3xl">{activeApp.name}</p>
 					<p class="text-center lg:text-start">{activeApp.description}</p>
 					<div class="flex-flow flex gap-3 overflow-auto">
-						{#each new Array(3) as a, i}
+						{#each getImagesWithName(activeApp.name.toLowerCase()) as a, i}
 							<img
 								class="max-h-[500px] xl:max-h-[600px]"
 								src={appImages[activeApp.name.toLowerCase() + (i + 1)]}
