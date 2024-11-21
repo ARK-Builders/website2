@@ -33,7 +33,7 @@
 			<Cta text="View documentation" bgBlack />
 
 			<div class="flex w-fit items-center rounded-lg border border-arkGray bg-white pr-2">
-				<Cta target="_blank" text="View on Github" classes="px-2" url={config.github} />
+				<Cta target="_blank" text="View on Github" classes="px-2" url={app?.github} />
 				<Icon icon="pajamas:github" width="24px" />
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 		{#if app.preview && app.preview.length}
 			<div class="flex grid-cols-3 gap-2 overflow-x-auto lg:grid lg:w-fit">
 				{#each app.preview as preview}
-					<img class="max-h-[550px] max-w-[300px]" src={preview} alt="app logo" />
+					<img class="max-h-[560px] max-w-[300px]" src={preview} alt="app logo" />
 				{/each}
 			</div>
 		{/if}

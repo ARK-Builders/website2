@@ -52,7 +52,7 @@ export const appList = [
 	}
 ]
 
-export const currentApps = appList.slice(0, 3)
+export const currentApps = appList.slice(0, 2)
 
 export const communityList = [
 	{

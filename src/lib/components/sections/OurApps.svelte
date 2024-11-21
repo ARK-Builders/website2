@@ -68,7 +68,7 @@
 					<div class="flex-flow flex gap-3 overflow-auto">
 						{#each new Array(3) as a, i}
 							<img
-								class="max-h-[500px]"
+								class="max-h-[500px] xl:max-h-[600px]"
 								src={appImages[activeApp.name.toLowerCase() + (i + 1)]}
 								alt="{activeApp.name} app screens"
 							/>

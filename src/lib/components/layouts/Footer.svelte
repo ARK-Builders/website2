@@ -44,9 +44,9 @@
 						<!-- <td class="pr-10"> Navigator </td> -->
 					</tr>
 					<tr>
-						<td>
+						<!-- <td>
 							<a href="{base}/apps/retouch" class="hover:text-black"> Retouch </a>
-						</td>
+						</td> -->
 						<!-- <td> Shelf </td>
 						<td> Gallery </td> -->
 					</tr>

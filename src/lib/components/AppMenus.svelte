@@ -23,7 +23,7 @@
 		class="absolute left-16 top-10 grid w-96 grid-cols-2 rounded-xl border border-gray-300 bg-white p-4"
 	>
 		<div class="flex w-44 flex-col gap-2">
-			{#each currentApps.slice(0, 2) as menu}
+			{#each currentApps.slice(0, 1) as menu}
 				<MenuItem
 					url={link.href}
 					description={menu.description}
@@ -33,7 +33,7 @@
 			{/each}
 		</div>
 		<div class="flex w-40 flex-col gap-2">
-			{#each currentApps.slice(2) as menu}
+			{#each currentApps.slice(1) as menu}
 				<MenuItem
 					url={link.href}
 					description={menu.description}
