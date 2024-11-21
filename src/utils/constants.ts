@@ -108,6 +108,16 @@ export const communityList = [
 export const BTC_ADDRESS = 'bc1qx8n9r4uwpgrhgnamt2uew53lmrxd8tuevp7lv5'
 export const ETH_ADDRESS = '0x9765C5aC38175BFbd2dC7a840b63e50762B80a1b'
 
+export type App = {
+	title: string
+	draft: string
+	slug: string
+	date: string
+	preview?: string[]
+	author: string
+	github: string
+}
+
 export type Blog = {
 	author: string
 	content: string

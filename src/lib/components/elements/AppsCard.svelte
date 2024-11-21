@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import MemoImage1 from '$lib/assets/images/apps/memo/1.png'
-	import { appLogos } from '$utils/constants'
+	import { appLogos, type App } from '$utils/constants'
 
-	export let app: any
+	export let app: App
 </script>
 
 <div class="flex flex-col gap-3 rounded-xl bg-arkGray5 p-5">

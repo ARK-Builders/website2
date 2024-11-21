@@ -7,7 +7,10 @@ preview:
   [
     'https://ark-builders.github.io/website2/images/apps/rate/blog1.png',
     'https://ark-builders.github.io/website2/images/apps/rate/blog2.png',
-    'https://ark-builders.github.io/website2/images/apps/rate/blog3.png'
+    'https://ark-builders.github.io/website2/images/apps/rate/blog3.png',
+    'https://ark-builders.github.io/website2/images/apps/rate/blog4.png',
+    'https://ark-builders.github.io/website2/images/apps/rate/blog5.png',
+    'https://ark-builders.github.io/website2/images/apps/rate/blog6.png'
   ]
 github: https://github.com/ARK-Builders/ARK-Rate
 ---

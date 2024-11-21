@@ -5,6 +5,9 @@
 	import RateImage1 from '$lib/assets/images/apps/rate/1.png'
 	import RateImage2 from '$lib/assets/images/apps/rate/2.png'
 	import RateImage3 from '$lib/assets/images/apps/rate/3.png'
+	import RateImage4 from '$lib/assets/images/apps/rate/4.png'
+	import RateImage5 from '$lib/assets/images/apps/rate/5.png'
+	import RateImage6 from '$lib/assets/images/apps/rate/6.png'
 	import MemoImage1 from '$lib/assets/images/apps/memo/1.png'
 	import MemoImage2 from '$lib/assets/images/apps/memo/2.png'
 	import MemoImage3 from '$lib/assets/images/apps/memo/3.png'
@@ -19,6 +22,9 @@
 		rate1: RateImage1,
 		rate2: RateImage2,
 		rate3: RateImage3,
+		rate4: RateImage4,
+		rate5: RateImage5,
+		rate6: RateImage6,
 		memo1: MemoImage1,
 		memo2: MemoImage2,
 		memo3: MemoImage3,
