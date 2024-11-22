@@ -88,7 +88,7 @@ export const communityList = [
 	{
 		name: 'LinkedIn',
 		logo: 'iconoir:linkedin',
-		url: '',
+		url: 'https://www.linkedin.com/company/ark-builders-dev/',
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
@@ -100,7 +100,7 @@ export const communityList = [
 	{
 		name: 'Medium',
 		logo: 'iconoir:medium',
-		url: 'https://medium.com/me/stories/public',
+		url: 'https://ark-builders.medium.com/',
 		colors: ['#FFF3E6', '#DD7409']
 	}
 ]
