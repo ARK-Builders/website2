@@ -92,7 +92,7 @@ export const communityList = [
 		colors: ['#FFF3E6', '#DD7409']
 	},
 	{
-		name: 'YoutTube',
+		name: 'YouTube',
 		logo: 'iconoir:youtube',
 		url: 'https://www.youtube.com/@ARK-Builders-Dev',
 		colors: ['#FFF3E6', '#DD7409']

@@ -6,6 +6,7 @@
 	import Contribute from '$lib/components/sections/Contribute.svelte'
 	import OurApps from '$lib/components/sections/OurApps.svelte'
 	import Youtube from '$lib/components/sections/Youtube.svelte'
+	import AnimatedFeatures from '$lib/components/sections/AnimatedFeatures.svelte'
 
 	export let data
 </script>
@@ -13,6 +14,7 @@
 <Head />
 <Hero />
 <OurApps />
+<AnimatedFeatures />
 <Blog posts={data.posts} />
 <Youtube />
 <Contribute />

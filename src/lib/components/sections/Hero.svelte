@@ -1,38 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
-	import { browser } from '$app/environment'
 	import Icon from '@iconify/svelte'
-	import ScrollContainer from '$lib/components/elements/ScrollContainer.svelte'
 	import { communityList } from '$utils/constants'
-	import LottieAnimation from '$lib/components/elements/LottieAnimation.svelte'
 	import LeftImage from '$lib/assets/images/left.svelte'
 	import RightImage from '$lib/assets/images/right.svelte'
 	import MobLeftImage from '$lib/assets/images/mob-left.svelte'
 	import MobRightImage from '$lib/assets/images/mob-right.svelte'
-
-	const slides = [
-		{
-			text: 'Connect all your devices using P2P technology',
-			color: '#ACD6FC',
-			animation: 'feature-1'
-		},
-		{
-			text: 'Connect all your devices using P2P technology 2',
-			color: '#DBF5C8',
-			animation: 'feature-2'
-		},
-		{
-			text: 'Connect all your devices using P2P technology 3',
-			color: '#E1D0F7',
-			animation: 'feature-3'
-		},
-		{
-			text: 'Connect all your devices using P2P technology 4',
-			color: '#FFEDC3',
-			animation: 'feature-4'
-		}
-	]
 
 	const contacts = communityList.filter((community) =>
 		['Telegram', 'Discord', 'X'].includes(community.name)
@@ -42,7 +15,7 @@
 </script>
 
 <div class="mb-16 flex w-full flex-col">
-	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10 md:mb-10">
+	<div class="relative flex w-full flex-row items-center justify-between gap-1 py-10">
 		<!-- BG Images -->
 		<div class="h-full flex-1">
 			<span class="relative hidden h-full md:block">
@@ -116,27 +89,5 @@
 				<MobRightImage />
 			</span>
 		</div>
-	</div>
-
-	<div class="mx-auto flex w-full max-w-7xl flex-row sm:px-8 lg:px-5 xl:px-0">
-		{#if browser}
-			<ScrollContainer>
-				{#each slides as { color, text, animation }, i}
-					<div
-						class="flex w-full snap-center flex-col justify-between rounded-xl lg:flex-row"
-						style="background-color: {color}"
-					>
-						<p class="mt-10 pl-5 text-center text-3xl font-medium lg:text-start">{text}</p>
-						<div class="flex justify-center">
-							<LottieAnimation
-								height="380px"
-								width="540px"
-								src={`${base}/videos/${animation}.json`}
-							/>
-						</div>
-					</div>
-				{/each}
-			</ScrollContainer>
-		{/if}
 	</div>
 </div>
