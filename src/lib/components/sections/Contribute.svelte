@@ -93,5 +93,6 @@
 				</ContributeCard>
 			{/each}
 		</div>
+		<Cta url="/contribute" text="View More" classes="lg:hidden mt-5" />
 	</div>
 </section>
