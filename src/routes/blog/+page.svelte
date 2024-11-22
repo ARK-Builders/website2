@@ -3,9 +3,9 @@
 	import Blogs from '$lib/components/Blogs.svelte'
 
 	export let data
-	const posts = data.posts
+	const { posts, tags } = data
 </script>
 
 <Head title="Blog" />
 
-<Blogs title="Blog" {posts} />
+<Blogs title="Blog" {posts} {tags} />

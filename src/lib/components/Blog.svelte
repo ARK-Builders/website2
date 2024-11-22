@@ -73,7 +73,7 @@
 					<div
 						class="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y"
 					>
-						{#if post.tags}
+						<!-- {#if post.tags}
 							<div class="py-4 xl:py-8">
 								<h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
 									Tags
@@ -84,7 +84,7 @@
 									{/each}
 								</div>
 							</div>
-						{/if}
+						{/if} -->
 						{#if post.next || post.prev}
 							<div class="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
 								{#if post.prev}
