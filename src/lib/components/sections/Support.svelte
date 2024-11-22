@@ -94,7 +94,7 @@
 			{/each}
 			{#each supportLogos as logo}
 				<a
-					class="h-11 w-[150px] overflow-hidden rounded-md md:h-full md:w-[120px]"
+					class="h-11 w-[150px] overflow-hidden rounded-md md:w-[120px]"
 					href={logo.url || base + '/'}
 					target="_blank"
 				>
