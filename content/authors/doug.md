@@ -1,5 +1,5 @@
 ---
-name: Doug
+name: Doug Sillars
 avatar: /images/authors/doug.jpg
 occupation: Developer Relations
 company: AdatoSystems
