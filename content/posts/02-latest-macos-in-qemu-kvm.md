@@ -6,6 +6,7 @@ summary: 'Virtual machines (VMs) are a powerful tool that enables the emulation 
 
 image:
 author: Shubert Munthali
+authorId: shubert
 ---
 
 ## Why QEMU/KVM?
@@ -18,7 +19,7 @@ First of all, clone [OSX-KVM](https://github.com/kholia/OSX-KVM) and follow the 
 
 However, if your machine cannot boot up to Sonoma, the explanation could be in the [Requirements](https://github.com/kholia/OSX-KVM#requirements) section of the OSX-KVM repo’s `README`. There is a requirement of a “CPU with AVX2 support” to run macOS Ventura or a later version.
 
-## Latest macOS versions and AVX2 support 
+## Latest macOS versions and AVX2 support
 
 Now you need to check if your machine supports AVX2. To do this open terminal and run this command:
 
@@ -29,11 +30,13 @@ grep -o 'avx[^ ]*' /proc/cpuinfo
 If your machine has AVX2 support it will print `avx avx2` for each core in the machine’s CPU.
 
 Then navigate to `OSX-KVM` folder, open `OpenCoreBoot.sh` file and do some edits:
+
 1. Locate the line where `MY_OPTIONS` is declared, and add `+avx2` to it’s values.
 2. Edit `-cpu` value to `host` entry.
 
 Save the script and run it. Sonoma should load now.
 
 ### References
+
 - [OSX-KVM](https://github.com/kholia/OSX-KVM/pull/207)
 - [ostechnix](https://ostechnix.com/check-if-linux-system-supports-avx-and-avx2/)

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Head from '$lib/components/layouts/Head.svelte'
 	import Blog from '$lib/components/Blog.svelte'
+	import Head from '$lib/components/layouts/Head.svelte'
 
 	export let data
 

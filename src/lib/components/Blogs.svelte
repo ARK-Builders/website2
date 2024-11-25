@@ -1,12 +1,11 @@
 <script lang="ts">
-	import Title from '$lib/components/Title.svelte'
+	import { page } from '$app/stores'
 	import BlogItem from '$lib/components/elements/BlogItem.svelte'
 	import SearchBox from '$lib/components/SearchBox.svelte'
-	import { page } from '$app/stores'
+	import Title from '$lib/components/Title.svelte'
+	import type { Blog } from '$utils/constants'
 	import fuzzySearch from '$utils/search'
 	import { onMount } from 'svelte'
-	import type { Blog } from '$utils/constants'
-	import TagList from '$lib/components/TagList.svelte'
 
 	export let title = ''
 	export let subtitle = ''

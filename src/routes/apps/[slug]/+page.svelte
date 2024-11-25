@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Head from '$lib/components/layouts/Head.svelte'
-	import Title from '$lib/components/Title.svelte'
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
-	import Icon from '@iconify/svelte'
+	import Head from '$lib/components/layouts/Head.svelte'
+	import Title from '$lib/components/Title.svelte'
 	import { appLogos } from '$utils/constants'
+	import Icon from '@iconify/svelte'
 
 	export let data
 

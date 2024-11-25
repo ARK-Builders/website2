@@ -6,6 +6,7 @@ summary: 'The year 2024 has become a landmark for the ARK Builders team as we ha
 
 image:
 author: Kirill Taran
+authorId: kirill
 ---
 
 ## Our new approach
@@ -16,7 +17,7 @@ Now, for every application we develop, we start with the design process: conside
 
 We're thrilled to unveil a complete redesign of our app, featuring a new UI designed for an ergonomic and user-friendly experience. You can download the app from the Play Store at https://play.google.com/store/apps/details?id=dev.arkbuilders.rate. Currently, only the Android version is available, but we aim to release the iOS version next year.
 
-![Easy to use currency exchange calculator](/images/apps/rate/calculation_app.png)
+![Easy to use currency exchange calculator](/images/apps/rate/calculation-app.png)
 
 ## What is the ARK Rate app?
 

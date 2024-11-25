@@ -1,7 +1,7 @@
-import type { ComponentType } from 'svelte'
-import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
 import MemoLogo from '$lib/assets/images/app-logos/memo.svelte'
+import RateLogo from '$lib/assets/images/app-logos/rate.svelte'
 import RetouchLogo from '$lib/assets/images/app-logos/retouch.svelte'
+import type { ComponentType } from 'svelte'
 
 export const appList = [
 	{
@@ -112,6 +112,7 @@ export type App = {
 	title: string
 	draft: string
 	slug: string
+	content: any
 	date: string
 	preview?: string[]
 	author: string
@@ -120,6 +121,7 @@ export type App = {
 
 export type Blog = {
 	author: string
+	authorId: string
 	content: string
 	date: string
 	draft: boolean

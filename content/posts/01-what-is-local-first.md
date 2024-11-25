@@ -6,6 +6,7 @@ summary: 'Every day, millions of people create, edit and collaborate on digital 
 
 image:
 author: Doug Sillars
+authorId: doug
 ---
 
 ## Local-first architecture

@@ -20,7 +20,7 @@ export const config = {
 }
 
 export const user = {
-	name: 'admin',
+	name: 'ARK-Builders',
 	twitter: ''
 }
 

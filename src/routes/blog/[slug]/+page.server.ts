@@ -1,6 +1,8 @@
-import { error } from '@sveltejs/kit'
+export const prerender = true
+
+import type { Author, Blog } from '$utils/constants'
 import { getEntries } from '$utils/entries'
-import type { Blog, Author } from '$utils/constants'
+import { error } from '@sveltejs/kit'
 
 /** @type {import('./$types').EntryGenerator} */
 export function entries() {
@@ -8,15 +10,13 @@ export function entries() {
 	return posts.map((post: Blog) => ({ slug: post.slug }))
 }
 
-export const prerender = true
-
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
 	const posts = (getEntries('posts') as Blog[]) || []
 	const authors = (getEntries('authors') as Author[]) || []
 	const { slug } = params
 	const post = posts.find((p) => p.slug === slug)
-	const author = authors.find((a) => a.name === post?.author)
+	const author = authors.find((a) => a.id === post?.authorId)
 
 	if (!post) {
 		throw error(404, 'No post found')

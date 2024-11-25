@@ -1,6 +1,7 @@
 import { browser } from '$app/environment'
-import { slug } from 'github-slugger'
 import { config, user } from '$lib/config'
+import { slug } from 'github-slugger'
+import type { Blog } from './constants'
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
@@ -41,7 +42,7 @@ const getMetadata = (entryType: string, filepath: string, entry: any) => {
 	return {
 		...entry.metadata,
 
-		author: entryType === 'posts' && !config.multiuser ? user.name : entry.metadata.author,
+		author: entryType === 'posts' && !config.multiuser ? user.name : entry.metadata?.author,
 
 		content: entry.default.render().html,
 
@@ -51,15 +52,15 @@ const getMetadata = (entryType: string, filepath: string, entry: any) => {
 			.split('/')
 			.pop(),
 
-		youtube: entry.metadata.video
-			? entry.metadata.video.replace(
+		youtube: entry.metadata?.video
+			? entry.metadata?.video.replace(
 					/(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)(\.com)?\/(watch\?v=)?/,
 					''
 				)
 			: null,
 
-		tag: entry.metadata.type?.split(' ').shift().toLowerCase() || null,
-		tags: entry.metadata.tags || []
+		tag: entry.metadata?.type?.split(' ').shift().toLowerCase() || null,
+		tags: entry.metadata?.tags || []
 
 		// whether or not this file is `my-post.md` or `my-post/index.md`
 		// (needed to do correct dynamic import in posts/[slug].svelte)
@@ -100,7 +101,7 @@ interface Tag {
 }
 
 export const getTags = () => {
-	const posts = getEntries('posts')
+	const posts = getEntries('posts') as Blog[]
 	let tags = posts
 		.flatMap(({ tags }) => tags)
 		.map((tag) => ({ text: tag, slug: slug(tag) }))

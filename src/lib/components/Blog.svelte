@@ -1,8 +1,7 @@
 <script>
-	import { config } from '$lib/config'
-	import Tag from '$lib/components/Tag.svelte'
-	import Author from '$lib/components/Author.svelte'
 	import { base } from '$app/paths'
+	import Author from '$lib/components/Author.svelte'
+	import { config } from '$lib/config'
 
 	export let post
 	export let author

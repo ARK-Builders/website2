@@ -11,9 +11,10 @@
 			<p class="text-2xl font-extrabold">{post.title}</p>
 			<p class="font-medium text-arkGray4">{post.date}</p>
 		</div>
-		<p>
+
+		<div class="h-full max-h-36 overflow-hidden">
 			{post.summary}
-		</p>
+		</div>
 		<a href="{base}/blog/{post.slug}" class="font-bold text-arkOrange underline">Read</a>
 	</div>
 </article>
