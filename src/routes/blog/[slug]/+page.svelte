@@ -4,8 +4,8 @@
 
 	export let data
 
-	const post = data.post
-	const author = data.author
+	$: post = data.post
+	$: author = data.author
 </script>
 
 <Head title={post.title} />

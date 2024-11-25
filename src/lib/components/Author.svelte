@@ -1,5 +1,4 @@
 <script>
-	import { base } from '$app/paths'
 	import SocialIcon from '$lib/components/SocialIcon.svelte'
 	import formatDate from '$utils/formatDate'
 	import Icon from '@iconify/svelte'
@@ -26,7 +25,7 @@
 	{#if twitter}
 		<dt class="sr-only">Twitter</dt>
 		<dd>
-			<SocialIcon icon="twitter" url={twitter} small>
+			<SocialIcon popup icon="twitter" url={twitter} small>
 				{twitter?.replace('https://x.com/', '@')}
 			</SocialIcon>
 		</dd>

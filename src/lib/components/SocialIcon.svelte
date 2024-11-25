@@ -1,11 +1,10 @@
 <script>
-	import IconMail from '$lib/icons/mail.svelte'
-	import IconGithub from '$lib/icons/github.svelte'
 	import IconFacebook from '$lib/icons/facebook.svelte'
-	import IconYoutube from '$lib/icons/youtube.svelte'
+	import IconGithub from '$lib/icons/github.svelte'
 	import IconLinkedin from '$lib/icons/linkedin.svelte'
+	import IconMail from '$lib/icons/mail.svelte'
 	import IconTwitter from '$lib/icons/twitter.svelte'
-	import { base } from '$app/paths'
+	import IconYoutube from '$lib/icons/youtube.svelte'
 
 	export let url = ''
 	export let icon = ''
@@ -29,7 +28,7 @@
 {#if url}
 	<a
 		class="hover:text-primary-600 flex gap-x-2 text-gray-500 transition"
-		href={base + url || '#'}
+		href={url || '#'}
 		target={popup ? '_blank' : ''}
 		rel="noreferrer"
 	>
