@@ -5,7 +5,7 @@ draft: false
 summary: 'Every day, millions of people create, edit and collaborate on digital files. In this post, we describe our vision of local-first architecture ⏤  where collaboration can occur in real time, without a big cloud in the middle.'
 
 image:
-author: Doug
+author: doug
 ---
 
 ## Local-first architecture
