@@ -5,7 +5,7 @@ draft: false
 summary: 'Virtual machines (VMs) are a powerful tool that enables the emulation of various operating systems on a single physical computer, ranging from Windows to Linux to macOS, depending on the VM configuration. Software like VirtualBox and QEMU/KVM facilitates the creation and management of VMs. However, the latest versions of macOS, such as Ventura, pose certain challenges for emulation within a Virtual Machine... In this post, we will explain how to get the latest versions of macOS running on Linux physical machine using QEMU/KVM.'
 
 image:
-author: shubert
+author: Shubert Munthali
 ---
 
 ## Why QEMU/KVM?
