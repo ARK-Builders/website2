@@ -3,9 +3,6 @@ title: What is "local-first"?
 date: '2024-01-04'
 draft: false
 summary: 'Every day, millions of people create, edit and collaborate on digital files. In this post, we describe our vision of local-first architecture ⏤  where collaboration can occur in real time, without a big cloud in the middle.'
-tags:
-  - ARK
-  - Local-first
 
 image:
 author: Doug
