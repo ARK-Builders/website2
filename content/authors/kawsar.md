@@ -2,7 +2,7 @@
 name: Kawsar Ahmed
 avatar: /images/logo.png
 occupation: Frontend Engineer
-company: ARK Builder
+company: ARK Builders
 email: prokawsar@gmail.com
 twitter:
 linkedin: https://www.linkedin.com/in/prokawsar/
