@@ -41,6 +41,9 @@
 									})}
 								</time>
 							</dd>
+							<dd class="mt-4 text-justify lg:text-start">
+								{post.summary}
+							</dd>
 						</div>
 					</dl>
 				</div>
