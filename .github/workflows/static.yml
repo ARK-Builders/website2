@@ -39,6 +39,9 @@ jobs:
         run: |
           npm run build
       - run: npm run build
+      - name: Add .nojekyll file
+        run: touch build/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -51,5 +54,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
         id: deployment
