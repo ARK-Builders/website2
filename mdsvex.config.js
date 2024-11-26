@@ -12,6 +12,23 @@ export default {
 	// remarkPlugins: [...Object.values(remarkPlugins)],
 	rehypePlugins: [
 		[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
-		...Object.values(rehypePlugins)
+		...Object.values(rehypePlugins),
+
+		// Image path plugin
+		() => {
+			return (tree) => {
+				// Traverse the syntax tree and modify image nodes
+				tree.children = tree.children.map((node) => {
+					if (node.type === 'element' && node.tagName === 'img') {
+						// Check if src is a relative path
+						if (node.properties.src && !node.properties.src.startsWith('http')) {
+							node.properties.src = node.properties.src.replace(/^\.?\/?/, '/')
+						}
+					}
+					return node
+				})
+				return tree
+			}
+		}
 	]
 }
