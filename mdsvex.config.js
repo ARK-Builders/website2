@@ -3,7 +3,7 @@ import relativeImages from 'mdsvex-relative-images'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypePlugins from './src/plugins/rehype/index.js'
 
-const BASE_PATH = process.env.BASE_PATH || ''
+const BASE_PATH = 'https://ark-builders.github.io/website2/'
 
 export default {
 	extensions: ['.md'],
