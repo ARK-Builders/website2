@@ -33,11 +33,11 @@ Editing a Google Doc with several people looks and feels like magic - we can see
 All of our data is stored in the cloud, and it is easy to collaborate and work on files this way… until it isn’t.
 
 In March 2021, customers of OVH Cloud who stored their files in the Strasbourg data center discovered this firsthand when their files went up in smoke:
-![OVH datacenter on fire](/images/ovh_fire.jpg)
+![OVH datacenter on fire](https://ark-builders.github.io/website2/images/ovh_fire.jpg)
 
 Ok, that’s a super extreme example - and everyone should save important files and deployments on multiple machines - whether local or cloud. But users have been locked out of Google Accounts. When you stop paying for BigCorp Cloud, how long until your data is removed? What if your card has expired, and the emails are going to a former employee's e-mail account? Will you lose your files forever? At a previous position, months of work was lost when a colleague decided that a specific tenant was no longer in use, and deleted it without looking at usage, or asking the team if the data on the server was still needed.
 
-![Google recovery](/images/google_recovery.png)
+![Google recovery](https://ark-builders.github.io/website2/images/google_recovery.png)
 
 All of the convenience of Cloud-first architecture is lost - as soon as we lose all of our files.
 
