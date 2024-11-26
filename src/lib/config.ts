@@ -2,7 +2,7 @@ export const config = {
 	title: 'ARK Builders | Privacy-focused apps for every day',
 	author: 'Kawsar Ahmed',
 	headerTitle: 'ARK Builder',
-	description: 'ARK Builder (un)official blog, created with Sveltekit and Tailwind.css',
+	description: 'ARK Builder (un)official blog | Privacy-focused apps for every day',
 	language: 'en-us',
 	theme: 'dark', // system, dark or light
 	domain: 'https://www.ark-builders.dev/',
