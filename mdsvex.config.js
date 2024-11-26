@@ -24,7 +24,7 @@ export default {
 					if (node.type === 'element' && node.tagName === 'img') {
 						// Check if src is a relative path
 						if (node.properties.src && !node.properties.src.startsWith('http')) {
-							node.properties.src = `${BASE_PATH}${node.properties.src}`.replace(/^\.?\/?/, '/')
+							node.properties.src = BASE_PATH + node.properties.src.replace(/^\.?\/?/, '/')
 						}
 					}
 					return node
