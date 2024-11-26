@@ -1,4 +1,5 @@
 // import remarkPlugins from './src/plugins/remark/index.js';
+import { base } from '$app/paths'
 import relativeImages from 'mdsvex-relative-images'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypePlugins from './src/plugins/rehype/index.js'
@@ -22,7 +23,7 @@ export default {
 					if (node.type === 'element' && node.tagName === 'img') {
 						// Check if src is a relative path
 						if (node.properties.src && !node.properties.src.startsWith('http')) {
-							node.properties.src = node.properties.src.replace(/^\.?\/?/, '/')
+							node.properties.src = `${base}${node.properties.src}`.replace(/^\.?\/?/, '/')
 						}
 					}
 					return node
