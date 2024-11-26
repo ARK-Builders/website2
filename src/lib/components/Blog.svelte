@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths'
 	import Author from '$lib/components/Author.svelte'
+	import RenderMarkdown from '$lib/components/RenderMarkdown.svelte'
 	import { config } from '$lib/config'
 
 	export let post
@@ -64,8 +65,9 @@
 				<div
 					class="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0"
 				>
-					<div class="prose dark:prose-dark max-w-none pb-8 pt-10">
-						{@html post.content}
+					<div class="dark:prose-dark prose max-w-none pb-8 pt-10">
+						<!-- {@html post.content} -->
+						<RenderMarkdown content={post.content} />
 					</div>
 				</div>
 				<footer class="">
