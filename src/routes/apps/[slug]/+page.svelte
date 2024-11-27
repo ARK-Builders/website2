@@ -64,7 +64,7 @@
 		{#if app.preview && app.preview.length}
 			<div class="flex grid-cols-3 gap-2 overflow-x-auto lg:grid lg:w-fit">
 				{#each app.preview as preview}
-					<img class="max-h-[560px] max-w-[300px]" src={preview} alt="app preview" />
+					<img class="max-h-[560px] max-w-[300px]" src={base + preview} alt="app preview" />
 				{/each}
 			</div>
 		{/if}
