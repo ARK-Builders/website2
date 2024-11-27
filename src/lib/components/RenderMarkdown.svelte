@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 
-	export let content = ''
+	export let content
 
 	function transformImagePaths(htmlContent: string) {
 		return htmlContent.replace(/(<img[^>]+src=")([^"]+)(")/gi, (match, prefix, src, suffix) => {

@@ -2,11 +2,14 @@
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
+	import RenderMarkdown from '$lib/components/RenderMarkdown.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import { appLogos } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 
 	export let data
+
+	let hoverGithub = false
 
 	$: app = data.app
 </script>
@@ -32,15 +35,28 @@
 			<Cta text="View documentation" bgBlack />
 
 			<div class="flex w-fit items-center rounded-lg border border-arkGray bg-white pr-2">
-				<Cta target="_blank" text="View on Github" classes="px-2" url={app?.github} />
-				<Icon icon="pajamas:github" width="24px" />
+				<div class="flex items-center rounded-lg bg-white pr-2">
+					<Cta
+						on:hover={(e) => (hoverGithub = e.detail)}
+						target="_blank"
+						text="View on Github"
+						classes="px-2 !text-base lg:!text-xl"
+						url={app?.github}
+					/>
+					<Icon
+						class={hoverGithub ? 'text-arkOrange' : 'text-black'}
+						icon="pajamas:github"
+						width="24px"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="mx-auto flex w-full max-w-[50rem] flex-col gap-5">
-		<div class="prose dark:prose-dark w-full text-justify">
-			{@html app.content}
+		<div class="dark:prose-dark prose w-full text-justify">
+			<!-- {@html app.content} -->
+			<RenderMarkdown content={app.content} />
 		</div>
 
 		<h2 class="text-4xl font-bold">App Preview</h2>

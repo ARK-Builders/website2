@@ -30,7 +30,7 @@
 		</div>
 		<div class="flex w-full flex-1 auto-rows-auto grid-cols-3 flex-col gap-3 lg:grid">
 			<div>
-				<a href="{base}/apps" class="pb-2 text-xl font-semibold">Apps</a>
+				<a href="{base}/apps" class="footer-menu pb-2">Apps</a>
 				<table class="text-xl text-gray-400">
 					<tr>
 						<td>
@@ -53,11 +53,11 @@
 				</table>
 			</div>
 			<div class="flex flex-col gap-1">
-				<a href="{base}/contribute" class="text-xl font-semibold">Contribute</a>
-				<a href="{base}/framework" class="text-xl font-semibold">Framework</a>
+				<a href="{base}/contribute" class="footer-menu">Contribute</a>
+				<a href="{base}/framework" class="footer-menu">Framework</a>
 			</div>
 			<div>
-				<a href="{base}/blog" class="text-xl font-semibold">Blog</a>
+				<a href="{base}/blog" class="footer-menu">Blog</a>
 			</div>
 		</div>
 	</div>
@@ -66,5 +66,9 @@
 <style lang="postcss">
 	tr td {
 		@apply py-1;
+	}
+
+	.footer-menu {
+		@apply text-xl font-semibold hover:underline;
 	}
 </style>
