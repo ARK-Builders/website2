@@ -10,7 +10,7 @@ if (browser) {
 
 // we have to have separate functions for this because Vite only accepts literal strings for import.meta.glob
 const getPosts = () => {
-	return Object.entries(import.meta.glob('/content/blogs/**/*.md', { eager: true }))
+	return Object.entries(import.meta.glob('/content/blog/**/*.md', { eager: true }))
 }
 
 const getIssues = () => {
