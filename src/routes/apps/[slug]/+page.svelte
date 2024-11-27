@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import Cta from '$lib/components/elements/CTA.svelte'
+	import Image from '$lib/components/elements/Image.svelte'
 	import Head from '$lib/components/layouts/Head.svelte'
 	import RenderMarkdown from '$lib/components/RenderMarkdown.svelte'
 	import Title from '$lib/components/Title.svelte'
@@ -64,7 +65,8 @@
 		{#if app.preview && app.preview.length}
 			<div class="flex grid-cols-3 gap-2 overflow-x-auto lg:grid lg:w-fit">
 				{#each app.preview as preview}
-					<img class="max-h-[560px] max-w-[300px]" src={base + preview} alt="app preview" />
+					<Image src={base + preview} class="max-h-[560px] max-w-[300px]" alt="app preview" />
+					<!-- <img class="max-h-[560px] max-w-[300px]" src={base + preview} alt="app preview" /> -->
 				{/each}
 			</div>
 		{/if}

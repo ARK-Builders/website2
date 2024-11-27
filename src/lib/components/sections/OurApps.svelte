@@ -1,22 +1,23 @@
 <script lang="ts">
 	import { base } from '$app/paths'
-	import Cta from '$lib/components/elements/CTA.svelte'
-	import { appLogos, currentApps } from '$utils/constants'
-	import RateImage1 from '$lib/assets/images/apps/rate/1.png'
-	import RateImage2 from '$lib/assets/images/apps/rate/2.png'
-	import RateImage3 from '$lib/assets/images/apps/rate/3.png'
-	import RateImage4 from '$lib/assets/images/apps/rate/4.png'
-	import RateImage5 from '$lib/assets/images/apps/rate/5.png'
-	import RateImage6 from '$lib/assets/images/apps/rate/6.png'
 	import MemoImage1 from '$lib/assets/images/apps/memo/1.png'
 	import MemoImage2 from '$lib/assets/images/apps/memo/2.png'
 	import MemoImage3 from '$lib/assets/images/apps/memo/3.png'
 	import MemoImage4 from '$lib/assets/images/apps/memo/4.png'
 	import MemoImage5 from '$lib/assets/images/apps/memo/5.png'
 	import MemoImage6 from '$lib/assets/images/apps/memo/6.png'
+	import RateImage1 from '$lib/assets/images/apps/rate/1.png'
+	import RateImage2 from '$lib/assets/images/apps/rate/2.png'
+	import RateImage3 from '$lib/assets/images/apps/rate/3.png'
+	import RateImage4 from '$lib/assets/images/apps/rate/4.png'
+	import RateImage5 from '$lib/assets/images/apps/rate/5.png'
+	import RateImage6 from '$lib/assets/images/apps/rate/6.png'
 	import RetouchImage1 from '$lib/assets/images/apps/retouch/1.png'
 	import RetouchImage2 from '$lib/assets/images/apps/retouch/2.png'
 	import RetouchImage3 from '$lib/assets/images/apps/retouch/3.png'
+	import Cta from '$lib/components/elements/CTA.svelte'
+	import Image from '$lib/components/elements/Image.svelte'
+	import { appLogos, currentApps } from '$utils/constants'
 
 	const appImages: Record<string, string> = {
 		rate1: RateImage1,
@@ -36,10 +37,17 @@
 		retouch3: RetouchImage3
 	}
 
+	// const getImagesWithName = (name: string) =>
+	// 	Object.entries(appImages).filter((value) => value[0].includes(name))
+
 	const getImagesWithName = (name: string) =>
-		Object.entries(appImages).filter((value) => value[0].includes(name))
+		Object.entries(appImages)
+			.filter((value) => value[0].includes(name.toLowerCase()))
+			.map(([key, value]) => value)
 
 	let activeApp = currentApps[0]
+
+	$: activeAppImages = getImagesWithName(activeApp.name)
 </script>
 
 <section id="apps" class="relative flex pb-12 pt-16 lg:px-5 xl:px-0">
@@ -56,7 +64,10 @@
 				{#each currentApps as app}
 					<button
 						style="background-color: {activeApp.name == app.name ? app.colors[1] : ''};"
-						on:click={() => (activeApp = app)}
+						on:click={() => {
+							activeApp = app
+							activeAppImages = getImagesWithName(app.name)
+						}}
 						class="
 						{activeApp.name != app.name ? ' hover:bg-arkGray5' : ''} 
 						flex w-full flex-col items-center gap-3 border-b bg-arkGray6
@@ -77,16 +88,14 @@
 				style="background-color: {activeApp.colors[0]};"
 				class="flex w-full flex-col items-center justify-between gap-3 rounded-md p-5 lg:w-4/5 lg:items-start"
 			>
-				<div class="flex flex-col items-center gap-3 lg:items-start">
+				<div class="flex max-w-full flex-col items-center gap-3 lg:items-start">
 					<p class="text-center text-2xl font-bold lg:text-start lg:text-3xl">{activeApp.name}</p>
 					<p class="text-center lg:text-start">{activeApp.description}</p>
-					<div class="flex-flow flex gap-3 overflow-auto">
-						{#each getImagesWithName(activeApp.name.toLowerCase()) as a, i}
-							<img
-								class="max-h-[500px] xl:max-h-[600px]"
-								src={appImages[activeApp.name.toLowerCase() + (i + 1)]}
-								alt="{activeApp.name} app screens"
-							/>
+					<div class="flex-flow flex max-w-full gap-3 overflow-x-auto">
+						{#each activeAppImages as image, i}
+							{#key image}
+								<Image src={image} />
+							{/key}
 						{/each}
 					</div>
 				</div>
