@@ -9,7 +9,7 @@ image:
 authorId: doug
 ---
 
-<img style="max-width: 800px" src="/images/splash/collaboration-natalia-blauth" alt="Collaboration as it is seen by Natalia Blauth">
+<img style="max-width: 800px" src="/images/splash/collaboration-natalia-blauth.jpg" alt="Collaboration as it is seen by Natalia Blauth">
 
 ## Local-first architecture
 
