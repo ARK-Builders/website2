@@ -9,6 +9,8 @@ image:
 authorId: doug
 ---
 
+<img style="max-width: 800px" src="/images/splash/collaboration-natalia-blauth" alt="Collaboration as it is seen by Natalia Blauth">
+
 ## Local-first architecture
 
 Every day, millions of people create, edit and collaborate on digital files. The files could be text documents, spreadsheets or presentations. They could also be PhotoShop files, videos, code or even an industry specific format. As teams have dispersed geographically, using the cloud to share and collaborate on files has been a logical growth pattern - everyone has access to the files, and updates are kept in a centralized repository.
