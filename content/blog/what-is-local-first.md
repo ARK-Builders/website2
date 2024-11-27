@@ -46,11 +46,11 @@ All of the convenience of Cloud-first architecture is lost - as soon as we lose 
 
 Git is an example of cloud collaboration where the working documents are kept locally. I edit my code locally on my computer, and when it is completed, I can update the cloud repository (that is considered the reference point for all). Local versions on other devices can quickly become out of date as other users make updates. As local versions become out of date, the possibility of a conflict on future merges increases - adding time and energy to keep the code synchronized.
 
-Files on Github (and other cloud tools like DropBox) use Content Addressable storage (CAS). Instead of a directory structure, each file is stored as a unique hash based on its content. Rather than relying on a location of the file, The file can be quickly and efficiently received by the hash. Use of content hashes also makes version control easy - by accessing an “older hash” of the file, users can revisit older incarnations of the file.
+Files on GitHub (and other cloud tools like DropBox) use Content Addressable storage (CAS). Instead of a directory structure, each file is stored as a unique hash based on its content. Rather than relying on a location of the file, the file can be quickly and efficiently received by the hash. Use of content hashes also makes version control easy - by accessing an “older hash” of the file, users can revisit older incarnations of the file.
 
 ## New school local-first
 
-What if we could edit our files locally, and share them with colleagues - instantly? No more emailing that Powerpoint with the ever growing file name - but using the internet to update files on every change.
+What if we could edit our files locally, and share them with colleagues - instantly? No more emailing that PowerPoint with the ever growing file name - but using the internet to update files on every change.
 
 Each colleague would have a distinct copy of the same file, and software running on each device would sync with one another as edits were being made. With a local-first and real-time sync, we gain many of the collaborational attributes of working in the cloud, but we also retain ownership of our content. We can leverage CAS to make file discovery easy, and also enable version control of our documents.
 
@@ -64,14 +64,14 @@ Just as saving to the cloud and propagating the cloud changes outward- local cha
 
 Here at ARK Builders, we are building a suite of applications that allow for easy sharing of files across platforms and across users and focus on local-first storage of content.
 
-**[ARK Navigator](https://www.ark-builders.dev/apps/navigator/)**: A file browser that embraces tags as the novel method to locate your data. It effectively eliminates irrelevant system files, enabling you to find your documents or photos with ease through the use of tags.
-
-**[ARK Shelf](https://www.ark-builders.dev/apps/shelf/)**: A cross-device bookmark keeper. Secure any intriguing webpage into your dedicated folder, independent of any browser. Later, conveniently retrieve this link on another device.
-
 **[ARK Memo](https://www.ark-builders.dev/apps/memo/)**: Memo application for text and graphical notes with version control. Create content, save and continue on your idea. Make a change you are not happy with? Roll back to a previous version.
 
-**[ARK Retouch](https://www.ark-builders.dev/apps/retouch/)**: graphic assistant right in your pocket! This app is designed not only for photo editing but also for drawing, creating graphic notes with a stylus, and highlighting important information in screenshots.
+**[ARK Rate](https://www.ark-builders.dev/apps/rate/)**: The indispensable companion for travelers, enables swift conversions across multiple currencies without requiring an online connection! It also allows you to keep track of your assets scattered across various sources and to set exchange rate alerts for both fiat and crypto, ensuring no lucrative deal slips past you.
 
-**[ARK Rate](https://www.ark-builders.dev/apps/rate/)**: The indispensable companion for travelers, enables swift conversions among multiple currencies and allows you to set exchange rate alerts for both fiat and crypto, ensuring no lucrative deal slips past you.
+**ARK Navigator**: A file browser that embraces tags as the novel method to locate your data. It effectively eliminates irrelevant system files, enabling you to find your documents or photos with ease through the use of tags.
+
+**ARK Shelf**: A cross-device bookmark keeper. Secure any intriguing webpage into your dedicated folder, independent of any browser. Later, conveniently retrieve this link on another device.
+
+**ARK Retouch**: graphic assistant right in your pocket! This app is designed not only for photo editing but also for drawing, creating graphic notes with a stylus, and highlighting important information in screenshots.
 
 All of these apps are Open Source, and we welcome contributions!
