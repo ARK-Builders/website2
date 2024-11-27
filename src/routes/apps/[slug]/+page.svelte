@@ -54,7 +54,7 @@
 	</div>
 
 	<div class="mx-auto flex w-full max-w-[50rem] flex-col gap-5">
-		<div class="dark:prose-dark prose w-full text-justify">
+		<div class="w-full text-justify">
 			<!-- {@html app.content} -->
 			<RenderMarkdown content={app.content} />
 		</div>
