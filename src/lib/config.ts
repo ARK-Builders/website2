@@ -1,8 +1,8 @@
 export const config = {
-	title: 'ARK Builders | Privacy-focused apps for every day',
-	author: 'Kawsar Ahmed',
+	title: 'ARK Builders | Opensource apps and framework',
+	author: 'ARK Builders',
 	headerTitle: 'ARK Builders',
-	description: 'ARK Builders official blog | Privacy-focused apps for every day',
+	description: 'Privacy-focused apps for every day, built on local-first serverless architecture.',
 	language: 'en-us',
 	theme: 'dark', // system, dark or light
 	domain: 'https://www.ark-builders.dev/',
