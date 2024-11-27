@@ -25,7 +25,7 @@
 			{/if}
 		</div>
 
-		<p class="text-2xl font-bold">{app.title}</p>
+		<a href="{base}/apps/{app.slug}" class="text-2xl font-bold hover:underline">{app.title}</a>
 	</div>
 
 	<img
