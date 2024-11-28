@@ -1,6 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite'
-import { defineConfig } from 'vite'
 import path from 'path'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
 	resolve: {
@@ -11,5 +11,8 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	optimizeDeps: {
 		include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+	},
+	ssr: {
+		noExternal: ['lottie-web']
 	}
 })
