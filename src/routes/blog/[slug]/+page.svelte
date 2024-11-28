@@ -4,8 +4,7 @@
 
 	export let data
 
-	$: post = data.post
-	$: author = data.author
+	$: ({ post, author } = data)
 </script>
 
 <Head title={post.title} />
