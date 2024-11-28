@@ -67,7 +67,9 @@
 				<div
 					class="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0"
 				>
-					<div class="dark:prose-dark prose max-w-none pb-8 pt-10">
+					<div
+						class="prose max-w-none pb-8 pt-10 prose-a:text-arkOrange prose-a:no-underline hover:prose-a:underline"
+					>
 						{#if post.image}
 							<img
 								alt={post.image.split('/').reverse()[0]}
@@ -75,7 +77,6 @@
 								class="h-auto w-full object-cover object-center"
 							/>
 						{/if}
-						<!-- {@html post.content} -->
 						<RenderMarkdown content={post.content} />
 					</div>
 				</div>
