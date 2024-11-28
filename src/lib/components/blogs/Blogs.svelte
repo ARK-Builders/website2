@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import BlogItem from '$lib/components/elements/BlogItem.svelte'
+	import BlogItem from '$lib/components/blogs/BlogItem.svelte'
 	import SearchBox from '$lib/components/SearchBox.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import type { Blog } from '$utils/constants'
