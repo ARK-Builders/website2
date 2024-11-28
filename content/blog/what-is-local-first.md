@@ -11,11 +11,11 @@ authorId: doug
 
 <img style="max-width: 800px" src="/images/splash/collaboration-natalia-blauth.jpg" alt="Collaboration as it is seen by Natalia Blauth">
 
+Every day, millions of people create, edit and collaborate on digital files. The files could be text documents, spreadsheets or presentations. They could also be PhotoShop files, videos, code or even an industry specific format. As teams have dispersed geographically, using the cloud to share and collaborate on files has been a logical growth pattern — everyone has access to the files, and updates are kept in a centralized repository.
+
+But there is a downside to “cloud first” collaborations. The biggest (and most expensive) downside is that once a team has “bought in” to a cloud service, they are also “locked in.” A third party now has an indirect ownership of your content. And that ownership comes at a cost — security, proprietary formats, but also a monthly recurring charge to keep your content in their cloud.
+
 ## Local-first architecture
-
-Every day, millions of people create, edit and collaborate on digital files. The files could be text documents, spreadsheets or presentations. They could also be PhotoShop files, videos, code or even an industry specific format. As teams have dispersed geographically, using the cloud to share and collaborate on files has been a logical growth pattern - everyone has access to the files, and updates are kept in a centralized repository.
-
-But there is a downside to “cloud first” collaborations. The biggest (and most expensive) downside is that once a team has “bought in” to a cloud service, they are also “locked in.” A third party now has an indirect ownership of your content. And that ownership comes at a cost - security, proprietary formats, but also a monthly recurring charge to keep your content in their cloud.
 
 What if we could have a similar user experience, but keeping the files stored locally on our device (or devices) and collaborate with others who also have copies local to their device? We gain all the benefits of a distributed storage and collaboration that we gained from the cloud, but we retain ownership and copies of our files.
 
