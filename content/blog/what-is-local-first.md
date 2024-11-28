@@ -5,11 +5,11 @@ updated_at: '2024-11-28'
 draft: false
 summary: 'Every day, millions of people create, edit and collaborate on digital files. In this post, we describe our vision of local-first architecture ⏤  where collaboration can occur in real time, without a big cloud in the middle.'
 
-image:
+image: /images/splash/collaboration-natalia-blauth.jpg
 authorId: doug
 ---
 
-<img style="max-width: 800px" src="/images/splash/collaboration-natalia-blauth.jpg" alt="Collaboration as it is seen by Natalia Blauth">
+<!-- <img style="" src="/images/splash/collaboration-natalia-blauth.jpg" alt="Collaboration as it is seen by Natalia Blauth"> -->
 
 ## Local-first architecture
 
