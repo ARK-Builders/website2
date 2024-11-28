@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
-	import lottie, { type AnimationItem } from 'lottie-web'
+	// import lottie, { type AnimationItem } from 'lottie-web'
 	import { onMount } from 'svelte'
 
 	export let src = ''
@@ -8,20 +8,20 @@
 	export let height = '100%'
 
 	let container: HTMLDivElement
-	let animation: AnimationItem
+	let animation: any
 
 	onMount(() => {
 		if (browser) {
-			animation = lottie.loadAnimation({
-				container: container,
-				renderer: 'svg',
-				loop: true,
-				autoplay: true,
-				path: src
-			})
+			// animation = lottie.loadAnimation({
+			// 	container: container,
+			// 	renderer: 'svg',
+			// 	loop: true,
+			// 	autoplay: true,
+			// 	path: src
+			// })
 		}
 		return () => animation?.destroy()
 	})
 </script>
 
-<div bind:this={container} style="width: {width}; height: {height};"></div>
+<!-- <div bind:this={container} style="width: {width}; height: {height};"></div> -->
