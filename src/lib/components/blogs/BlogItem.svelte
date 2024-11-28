@@ -8,7 +8,7 @@
 <article>
 	<a
 		href="{base}/blog/{post.slug}"
-		class="flex flex-col gap-3 rounded-xl bg-arkGray5 p-5 hover:bg-[#FCF0E3]"
+		class="flex flex-col gap-3 rounded-xl bg-arkGray5 p-5 hover:bg-arkOrangeLight"
 	>
 		<div class="flex flex-col">
 			<p class="text-2xl font-extrabold">{post.title}</p>
