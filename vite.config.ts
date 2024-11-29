@@ -5,14 +5,11 @@ import { defineConfig } from 'vite'
 export default defineConfig({
 	resolve: {
 		alias: {
-			$utils: path.resolve('./src/utils')
-		}
+			$utils: path.resolve('./src/utils'),
+		},
 	},
 	plugins: [sveltekit()],
 	optimizeDeps: {
-		include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+		include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep'],
 	},
-	ssr: {
-		noExternal: ['lottie-web']
-	}
 })
