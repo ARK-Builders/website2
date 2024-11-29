@@ -24,19 +24,21 @@
 						<div>
 							<dt class="sr-only">Published on</dt>
 							<dd class="text-sm font-medium leading-6 text-gray-500 dark:text-gray-400">
-								Published: <time dateTime={post.date}>
+								Published on: <time dateTime={post.date}>
 									{new Date(post.date).toLocaleDateString(config.locale, {
 										year: 'numeric',
 										month: 'long',
-										day: 'numeric'
+										day: 'numeric',
 									})}
 								</time>
+							</dd>
+							<dd class="text-sm font-medium leading-6 text-gray-500 dark:text-gray-400">
 								Last Update:
 								<time dateTime={post.updated_at ?? post.date}>
 									{new Date(post.updated_at ?? post.date).toLocaleDateString(config.locale, {
 										year: 'numeric',
 										month: 'long',
-										day: 'numeric'
+										day: 'numeric',
 									})}
 								</time>
 							</dd>
