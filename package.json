@@ -43,7 +43,6 @@
 		"@fontsource/jost": "^5.0.18",
 		"@lottiefiles/lottie-player": "^2.0.12",
 		"github-slugger": "^2.0.0",
-		"lottie-web": "^5.12.2",
 		"mdsvex": "^0.11.2",
 		"rehype-external-links": "^3.0.0"
 	}
