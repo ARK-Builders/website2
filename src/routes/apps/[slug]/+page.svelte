@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="flex flex-col gap-3 lg:flex-row">
-			<Cta text="Download for Android" bgBlack>
+			<Cta text="Download for Android" bgBlack url={app?.android_download ?? ''}>
 				<Icon class={'text-white'} icon="fa:android" width="24px" />
 			</Cta>
 
