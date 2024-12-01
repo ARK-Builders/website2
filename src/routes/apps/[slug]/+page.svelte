@@ -37,7 +37,7 @@
 				<Icon class={'text-white'} icon="fa:android" width="24px" />
 			</Cta>
 
-			<Cta classes="border items-center pointer-events-none bg-gray-200 text-gray-500">
+			<Cta classes="border items-center pointer-events-none !bg-gray-200 text-gray-500">
 				<div class="flex flex-col items-center">
 					<span class="text-xs">Coming soon</span>
 					<span class="text-lg"> Download for iOS</span>
