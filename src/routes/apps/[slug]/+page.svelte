@@ -33,24 +33,17 @@
 		</div>
 
 		<div class="flex flex-col gap-3 lg:flex-row">
-			<Cta text="View documentation" bgBlack />
+			<Cta text="Download for Android" bgBlack>
+				<Icon class={'text-white'} icon="fa:android" width="24px" />
+			</Cta>
 
-			<div class="flex w-fit items-center rounded-lg border border-arkGray bg-white pr-2">
-				<div class="flex items-center rounded-lg bg-white pr-2">
-					<Cta
-						on:hover={(e) => (hoverGithub = e.detail)}
-						target="_blank"
-						text="View on Github"
-						classes="px-2 !text-base lg:!text-xl"
-						url={app?.github}
-					/>
-					<Icon
-						class={hoverGithub ? 'text-arkOrange' : 'text-black'}
-						icon="pajamas:github"
-						width="24px"
-					/>
+			<Cta classes="border items-center pointer-events-none bg-gray-200 text-gray-500">
+				<div class="flex flex-col items-center">
+					<span class="text-xs">Coming soon</span>
+					<span class="text-lg"> Download for iOS</span>
 				</div>
-			</div>
+				<Icon class={'text-gray-500'} icon="ic:round-apple" width="30px" />
+			</Cta>
 		</div>
 	</div>
 
@@ -69,5 +62,23 @@
 				{/each}
 			</div>
 		{/if}
+
+		<div class="flex flex-col gap-3 lg:flex-row">
+			<Cta text="View documentation" bgBlack />
+
+			<Cta
+				on:hover={(e) => (hoverGithub = e.detail)}
+				target="_blank"
+				text="View on Github"
+				classes="border border-arkGray px-2 !text-lg lg:!text-xl"
+				url={app?.github}
+			>
+				<Icon
+					class={hoverGithub ? 'text-arkOrange' : 'text-black'}
+					icon="pajamas:github"
+					width="24px"
+				/>
+			</Cta>
+		</div>
 	</div>
 </div>
