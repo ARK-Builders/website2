@@ -46,7 +46,7 @@
 	{#if !currentPosts.length}
 		No post found.
 	{:else}
-		<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 			{#each currentPosts as post}
 				<BlogItem {post} />
 			{/each}
