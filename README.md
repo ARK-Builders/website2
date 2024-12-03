@@ -1,10 +1,10 @@
 # ARK-website
 
-Landing page of ARK-builder (In progress)
+Landing page of ARK-builders
 
 ## Live
 
-https://ark-builders.github.io/website2/
+https://ark-builders.dev
 
 ## Tech used
 
