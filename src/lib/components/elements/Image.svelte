@@ -23,7 +23,12 @@
 </script>
 
 {#if loaded}
-	<img {src} alt="app screenshot" class="max-h-[500px] xl:max-h-[600px]" {...$$restProps} />
+	<img
+		{src}
+		alt="app screenshot"
+		class="max-h-[500px] transition-all duration-300 ease-in-out xl:max-h-[600px]"
+		{...$$restProps}
+	/>
 {:else if loading}
 	<div class="flex h-full max-h-[500px] w-[150px] flex-col items-center xl:max-h-[600px]">
 		<Icon icon="ei:spinner-3" class="animate-spin" width="50px" />
