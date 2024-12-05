@@ -5,9 +5,11 @@
 	import type { Blog } from '$utils/constants'
 
 	export let post: Blog
+
+	let hover: boolean = false
 </script>
 
-<article>
+<article on:mouseenter={() => (hover = true)} on:mouseleave={() => (hover = false)}>
 	<a
 		href="{base}/blog/{post.slug}"
 		class="flex flex-col gap-3 rounded-xl bg-arkGray5 p-5 hover:bg-arkOrangeLight"
@@ -15,7 +17,7 @@
 		<div class="flex flex-col gap-2">
 			<Image
 				src="{base}{post.image ?? 'https://placehold.co/100x100/EEA050/white/?text=' + post.title}"
-				class="max-h-48 w-full rounded-md object-cover xl:max-h-52"
+				class="max-h-48 w-full rounded-md object-cover xl:max-h-52 {hover && 'scale-105'}"
 			/>
 			<div class="flex h-52 flex-col gap-1">
 				<time dateTime={post.date ?? post.date} class="text-arkGray4">
@@ -25,7 +27,9 @@
 						day: 'numeric',
 					})}
 				</time>
-				<p class="text-2xl font-extrabold">{post.title}</p>
+				<p class="text-2xl font-extrabold">
+					{post.title}
+				</p>
 				<div class="">
 					<p class="line-clamp-5">
 						{post.summary}
