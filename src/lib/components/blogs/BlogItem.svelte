@@ -27,12 +27,11 @@
 				</time>
 				<p class="text-2xl font-extrabold">{post.title}</p>
 				<div class="">
-					<p class="line-clamp-5">
+					<p class={post.title.length > 40 ? 'line-clamp-4' : 'line-clamp-5'}>
 						{post.summary}
 					</p>
 				</div>
 			</div>
 		</div>
-		<!-- <a href="{base}/blog/{post.slug}" class="w-fit font-bold text-arkOrange">Read</a> -->
 	</a>
 </article>
