@@ -25,7 +25,7 @@
 				</div>
 			</a>
 
-			<div class="relative ml-5 hidden flex-row items-center gap-1 lg:flex">
+			<div class="relative ml-5 hidden flex-row items-center gap-2 lg:flex">
 				{#each navLinks as link}
 					{#if link.title == 'Apps'}
 						<AppMenus {link} />
@@ -35,10 +35,10 @@
 						<div>
 							<a
 								href={base + link.href}
-								class:underline={$page.url.pathname == link.href}
-								class:!text-arkOrange={$page.url.pathname == link.href}
-								class="p-1 font-medium text-white hover:text-arkOrange sm:p-2"
+								class:active={$page.url.pathname == link.href}
+								class="flex h-9 items-center gap-1 rounded-lg bg-white/10 px-4 text-base font-medium text-arkGray7 hover:bg-arkOrangeLightM/10 hover:text-arkOrangeLightM"
 							>
+								<Icon icon={link.icon} width="{link.title == 'Blog' ? '20' : '24'}px" />
 								{link.title}
 							</a>
 						</div>
@@ -58,3 +58,9 @@
 {#if showMobileMenu}
 	<MobileMenu bind:showMobileMenu />
 {/if}
+
+<style lang="postcss">
+	.active {
+		@apply bg-arkOrangeLightM/10 text-arkOrangeLightM;
+	}
+</style>

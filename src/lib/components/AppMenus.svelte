@@ -10,37 +10,35 @@
 
 <div class="menus">
 	<a
-		class:underline={$page.url.pathname.includes('/apps')}
-		class:!text-arkOrange={$page.url.pathname.includes('/apps')}
+		class:active={$page.url.pathname.includes('/apps')}
 		href={base + link.href}
-		class="flex items-center p-1 font-medium text-white hover:text-arkOrange dark:text-gray-100 sm:p-2"
+		class="flex h-9 items-center gap-1 rounded-lg bg-white/10 p-1 px-4 font-medium text-arkGray7 hover:bg-arkOrangeLightM/10 hover:text-arkOrangeLightM dark:text-gray-100"
 	>
+		<Icon icon="tdesign:app-filled" width="20px" />
 		{link.title}
-		<Icon icon="ic:outline-keyboard-arrow-down" width="24px" />
 	</a>
-	<div
-		id="apps-menu"
-		class="absolute left-16 top-10 grid w-96 grid-cols-2 rounded-xl border border-gray-300 bg-white p-2"
-	>
-		<div class="flex w-full flex-col gap-2">
-			{#each currentApps.slice(0, 1) as menu}
-				<MenuItem
-					url={link.href}
-					description={menu.description}
-					name={menu.name}
-					logo={menu.logo}
-				/>
-			{/each}
-		</div>
-		<div class="flex w-full flex-col gap-2">
-			{#each currentApps.slice(1) as menu}
-				<MenuItem
-					url={link.href}
-					description={menu.description}
-					name={menu.name}
-					logo={menu.logo}
-				/>
-			{/each}
+	<div id="apps-menu" class="absolute left-20 top-9 pt-2">
+		<div class="grid w-96 grid-cols-2 rounded-xl border border-gray-300 bg-white p-2">
+			<div class="flex w-full flex-col gap-2">
+				{#each currentApps.slice(0, 1) as menu}
+					<MenuItem
+						url={link.href}
+						description={menu.description}
+						name={menu.name}
+						logo={menu.logo}
+					/>
+				{/each}
+			</div>
+			<div class="flex w-full flex-col gap-2">
+				{#each currentApps.slice(1) as menu}
+					<MenuItem
+						url={link.href}
+						description={menu.description}
+						name={menu.name}
+						logo={menu.logo}
+					/>
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>
@@ -51,5 +49,9 @@
 	}
 	.menus:hover #apps-menu {
 		display: grid;
+	}
+
+	.active {
+		@apply bg-arkOrangeLightM/10 text-arkOrangeLightM;
 	}
 </style>

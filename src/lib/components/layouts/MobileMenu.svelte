@@ -2,7 +2,7 @@
 	import { base } from '$app/paths'
 	import { page } from '$app/stores'
 	import { navLinks } from '$lib/config'
-	import { appList, appLogos, communityList, currentApps } from '$utils/constants'
+	import { appLogos, communityList, currentApps } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 	import { slide } from 'svelte/transition'
 	import GetStarted from '../GetStarted.svelte'
@@ -36,7 +36,7 @@
 						class="flex items-center gap-2 p-1 text-xl font-medium text-white hover:text-arkOrange sm:p-2"
 					>
 						{#if link.icon}
-							<Icon icon={link.icon} />
+							<Icon icon={link.icon} width="{link.title == 'Blog' ? '20' : '24'}px" />
 						{/if}
 						{link.title}
 					</a>
