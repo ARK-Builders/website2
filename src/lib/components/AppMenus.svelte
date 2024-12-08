@@ -14,7 +14,7 @@
 		href={base + link.href}
 		class="flex h-9 items-center gap-1 rounded-lg bg-white/10 p-1 px-4 font-medium text-arkGray7 hover:bg-arkOrangeLightM/10 hover:text-arkOrangeLightM dark:text-gray-100"
 	>
-		<Icon icon="tdesign:app-filled" width="20px" />
+		<Icon icon="tdesign:app-filled" width="19px" />
 		{link.title}
 	</a>
 	<div id="apps-menu" class="absolute left-20 top-9 pt-2">
