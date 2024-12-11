@@ -5,7 +5,7 @@ updated_at: '2024-07-12'
 draft: false
 summary: 'Now we come to the example of applying visual design principles in UI design, the more we recognize, the more likely we will improve the overall user experience of our design. Here are case study examples that illustrate these principles and some best practices to consider.'
 
-image:
+image: /images/blogs/spotify.png
 authorId: imam
 ---
 
