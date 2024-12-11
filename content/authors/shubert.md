@@ -1,6 +1,6 @@
 ---
 name: Shubert Munthali
-avatar: /images/authors/shubert.png
+avatar: /images/authors/shubert.jpg
 occupation: QA Engineer
 company: ARK Builders
 email:
