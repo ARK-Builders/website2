@@ -16,6 +16,7 @@ export default {
 				arkOrangeLight: '#FFF3E6',
 				arkOrangeLight2: '#FFE0BF',
 				arkOrangeLighter: '#FFF5DD',
+				arkOrangeLightM: '#EEA050',
 
 				arkBlueLight: '#A5D6FF',
 				arkGray: '#302C2C',
@@ -24,6 +25,7 @@ export default {
 				arkGray4: '#968D8D',
 				arkGray5: '#F5F4F2',
 				arkGray6: '#F9F9F9',
+				arkGray7: '#E1E1E1',
 
 				arkDeep: '#444444',
 				arkDeep2: '#4F4F4F',
