@@ -15,10 +15,14 @@
 		class="flex flex-col gap-3 rounded-xl bg-arkGray5 p-5 hover:bg-arkOrangeLight"
 	>
 		<div class="flex flex-col gap-2">
-			<Image
-				src="{base}{post.image ?? 'https://placehold.co/100x100/EEA050/white/?text=' + post.title}"
-				class="max-h-48 w-full rounded-md object-cover xl:max-h-52 {hover && 'scale-105'}"
-			/>
+			<div class="overflow-hidden rounded-md">
+				<Image
+					src="{base}{post.image ??
+						'https://placehold.co/100x100/EEA050/white/?text=' + post.title}"
+					class="max-h-48 w-full rounded-md object-cover xl:max-h-52 {hover && 'scale-105'}"
+				/>
+			</div>
+
 			<div class="flex h-52 flex-col gap-1">
 				<time dateTime={post.date ?? post.date} class="text-arkGray4">
 					{new Date(post.date).toLocaleDateString(config.locale, {
@@ -27,7 +31,7 @@
 						day: 'numeric',
 					})}
 				</time>
-				<p class="text-2xl font-extrabold">
+				<p class="text-2xl font-extrabold {hover && 'underline'}">
 					{post.title}
 				</p>
 				<div class="">
