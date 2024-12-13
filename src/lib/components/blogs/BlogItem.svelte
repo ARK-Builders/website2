@@ -31,7 +31,7 @@
 						day: 'numeric',
 					})}
 				</time>
-				<p class="text-2xl font-extrabold">
+				<p class="text-2xl font-extrabold {hover && 'underline'}">
 					{post.title}
 				</p>
 				<div class="">
