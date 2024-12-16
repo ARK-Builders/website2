@@ -11,38 +11,38 @@
 			title: 'Automatically extract Domain tags',
 			tags: [{ icon: 'mdi:language-kotlin', name: 'Kotlin' }],
 			labels: [{ name: 'Feature', background: '#56DD9E' }],
-			issueLink: 'https://github.com/ARK-Builders/ARK-Shelf/issues/3'
+			issueLink: 'https://github.com/ARK-Builders/ARK-Shelf/issues/3',
 		},
 		{
 			title: 'Replace alphabetical sorting by un-sorting',
 			tags: [
 				{ icon: 'ri:svelte-line', name: 'Svelte' },
 				{ icon: 'teenyicons:rust-outline', name: 'Rust' },
-				{ icon: 'teenyicons:typescript-outline', name: 'TypeScript' }
+				{ icon: 'teenyicons:typescript-outline', name: 'TypeScript' },
 			],
 			labels: [
 				{ name: 'Enhancement', background: '#DAD67B' },
 				{ name: 'Windows', icon: 'devicon:windows8' },
 				{ name: 'Linux', icon: 'flat-color-icons:linux' },
-				{ name: 'macOS', icon: 'uil:apple' }
+				{ name: 'macOS', icon: 'uil:apple' },
 			],
-			issueLink: 'https://github.com/ARK-Builders/ARK-Shelf-Desktop/issues/20'
+			issueLink: 'https://github.com/ARK-Builders/ARK-Shelf-Desktop/issues/20',
 		},
 		{
 			title: 'Move resources with their associated data',
 			tags: [{ icon: 'mdi:language-kotlin', name: 'Kotlin' }],
 			labels: [{ name: 'Enhancement', background: '#DAD67B' }],
-			issueLink: 'https://github.com/ARK-Builders/ARK-Navigator/issues/380'
+			issueLink: 'https://github.com/ARK-Builders/ARK-Navigator/issues/380',
 		},
 		{
 			title: 'Empty previews are generated',
 			tags: [
 				{ icon: 'teenyicons:rust-outline', name: 'Rust' },
-				{ icon: 'mdi:language-kotlin', name: 'Kotlin' }
+				{ icon: 'mdi:language-kotlin', name: 'Kotlin' },
 			],
 			labels: [{ name: 'Enhancement', background: '#DAD67B' }],
-			issueLink: 'https://github.com/ARK-Builders/ark-android/issues/62'
-		}
+			issueLink: 'https://github.com/ARK-Builders/ark-android/issues/62',
+		},
 	]
 </script>
 
@@ -55,14 +55,38 @@
 				Contribute
 			</p>
 			<p class="text-center text-[40px] font-bold leading-snug text-white lg:text-start">
-				We greatly appreciate every bit of support!
+				Join our journey and become a hero in the open-source universe!
 			</p>
-			<div class="flex w-full justify-center lg:justify-start">
+			<div class="flex w-full flex-col justify-center lg:justify-start">
 				<p class="text-center text-white lg:max-w-[70%] lg:text-start">
-					We're passionate about making everyone's day-to-day life better through our open source
-					apps. We've poured hundreds of hours into creating them, and while they're not perfect and
-					we've got lots more we want to do, your support means everything. It's the fuel that keeps
-					us going!
+					Imagine being part of a passionate community where your efforts directly contribute to
+					innovations that touch lives around the globe. By joining us, you're not just contributing
+					-- you're shaping the future. Here's why it's so cool:
+				</p>
+				<ul class="my-5 text-white">
+					<li>
+						- <b>Learn and Grow</b>: Dive into new technologies, sharpen your skills, and grow with
+						a community of like-minded individuals.
+					</li>
+					<li>
+						- <b>Make an Impact</b>: Your contributions will improve software quality and introduce
+						new features, making technology accessible and useful for everyone, for free!
+					</li>
+					<li>
+						- <b>Recognition</b>: Get recognized for your work in a project that could be used by
+						millions, enhancing your portfolio and opening new career opportunities.
+					</li>
+					<li>
+						- <b>Drive Change</b>: Be at the forefront of technological evolution, addressing
+						real-world challenges and making the world a better place, one commit at a time.
+					</li>
+				</ul>
+				<p class="text-center text-white lg:max-w-[70%] lg:text-start">
+					Whether you're a developer, a QA engineer, a technical writer, or simply someone with a
+					keen interest and readiness to learn, your contribution can spark a revolution. Our
+					open-source initiatives extend beyond just code; they're about creating a positive impact,
+					bridging the efforts of IT domain across the world. Your support is the rocket fuel the
+					world needs and will make everyday life easier and more enjoyable for everyone.
 				</p>
 			</div>
 			<Cta url="/contribute" text="View More" classes="hidden lg:flex mt-5" />
