@@ -2,14 +2,14 @@
 	import { slug } from 'github-slugger'
 
 	export let text
-	export let size = 'text-sm'
+	export let classes = ''
 
 	let url = slug(text)
 </script>
 
 <a
 	href={'/tags/' + url}
-	class="rounded border px-1 font-medium uppercase text-arkOrange2 hover:text-arkOrangeDeep {size}"
+	class="rounded-md border bg-arkGray7 px-1 text-sm font-medium hover:bg-arkGray5 {classes}"
 >
 	{text}
 </a>

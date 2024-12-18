@@ -58,20 +58,16 @@
 								</time>
 							</dd>
 						</div>
-
-						{#if post.tags.length}
-							<div class="flex flex-col gap-2 border-s-2 pl-4">
-								<div class="flex flex-col gap-1">
-									<h3>Tags</h3>
-									<div class="flex flex-row flex-wrap gap-2">
-										{#each post.tags as tag}
-											<Tag text={tag} />
-										{/each}
-									</div>
-								</div>
-							</div>
-						{/if}
 					</div>
+
+					{#if post.tags.length}
+						<div class="flex flex-row flex-wrap gap-2 py-4">
+							{#each post.tags as tag}
+								<Tag text={tag} />
+							{/each}
+						</div>
+					{/if}
+
 					<dl class="space-y-10">
 						<dd class="mt-4 text-justify lg:text-start">
 							{post.summary}
