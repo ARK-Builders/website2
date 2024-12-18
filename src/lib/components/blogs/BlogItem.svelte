@@ -12,18 +12,19 @@
 <article on:mouseenter={() => (hover = true)} on:mouseleave={() => (hover = false)}>
 	<a
 		href="{base}/blog/{post.slug}"
-		class="flex flex-col gap-3 rounded-xl bg-arkGray5 p-5 hover:bg-arkOrangeLight"
+		class="flex flex-col gap-3 rounded-2xl bg-arkGray5 hover:bg-arkOrangeLight"
 	>
 		<div class="flex flex-col gap-2">
-			<div class="overflow-hidden rounded-md">
+			<div class="overflow-hidden rounded-t-2xl">
 				<Image
 					src="{base}{post.image ??
 						'https://placehold.co/100x100/EEA050/white/?text=' + post.title}"
-					class="max-h-48 w-full rounded-md object-cover xl:max-h-52 {hover && 'scale-105'}"
+					class="max-h-48 w-full rounded-t-xl object-cover object-top xl:max-h-52 {hover &&
+						'scale-105'}"
 				/>
 			</div>
 
-			<div class="flex h-52 flex-col gap-1">
+			<div class="flex h-52 flex-col gap-1 px-5">
 				<time dateTime={post.date ?? post.date} class="text-arkGray4">
 					{new Date(post.date).toLocaleDateString(config.locale, {
 						year: 'numeric',
@@ -35,7 +36,7 @@
 					{post.title}
 				</p>
 				<div class="">
-					<p class={post.title.length > 40 ? 'line-clamp-4' : 'line-clamp-5'}>
+					<p class={post.title.length > 40 ? 'line-clamp-3' : 'line-clamp-4'}>
 						{post.summary}
 					</p>
 				</div>
