@@ -34,7 +34,7 @@
 		memo6: MemoImage6,
 		retouch1: RetouchImage1,
 		retouch2: RetouchImage2,
-		retouch3: RetouchImage3
+		retouch3: RetouchImage3,
 	}
 
 	// const getImagesWithName = (name: string) =>
@@ -94,7 +94,7 @@
 					<div class="flex-flow flex max-w-full gap-3 overflow-x-auto">
 						{#each activeAppImages as image, i}
 							{#key image}
-								<Image src={image} />
+								<Image src={image} class="min-w-[300px]" />
 							{/key}
 						{/each}
 					</div>
