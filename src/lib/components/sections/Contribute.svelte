@@ -61,7 +61,7 @@
 				<p class="text-center text-white lg:max-w-[70%] lg:text-start">
 					Imagine being part of a passionate community where your efforts directly contribute to
 					innovations that touch lives around the globe. By joining us, you're not just contributing
-					-- you're shaping the future. Here's why it's so cool:
+					-- you're shaping the future.
 				</p>
 				<ul class="my-5 text-white">
 					<li>
@@ -83,10 +83,7 @@
 				</ul>
 				<p class="text-center text-white lg:max-w-[70%] lg:text-start">
 					Whether you're a developer, a QA engineer, a technical writer, or simply someone with a
-					keen interest and readiness to learn, your contribution can spark a revolution. Our
-					open-source initiatives extend beyond just code; they're about creating a positive impact,
-					bridging the efforts of IT domain across the world. Your support is the rocket fuel the
-					world needs and will make everyday life easier and more enjoyable for everyone.
+					keen interest and readiness to learn, your contribution can spark a revolution!
 				</p>
 			</div>
 			<Cta url="/contribute" text="View More" classes="hidden lg:flex mt-5" />
