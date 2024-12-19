@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
 	import { base } from '$app/paths'
 	import Author from '$lib/components/Author.svelte'
 	import BlogItem from '$lib/components/blogs/BlogItem.svelte'
+	import Tag from '$lib/components/elements/Tag.svelte'
 	import RenderMarkdown from '$lib/components/RenderMarkdown.svelte'
 	import { config } from '$lib/config'
+	import type { Blog } from '$utils/constants'
 
-	export let post
+	export let post: Blog
 	export let author
 </script>
 
@@ -57,6 +59,15 @@
 							</dd>
 						</div>
 					</div>
+
+					{#if post.tags.length}
+						<div class="flex flex-row flex-wrap gap-2 py-4">
+							{#each post.tags as tag}
+								<Tag text={tag} />
+							{/each}
+						</div>
+					{/if}
+
 					<dl class="space-y-10">
 						<dd class="mt-4 text-justify lg:text-start">
 							{post.summary}

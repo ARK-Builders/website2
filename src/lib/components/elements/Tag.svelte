@@ -1,13 +1,16 @@
 <script lang="ts">
+	import { base } from '$app/paths'
 	import { slug } from 'github-slugger'
 
-	export let text = ''
-	export let size = 'text-sm'
-	// export let url = slug(text)
+	export let text
+	export let classes = ''
+
+	let url = slug(text)
 </script>
 
-<p
-	class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 font-medium uppercase {size}"
+<a
+	href={base + '/tags/' + url}
+	class="rounded-md border bg-arkGray7 px-1 text-sm font-medium hover:bg-arkGray5 {classes}"
 >
 	{text}
-</p>
+</a>
