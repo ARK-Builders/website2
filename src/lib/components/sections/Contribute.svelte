@@ -58,12 +58,12 @@
 				Join our journey and become a hero in the open-source universe!
 			</p>
 			<div class="flex w-full flex-col justify-center lg:justify-start">
-				<p class="text-center text-white lg:max-w-[70%] lg:text-start">
+				<p class="text-center text-white lg:max-w-[90%] lg:text-start">
 					Imagine being part of a passionate community where your efforts directly contribute to
 					innovations that touch lives around the globe. By joining us, you're not just contributing
 					-- you're shaping the future.
 				</p>
-				<ul class="my-5 text-white">
+				<!-- <ul class="my-5 text-white">
 					<li>
 						- <b>Learn and Grow</b>: Dive into new technologies, sharpen your skills, and grow with
 						a community of like-minded individuals.
@@ -80,8 +80,8 @@
 						- <b>Drive Change</b>: Be at the forefront of technological evolution, addressing
 						real-world challenges and making the world a better place, one commit at a time.
 					</li>
-				</ul>
-				<p class="text-center text-white lg:max-w-[70%] lg:text-start">
+				</ul> -->
+				<p class="hidden text-white lg:block lg:max-w-[90%]">
 					Whether you're a developer, a QA engineer, a technical writer, or simply someone with a
 					keen interest and readiness to learn, your contribution can spark a revolution!
 				</p>
@@ -114,6 +114,10 @@
 				</ContributeCard>
 			{/each}
 		</div>
+		<p class="text-center text-white lg:hidden">
+			Whether you're a developer, a QA engineer, a technical writer, or simply someone with a keen
+			interest and readiness to learn, your contribution can spark a revolution!
+		</p>
 		<Cta url="/contribute" text="View More" classes="lg:hidden mt-5" />
 	</div>
 </section>
