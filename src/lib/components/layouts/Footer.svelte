@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths'
+	import FooterLogo from '$lib/assets/images/footer-logo.svelte'
 	import { communityList } from '$utils/constants'
 	import Icon from '@iconify/svelte'
-	import FooterLogo from '$lib/assets/images/footer-logo.svelte'
 </script>
 
 <footer class="bg-white px-5 pb-10 pt-40 xl:px-0">
@@ -14,6 +14,7 @@
 			<div class="grid w-fit grid-cols-4 flex-row gap-3 lg:flex">
 				{#each communityList as community}
 					<a
+						aria-label={community.name}
 						target="_blank"
 						href={community.url}
 						class="flex h-10 w-fit cursor-pointer flex-row items-center gap-4 hover:text-arkOrange"
