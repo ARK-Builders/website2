@@ -1,9 +1,15 @@
-export const prerender = false
+export const prerender = true
 
-import type { Blog } from '$utils/constants'
-import { getEntries } from '$utils/entries'
+import type { Blog, Tag } from '$utils/constants'
+import { getEntries, getTags } from '$utils/entries'
 import { error } from '@sveltejs/kit'
 import { slug } from 'github-slugger'
+
+/** @type {import('./$types').EntryGenerator} */
+export function entries() {
+	const tags = (getTags() as Tag[]) || []
+	return tags.map((tag: Tag) => ({ tag: tag.slug }))
+}
 
 function slugsArray(tags: string[]) {
 	return tags?.map((t) => slug(t) || [])

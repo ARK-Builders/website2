@@ -1,30 +1,30 @@
 <script lang="ts">
 	import { base } from '$app/paths'
+	import BitcoinImage from '$lib/assets/images/support/bitcoin.svelte'
+	import BuyMeACoffeeImage from '$lib/assets/images/support/buycoffee.png'
+	import EthereumImage from '$lib/assets/images/support/ethereum.svelte'
+	import PatreonImage from '$lib/assets/images/support/patreon.png'
+	import SupportImage from '$lib/assets/images/support/support.svelte'
 	import Modal from '$lib/components/elements/Modal.svelte'
 	import { BTC_ADDRESS, ETH_ADDRESS } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 	import QR from '@svelte-put/qr/img/QR.svelte'
-	import SupportImage from '$lib/assets/images/support/support.svelte'
-	import BitcoinImage from '$lib/assets/images/support/bitcoin.svelte'
-	import EthereumImage from '$lib/assets/images/support/ethereum.svelte'
-	import BuyMeACoffeeImage from '$lib/assets/images/support/buycoffee.png'
-	import PatreonImage from '$lib/assets/images/support/patreon.png'
 	import type { SvelteComponent } from 'svelte'
 
 	const supportImages: Record<string, string> = {
 		buycoffee: BuyMeACoffeeImage,
-		patreon: PatreonImage
+		patreon: PatreonImage,
 	}
 
 	const supportImagesCrypto: Record<string, typeof SvelteComponent> = {
 		bitcoin: BitcoinImage,
-		ethereum: EthereumImage
+		ethereum: EthereumImage,
 	}
 
 	let modalData = {
 		show: false,
 		type: '',
-		address: ''
+		address: '',
 	}
 	let copied = false
 	let timeout: ReturnType<typeof setTimeout> | null = null
@@ -36,7 +36,7 @@
 				modalData.show = true
 				modalData.type = 'bitcoin'
 				modalData.address = BTC_ADDRESS
-			}
+			},
 		},
 		{
 			name: 'ethereum',
@@ -44,13 +44,13 @@
 				modalData.show = true
 				modalData.type = 'etheruem'
 				modalData.address = ETH_ADDRESS
-			}
-		}
+			},
+		},
 	]
 
 	const supportLogos = [
 		{ name: 'buycoffee', url: 'https://buymeacoffee.com/arkbuilders' },
-		{ name: 'patreon', url: 'https://www.patreon.com/ARKBuilders' }
+		{ name: 'patreon', url: 'https://www.patreon.com/ARKBuilders' },
 	]
 
 	const copyAddress = (value: string) => {
@@ -83,6 +83,7 @@
 		<div class="my-5 grid grid-cols-2 gap-2 md:flex md:h-[40px] md:flex-row">
 			{#each supportLogosCrypto as logo}
 				<button
+					aria-label={logo.name}
 					class="h-11 w-[150px] overflow-hidden rounded-md"
 					on:click={(e) => {
 						if (['bitcoin', 'ethereum'].includes(logo.name)) e.preventDefault()

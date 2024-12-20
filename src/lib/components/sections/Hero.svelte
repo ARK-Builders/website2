@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Cta from '$lib/components/elements/CTA.svelte'
-	import Icon from '@iconify/svelte'
-	import { communityList } from '$utils/constants'
 	import LeftImage from '$lib/assets/images/left.svelte'
-	import RightImage from '$lib/assets/images/right.svelte'
 	import MobLeftImage from '$lib/assets/images/mob-left.svelte'
 	import MobRightImage from '$lib/assets/images/mob-right.svelte'
+	import RightImage from '$lib/assets/images/right.svelte'
+	import Cta from '$lib/components/elements/CTA.svelte'
+	import { communityList } from '$utils/constants'
+	import Icon from '@iconify/svelte'
 
 	const contacts = communityList.filter((community) =>
 		['Telegram', 'Discord', 'X'].includes(community.name)
@@ -69,6 +69,7 @@
 					<div class="flex flex-row justify-center gap-5">
 						{#each contacts as community}
 							<a
+								aria-label={community.name}
 								class="flex h-10 w-10 items-center justify-center rounded-full bg-arkOrangeLight2"
 								href={community.url}
 								target="_blank"

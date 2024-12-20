@@ -3,7 +3,7 @@
 	import Head from '$lib/components/layouts/Head.svelte'
 
 	export let data
-	const { tag, posts } = data
+	$: ({ tag, posts } = data)
 </script>
 
 <Head title="Blog" />
