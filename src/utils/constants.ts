@@ -163,6 +163,12 @@ export interface Issue {
 	languages: string[]
 }
 
+export interface Tag {
+	text: string
+	slug: string
+	count: number
+}
+
 export const appLogos: Record<string, ComponentType> = {
 	rate: RateLogo,
 	memo: MemoLogo,

@@ -1,7 +1,7 @@
 import { browser } from '$app/environment'
 import { config, user } from '$lib/config'
+import type { Blog, Tag } from '$utils/constants'
 import { slug } from 'github-slugger'
-import type { Blog } from './constants'
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
@@ -60,7 +60,7 @@ const getMetadata = (entryType: string, filepath: string, entry: any) => {
 			: null,
 
 		tag: entry.metadata?.type?.split(' ').shift().toLowerCase() || null,
-		tags: entry.metadata?.tags || []
+		tags: entry.metadata?.tags || [],
 
 		// whether or not this file is `my-post.md` or `my-post/index.md`
 		// (needed to do correct dynamic import in posts/[slug].svelte)
@@ -92,15 +92,9 @@ export const getEntries = (entryType: string, includeDraft: boolean = false) => 
 			.map((entry, index, allEntries) => ({
 				...entry,
 				next: allEntries[index - 1],
-				prev: allEntries[index + 1]
+				prev: allEntries[index + 1],
 			}))
 	)
-}
-
-interface Tag {
-	text: string
-	slug: string
-	count: number
 }
 
 export const getTags = () => {
