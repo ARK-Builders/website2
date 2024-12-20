@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import Image from '$lib/components/elements/Image.svelte'
+	import Tag from '$lib/components/elements/Tag.svelte'
 	import { config } from '$lib/config'
 	import type { Blog } from '$utils/constants'
-	import Tag from '$lib/components/elements/Tag.svelte'
 
 	export let post: Blog
 
@@ -20,12 +20,11 @@
 				<Image
 					src="{base}{post.image ??
 						'https://placehold.co/100x100/EEA050/white/?text=' + post.title}"
-					class="max-h-48 w-full rounded-t-xl object-cover object-top xl:max-h-52 {hover &&
-						'scale-105'}"
+					class="h-40 w-full rounded-t-xl object-cover object-top md:h-52 {hover && 'scale-105'}"
 				/>
 			</div>
 
-			<div class="flex h-60 flex-col gap-1 px-5">
+			<div class="flex h-60 flex-col gap-1 px-2 md:px-5">
 				<time dateTime={post.date ?? post.date} class="text-arkGray4">
 					{new Date(post.date).toLocaleDateString(config.locale, {
 						year: 'numeric',
@@ -33,7 +32,7 @@
 						day: 'numeric',
 					})}
 				</time>
-				<p class="text-2xl font-extrabold {hover && 'underline'}">
+				<p class="text-lg font-extrabold md:text-2xl {hover && 'underline'}">
 					{post.title}
 				</p>
 				<div class="">
