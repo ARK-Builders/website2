@@ -17,4 +17,4 @@ android_download:
 ios_download:
 ---
 
-You don't need to be a professional photographer to navigate the app. The app's interface is as simple and intuitive as possible, and the speed of work won't let you lose your train of thought. It's perfect for outlining, highlighting information in screenshots, or creating graphic notes with a stylus. The app supports all basic editing operations, too. With the ability to rotate, crop, and resize the image, you can enhance your photos without losing quality or increasing file size.
+Memo app is your ultimate companion for capturing and nurturing creativity on the go. Whether you're commuting, relaxing at a café, attending school, or even driving, Memo makes it effortless to capture your ideas. With options to type, draw, or speak your notes, you can record your thoughts in any situation.
