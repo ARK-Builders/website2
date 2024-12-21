@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { base } from '$app/paths'
 	import { page } from '$app/stores'
+	import GetStarted from '$lib/components/GetStarted.svelte'
 	import { navLinks } from '$lib/config'
 	import { appLogos, communityList, type App } from '$utils/constants'
 	import Icon from '@iconify/svelte'
 	import { getContext } from 'svelte'
 	import { slide } from 'svelte/transition'
-	import GetStarted from '../GetStarted.svelte'
 
 	export let showMobileMenu: boolean
 
