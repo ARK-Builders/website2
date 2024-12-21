@@ -13,7 +13,7 @@ preview:
     '/images/apps/rate/portfolios.png',
   ]
 github: https://github.com/ARK-Builders/ARK-Rate
-android_download:
+android_download: https://play.google.com/store/apps/details?id=dev.arkbuilders.rate
 ios_download:
 ---
 
