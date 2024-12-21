@@ -10,13 +10,13 @@
 
 	export let data
 
-	$: ({ posts, apps } = data)
+	$: ({ posts } = data)
 </script>
 
 <Head />
 <Hero />
 <AnimatedFeatures />
-<OurApps {apps} />
+<OurApps />
 <Blog {posts} />
 <Youtube />
 <Contribute />

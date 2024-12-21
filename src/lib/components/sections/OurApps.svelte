@@ -18,8 +18,9 @@
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Image from '$lib/components/elements/Image.svelte'
 	import { appLogos, currentApps, type App } from '$utils/constants'
+	import { getContext } from 'svelte'
 
-	export let apps: App[] = []
+	const apps = getContext('apps') as App[]
 
 	const appImages: Record<string, string> = {
 		rate1: RateImage1,
