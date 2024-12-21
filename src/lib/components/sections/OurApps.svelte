@@ -17,7 +17,9 @@
 	import RetouchImage3 from '$lib/assets/images/apps/retouch/3.png'
 	import Cta from '$lib/components/elements/CTA.svelte'
 	import Image from '$lib/components/elements/Image.svelte'
-	import { appLogos, currentApps } from '$utils/constants'
+	import { appLogos, currentApps, type App } from '$utils/constants'
+
+	export let apps: App[] = []
 
 	const appImages: Record<string, string> = {
 		rate1: RateImage1,
@@ -48,6 +50,8 @@
 	let activeApp = currentApps[0]
 
 	$: activeAppImages = getImagesWithName(activeApp.name)
+	// fetching app description from content/apps directory
+	$: app_description = apps.find((app) => app.title === activeApp.name)
 </script>
 
 <section id="apps" class="relative flex pb-12 pt-16 lg:px-5 xl:px-0">
@@ -90,7 +94,8 @@
 			>
 				<div class="flex max-w-full flex-col items-center gap-3 lg:items-start">
 					<p class="text-center text-2xl font-bold lg:text-start lg:text-3xl">{activeApp.name}</p>
-					<p class="text-center lg:text-start">{activeApp.description}</p>
+					<p class="text-center lg:text-start">{app_description?.summary}</p>
+
 					<div class="flex-flow flex max-w-full gap-3 overflow-x-auto">
 						{#each activeAppImages as image, i}
 							{#key image}

@@ -15,6 +15,7 @@ preview:
 github: https://github.com/ARK-Builders/ARK-Rate
 android_download: https://play.google.com/store/apps/details?id=dev.arkbuilders.rate
 ios_download:
+summary: Rate - the indispensable companion for travelers, enables swift conversions among multiple currencies and allows you to set exchange rate alerts for both fiat and crypto, ensuring no lucrative deal slips past you.
 ---
 
 Rate - the indispensable companion for travelers, enables swift conversions among multiple currencies and allows you to set exchange rate alerts for both fiat and crypto, ensuring no lucrative deal slips past you.
